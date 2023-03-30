@@ -7,13 +7,14 @@ import ProductHowItWorks from "../templates/modules/views/ProductHowItWorks";
 import ProductCTA from "../templates/modules/views/ProductCTA";
 import ProductSmokingHero from "../templates/modules/views/ProductSmokingHero";
 import AppFooter from "../templates/modules/views/AppFooter";
+import NavBar from "../templates/modules/components/navBar/NavBar";
 
 export default function HomePage() {
     return (
         // <AppTheme title="Onepirate theme - MUI" description="A onepirate theme">
         <div>
             <React.Fragment>
-                <AppAppBar />
+                {/*<AppAppBar />*/}
                 <ProductHero />
                 <ProductValues />
                 <ProductCategories />
