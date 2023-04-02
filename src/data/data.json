@@ -1,0 +1,44 @@
+[
+  {
+    "FIELD1": 0,
+    "Year": 2014,
+    "14-49 Average Digitally Included Index": 58.9,
+    "50 And Above Average Digitally Included Index": 47.3
+  },
+  {
+    "FIELD1": 1,
+    "Year": 2015,
+    "14-49 Average Digitally Included Index": 58,
+    "50 And Above Average Digitally Included Index": 48.3
+  },
+  {
+    "FIELD1": 2,
+    "Year": 2016,
+    "14-49 Average Digitally Included Index": 62.3,
+    "50 And Above Average Digitally Included Index": 49.15
+  },
+  {
+    "FIELD1": 3,
+    "Year": 2017,
+    "14-49 Average Digitally Included Index": 63.8,
+    "50 And Above Average Digitally Included Index": 50.6
+  },
+  {
+    "FIELD1": 4,
+    "Year": 2018,
+    "14-49 Average Digitally Included Index": 66.2,
+    "50 And Above Average Digitally Included Index": 53.3
+  },
+  {
+    "FIELD1": 5,
+    "Year": 2019,
+    "14-49 Average Digitally Included Index": 68.3,
+    "50 And Above Average Digitally Included Index": 54.9
+  },
+  {
+    "FIELD1": 6,
+    "Year": 2020,
+    "14-49 Average Digitally Included Index": 67.3,
+    "50 And Above Average Digitally Included Index": 55.7
+  }
+]

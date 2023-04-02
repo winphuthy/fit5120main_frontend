@@ -1,0 +1,22 @@
+.sidebar {
+    /*position: fixed;*/
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0 5px 5px;
+    border-radius: 7px;
+}
+
+.sidebar li:hover {
+    color: #7451f8;
+}
+
+.sidebar .sidebarItem {
+    background-color: rgba(116, 81, 248, 0.42);
+}
+

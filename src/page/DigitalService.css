@@ -1,0 +1,15 @@
+.slide {
+    display: flex;
+    justify-content: space-between;
+    /*width: 30%;*/
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.main {
+    width: 75%;
+}
+
+.main p {
+    width: 90%;
+}
