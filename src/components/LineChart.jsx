@@ -10,7 +10,7 @@ import data from '../data/data.json';
 
 const options = {
     // responsive: true,
-    // aspectRatio: 1,
+    // aspectRatio: 2,
     maintainAspectRatio: false
 }
 

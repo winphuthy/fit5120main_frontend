@@ -15,10 +15,10 @@ export default function HomePage() {
                 {/*<AppAppBar />*/}
                 <ProductHero />
                 <ProductValues />
-                <ProductCategories />
-                <ProductHowItWorks />
-                <ProductCTA />
-                <ProductSmokingHero />
+                {/*<ProductCategories />*/}
+                {/*<ProductHowItWorks />*/}
+                {/*<ProductCTA />*/}
+                {/*<ProductSmokingHero />*/}
                 <AppFooter />
             </React.Fragment>
         </div>
