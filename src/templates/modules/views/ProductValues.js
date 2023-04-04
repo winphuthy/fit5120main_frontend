@@ -12,11 +12,13 @@ const item = {
   px: 5,
 };
 
+const fontcolor = 'White';
+
 function ProductValues() {
   return (
     <Box
       component="section"
-      sx={{ display: 'flex', overflow: 'hidden', bgcolor: 'secondary.light' }}
+      sx={{ display: 'flex', overflow: 'hidden', bgcolor: '#08527A' }}
     >
       <Container sx={{ mt: 15, mb: 30, display: 'flex', position: 'relative' }}>
         <Box
@@ -34,10 +36,10 @@ function ProductValues() {
                 alt="suitcase"
                 sx={{ height: 55 }}
               />
-              <Typography variant="h6" sx={{ my: 5 }}>
+              <Typography variant="h6" sx={{ my: 5 }} color={fontcolor} >
                 The best luxury hotels
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h5" color={fontcolor}>
                 {
                   'From the latest trendy boutique hotel to the iconic palace with XXL pool'
                 }
@@ -56,10 +58,10 @@ function ProductValues() {
                 alt="graph"
                 sx={{ height: 55 }}
               />
-              <Typography variant="h6" sx={{ my: 5 }}>
+              <Typography variant="h6" sx={{ my: 5 }} color={fontcolor} >
                 New experiences
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h5" color={fontcolor} >
                 {
                   'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '
                 }
@@ -76,10 +78,10 @@ function ProductValues() {
                 alt="clock"
                 sx={{ height: 55 }}
               />
-              <Typography variant="h6" sx={{ my: 5 }}>
+              <Typography variant="h6" sx={{ my: 5 }} color={fontcolor} >
                 Exclusive rates
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h5" color={fontcolor} >
                 {'By registering, you will access specially negotiated rates '}
                 {'that you will not find anywhere else.'}
               </Typography>

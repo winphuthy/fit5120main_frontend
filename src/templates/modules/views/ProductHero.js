@@ -4,8 +4,8 @@ import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 import mainPageImage from '../../../images/mainpage.jpg';
 
-const backgroundImage =
-  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400';
+// const backgroundImage =
+//   'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400';
 
 export default function ProductHero() {
   return (
@@ -22,7 +22,7 @@ export default function ProductHero() {
         src={mainPageImage}
         alt="increase priority"
       />
-      <Typography color="inherit" align="center" variant="h2" marked="center">
+      <Typography color="inherit" align="center" variant="h2">
         Bridging the Digital Divide
       </Typography>
       <Typography
@@ -31,9 +31,7 @@ export default function ProductHero() {
         variant="h5"
         sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
       >
-      </Typography>
-      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-        Discover the experience
+          Helping Seniors Get Online
       </Typography>
     </ProductHeroLayout>
   );
