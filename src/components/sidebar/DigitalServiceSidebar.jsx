@@ -1,5 +1,5 @@
 import "./sidebar.css";
-import DigitalService from "../../const/DigitalServiceContent.json"
+import DigitalService from "../../const/DigitalService/SettingEmail.json"
 
 export function DigitalServiceSidebar() {
     return (

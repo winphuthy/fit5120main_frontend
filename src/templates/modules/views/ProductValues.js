@@ -172,7 +172,8 @@ function ProductValues() {
                         </Grid>
                     </Grid>
                 </Container>
-            </Box></div>
+            </Box>
+        </div>
     );
 }
 
