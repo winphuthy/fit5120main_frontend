@@ -1,28 +1,35 @@
 [
   {
+    "id": 0,
     "content": "Step 1: Go to the website of the gmail service provider and click on the Create an account button.",
     "image": "digitalService/settingEmail/step1.png"
   },
   {
+    "id": 1,
     "content": "Step 2: Fill in the required information to register a new account, such as your name, desired email address, and password. Hints: To choose a strong and secure password to protect your account.",
     "image": "digitalService/settingEmail/step2.png"
   },
   {
+    "id": 2,
     "content": "Step 3: Sign up with a mobile phone number.",
     "image": "digitalService/settingEmail/step3.png"
   },
   {
+    "id": 3,
     "content": "Step 4: Log in to your new email account using your email address and password.",
     "image": "digitalService/settingEmail/step4.png"
   },
   {
+    "id": 4,
     "content": "Step 5: Set up your email account preferences and customise your profile by adding your name, profile picture, and other personal details.",
     "image": "digitalService/settingEmail/step5.png"
   },
   {
+    "id": 5,
     "content": "Step 6: Add contacts to your email address book and start sending and receiving emails. You can compose a new email, attach files, and format the text using the email service provider’s features."
   },
   {
+    "id": 6,
     "content": "Step 7: To ensure the security of your account, please change your password regularly."
   }
 ]

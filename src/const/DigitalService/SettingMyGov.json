@@ -1,5 +1,27 @@
 [
   {
-    "content": "Step 1: Go to the myGov website (https://my.gov.au)."
+    "id": 0,
+    "content": "Step 1: Go to the myGov website (https://my.gov.au).",
+    "image": "digitalService/settingMyGov/step1.png"
+  },
+  {
+    "id": 1,
+    "content": "Step 2: Click Create account.",
+    "image": "digitalService/settingMyGov/step2.png"
+  },
+  {
+    "id": 2,
+    "content": "Step 3: Fill out your personal information and select the services you want to register for.",
+    "image": "digitalService/settingMyGov/step3.png"
+  },
+  {
+    "id": 3,
+    "content": "Step 4: Create a password.",
+    "image": "digitalService/settingMyGov/step4.png"
+  },
+  {
+    "id": 4,
+    "content": "Step 5: Verify your identity and complete the registration process to log in to your myGov account.",
+    "image": "digitalService/settingMyGov/step5.png"
   }
 ]

@@ -1,6 +1,5 @@
 import React from "react";
 import '../components/sidebar/sidebar.css'
-import {GetInvolvedSidebar} from "../components/sidebar/GetInvolvedSidebar";
 
 export function GetInvolved() {
     return (

@@ -6,8 +6,16 @@
     margin-top: 20px;
 }
 
+h2  {
+}
+
+p {
+    margin: auto;
+}
+
 .maincontent {
-    width: 75%;
+    width: 70%;
+    padding-right: 30px;
 }
 
 .maincontent p {
