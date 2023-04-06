@@ -9,6 +9,7 @@ import ProductSmokingHero from "../templates/modules/views/ProductSmokingHero";
 */
 import AppFooter from "../templates/modules/views/AppFooter";
 import LineChart from "../components/LineChart";
+import InteractionChart from "../components/InteractionChart";
 
 export default function HomePage() {
     return (
@@ -18,8 +19,8 @@ export default function HomePage() {
                 {/*<AppAppBar />*/}
                 <ProductHero />
                 <div style={{background:"#333", height: "auto", paddingTop: '50px', paddingBottom: '50px'}}>
-                    <div style={{width:"50%", height: "500px", margin: "auto"}} >
-                        <LineChart/>
+                    <div style={{width:"50%", height: "400px", margin: "auto"}} >
+                        <InteractionChart/>
                     </div>
                     <div style={{width: '70%', margin: "auto", color: "whitesmoke"}}>
                         <h3>Why are we doing this?</h3>
