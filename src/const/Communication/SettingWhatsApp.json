@@ -1,0 +1,47 @@
+[
+    {
+      "id": 0,
+      "content": "Step 1: Select a different app store (here is the Apple Store as an example)",
+      "image": "communication/image42.jpg"
+    },
+    {
+      "id": 1,
+      "content": "Step 2: Search for the keyword WhatsApp in the app store and click on the Download button.",
+      "image": "communication/image32.jpg"
+    },
+    {
+        "id": 2,
+        "content": "Step 3: Open the whatsApp and enter your phone number as an account",
+        "image": "communication/image31.jpg"
+      },    
+      {
+        "id": 3,
+        "content": "Step 4: Enter the verification code from the phone number.",
+        "image": "communication/image22.jpg"
+      },
+      {
+        "id": 4,
+        "content": "Step 5: Enter some profile information.",
+        "image": "communication/image2.jpg"
+      },
+      {
+        "id": 5,
+        "content": "Calls: It allows users to make voice or video calls to other users.         ",
+        "image": "communication/image8.jpg"
+      },
+      {
+        "id": 6,
+        "content": "When the user clicks on the phone icon in the upper right corner, the user can send a video or voice link to other users in his phonebook.",
+        "image": "communication/image55.jpg"
+      },
+      {
+        "id": 7,
+        "content": "Chats: It allows users to chat with other users or create chat groups to chat with multiple users.",
+        "image": "communication/image49.jpg"
+      },
+      {
+        "id": 8,
+        "content": "By clicking on New Group in the upper right corner, users can create a new chat group by selecting the members they want to invite from the WhatsApp contact book.",
+        "image": "communication/image14.jpg"
+      }
+  ]

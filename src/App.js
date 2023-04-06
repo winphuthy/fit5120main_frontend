@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import NavBar from "./templates/modules/components/navBar/NavBar";
 import HomePage from "./page/HomePage";
 import {DigitalService} from "./page/DigitalService";
-import {DigitalCommunication} from "./page/DigitalCommunication";
+import { Commnication } from './page/Communication';
 import {GetInvolved} from "./page/GetInvolved";
 import {AvoidScam} from "./page/AvoidScam";
 import {About} from "./page/About";
@@ -18,7 +18,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<HomePage/>}/>
                     <Route path='digitalservice' element={<DigitalService/>}/>
-                    <Route path='digitalcommunication' element={<DigitalCommunication/>}/>
+                    <Route path='digitalcommunication' element={<Commnication/>}/>
                     <Route path='getinvolved' element={<GetInvolved/>}/>
                     <Route path='avoidingscam' element={<AvoidScam/>}/>
                     <Route path='about' element={<About/>}/>
