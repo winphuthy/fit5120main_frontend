@@ -1,4 +1,4 @@
-import {MenuItem, Select} from "@mui/material";
+import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import React, {useEffect, useState} from "react";
 import LandingPageData from '../data/LandingPageData.json'
 import {Bar} from "react-chartjs-2";
@@ -26,8 +26,8 @@ secondLabel = Object.keys(LandingPageData[0])[3];
 
 export default function InteractionChart() {
 
-    const [year, setYear] = useState(2017);
-    const [selection, setSelection] = useState('InclusionIndex');
+    const [year, setYear] = useState('');
+    const [selection, setSelection] = useState('');
     const [chartData, setChartData] = useState({
         labels: labelContent,
         datasets: [
@@ -60,6 +60,8 @@ export default function InteractionChart() {
 
         console.log('data: ' + data);
 
+        let outFlag = true;
+
         for (let i = 0; i < LandingPageData.length; i++) {
             let key = LandingPageData[i];
             console.log('key: ' + key['Year'])
@@ -69,7 +71,7 @@ export default function InteractionChart() {
                     labelSecond = '50+_Avg_Digital_Inclusion_Index';
                     ageDataFirst = key['14-49_Avg_Digital_Inclusion_Index'];
                     ageDataSecond = key['50+_Avg_Digital_Inclusion_Index'];
-                }else if (selection == 'AccessibilityIndex') {
+                } else if (selection == 'AccessibilityIndex') {
                     labelFirst = '14-49_Avg_Digital_Accessibility_Index';
                     labelSecond = '50+_Avg_Digital_Accessibility_Index';
                     ageDataFirst = key['14-49_Avg_Digital_Accessibility_Index'];
@@ -80,10 +82,18 @@ export default function InteractionChart() {
                     ageDataFirst = key['14-49_Avg_Digital_Ability_Index'];
                     ageDataSecond = key['50+_Avg_Digital_Ability_Index'];
                 }
+                outFlag = false;
+                break;
             }
         }
+
         console.log('ageDataFirst: ' + ageDataFirst);
         console.log('ageDataSecond: ' + ageDataSecond);
+
+        if (outFlag) {
+            return;
+        }
+
         ageDataFirst = parseInt(ageDataFirst);
         ageDataSecond = parseInt(ageDataSecond);
 
@@ -107,25 +117,30 @@ export default function InteractionChart() {
 
     return (
         <div style={{height: '300px'}}>
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={selection}
-                label="Year"
-                onChange={event => setSelection(event.target.value)}
-            >
-                {selectOptions}
-            </Select>
+            <FormControl fullWidth>
+                <InputLabel id="SelectionInput">Selection</InputLabel>
+                <Select
+                    labelId='SelectionInput'
+                    label="Selection"
+                    value={selection}
+                    sx={{color:"white"}}
+                    onChange={event => setSelection(event.target.value)}
+                >
+                    {selectOptions}
+                </Select>
+            </FormControl>
             <Bar data={chartData} options={options}/>
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={year}
-                label="Year"
-                onChange={event => setYear(event.target.value)}
-            >
-                {yearOptions}
-            </Select>
+            <FormControl fullWidth>
+                <InputLabel id="YearInput">Year</InputLabel>
+                <Select
+                    labelId='YearInput'
+                    label="Year"
+                    value={year}
+                    onChange={event => setYear(event.target.value)}
+                >
+                    {yearOptions}
+                </Select>
+            </FormControl>
         </div>
     )
 };

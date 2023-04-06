@@ -133,26 +133,26 @@ function ProductValues() {
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Box sx={item}>
-                                <Box
-                                    component="img"
-                                    src={HowDonating}
-                                    alt="graph"
-                                    sx={{height: 100}}
-                                />
-                                <Typography variant="h6" sx={{my: 5}} color={fontcolor}>
-                                    How donating can help:
-                                </Typography>
-                                <Typography variant="h5" color={fontcolor}>
-                                    {
-                                        'Your donation can help people to stay connected with their love ones and service they need '
-                                    }
+                        {/*<Grid item xs={12} md={4}>*/}
+                        {/*    <Box sx={item}>*/}
+                        {/*        <Box*/}
+                        {/*            component="img"*/}
+                        {/*            src={HowDonating}*/}
+                        {/*            alt="graph"*/}
+                        {/*            sx={{height: 100}}*/}
+                        {/*        />*/}
+                        {/*        <Typography variant="h6" sx={{my: 5}} color={fontcolor}>*/}
+                        {/*            How donating can help:*/}
+                        {/*        </Typography>*/}
+                        {/*        <Typography variant="h5" color={fontcolor}>*/}
+                        {/*            {*/}
+                        {/*                'Your donation can help people to stay connected with their love ones and service they need '*/}
+                        {/*            }*/}
 
-                                    {/*{'your Sundays will not be alike.'}*/}
-                                </Typography>
-                            </Box>
-                        </Grid>
+                        {/*            /!*{'your Sundays will not be alike.'}*!/*/}
+                        {/*        </Typography>*/}
+                        {/*    </Box>*/}
+                        {/*</Grid>*/}
                         <Grid item xs={12} md={4}>
                             <Box sx={item}>
                                 <Box
