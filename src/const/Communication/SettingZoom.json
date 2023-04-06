@@ -1,0 +1,104 @@
+[
+  {
+    "id": 0,
+    "content": "Step 3: You should now be in the download centre of the zoom web page, it will look as shown below:",
+    "image": "communication/image40.png"
+  },
+  {
+    "id": 1,
+    "content": "Step 4: Under the section titled “Zoom Desktop Client”, click the blue “Download” button. The section will look like this: ",
+    "image": "communication/image57.png"
+  },
+  {
+    "id": 2,
+    "content": "Step 5: Once you’ve clicked the button, a file explorer will pop-up, this is where you’ll be saving the Zoom installer to, please click “Save” on the bottom right of the pop-up",
+    "image": "communication/image19.png"
+  },
+  {
+    "id": 3,
+    "content": "Step 6: Once done, this will save the file, to run the file, simply click on the file titled “ZoomInstallerFull.exe” at the bottom left of your browser. It will look like this:",
+    "image": "communication/image15.png"
+  },
+  {
+    "id": 4,
+    "content": "Step 7: Once you’ve clicked on the installer, a Window shown below will appear, showing you that you are now successfully installing the Zoom application.",
+    "image": "communication/image6.png"
+  },
+  {
+    "id": 5,
+    "content": "Step 8: You would have now successfully installed zoom, and should be brought to the following screen: ",
+    "image": "communication/image51.png"
+  },
+  {
+    "id": 6,
+    "content": "You can sign in via your gmail, if you have not already created a gmail, please refer to our guide on creating a gmail account within the Digital Services page of this website. To do so, please click on the following icon on the sign-in page:",
+    "image": "communication/image53.png"
+  },
+  {
+    "id": 7,
+    "content": "Step 1: Once you’ve done so, it will navigate you to a gmail page, in which you’ll be able to choose from a few gmail accounts. Please choose your gmail account here.",
+    "image": "communication/image20.png"
+  },
+  {
+    "id": 8,
+    "content": "Step 2: Once you’ve selected your account, the following page will open within your browser. Clicking on “Open Zoom Meetings” to connect your gmail account with Zoom",
+    "image": "communication/image28.png"
+  },
+  {
+    "id": 9,
+    "content": "Step 3: You can tell your account has been successfully connected as the Zoom application will now have you email’s profile picture within the top right corner of the app. ",
+    "image": "communication/image26.png"
+  },
+  {
+    "id": 10,
+    "content": "Step 4: In here, the “E” within the pink box, was the used emails display picture. ",
+    "image": "communication/image4.png"
+  },
+  {
+    "id": 11,
+    "content": "Simply click on the link, and this will open up a new page on your browser that will look as below:",
+    "image": "communication/image28.png"
+  },
+  {
+    "id": 12,
+    "content": "Click on the “Open Zoom Meetings” Button, and you will now be in the zoom meeting.",
+    "image": "communication/image30.png"
+  },
+  {
+    "id": 13,
+    "content": "Step 1: Hit the Windows key on your keyboard, it will look like this",
+    "image": "communication/image1.png"
+  },
+  {
+    "id": 14,
+    "content": "Step 2: Type in “Zoom” into the search bar and hit the “Enter” key. This will launch the Zoom application. You can tell the application is open, if you see the following window:",
+    "image": "communication/image29.png"
+  },
+  {
+    "id": 15,
+    "content": "Step 3: Within the Zoom software, click the following button:",
+    "image": "communication/image25.png"
+  },
+  {
+    "id": 16,
+    "content": "Step 4: Click on the little arrow on the top right of the “Paritcipants” tab within the navigation bar at the bottom of the meeting you’ve just started. ",
+    "image": "communication/image54.png"
+  },
+  {
+    "id": 17,
+    "content": "Step 5: Click on “Copy Invite Link”. This automatically copies the invite link to the meeting you are currently in.         "
+  },
+  {
+    "id": 18,
+    "content": "Step 6: To paste the invite link into an email or whatsapp message to the person you’d like to send it to, simply search for the recipient’s details within the respective tool, and hit both the “Ctrl” and “v” keys together at the same time into the chat/email with them"
+  },
+  {
+    "id": 19,
+    "content": "Step 7: Send the message/email, and they would now be able to enter your Zoom meeting through the link you’ve provided them! "
+  },
+  {
+    "id": 20,
+    "content": "You can tell if your microphone/camera is on based on the icons: In the right image, the “Mute” box, does not have a “red striking line” through it, this means that you are not muted.The “Start Video” box, has a “red striking line” through it, this means that your camera is turned off. To turn these options either on/off, simply click on the chosen one you’d like to adjust.  ",
+    "image": "communication/image46.png"
+  }
+]
