@@ -1,0 +1,65 @@
+[
+    {
+        "Year": 2014,
+        "14-49_Avg_Digital_Inclusion_Index": 58.9,
+        "50+_Avg_Digital_Inclusion_Index": 47.3,
+        "14-49_Avg_Digital_Accessibility_Index": 70.1,
+        "50+_Avg_Digital_Accessibility_Index": 53.5,
+        "14-49_Avg_Digital_Ability_Index": 50.7,
+        "50+_Avg_Digital_Ability_Index": 29.3
+    },
+    {
+        "Year": 2015,
+        "14-49_Avg_Digital_Inclusion_Index": 58,
+        "50+_Avg_Digital_Inclusion_Index": 48.3,
+        "14-49_Avg_Digital_Accessibility_Index": 69.7,
+        "50+_Avg_Digital_Accessibility_Index": 55.5,
+        "14-49_Avg_Digital_Ability_Index": 51.9,
+        "50+_Avg_Digital_Ability_Index": 32.7
+    },
+    {
+        "Year": 2016,
+        "14-49_Avg_Digital_Inclusion_Index": 62.3,
+        "50+_Avg_Digital_Inclusion_Index": 49.15,
+        "14-49_Avg_Digital_Accessibility_Index": 72.9,
+        "50+_Avg_Digital_Accessibility_Index": 59.3,
+        "14-49_Avg_Digital_Ability_Index": 54,
+        "50+_Avg_Digital_Ability_Index": 34
+    },
+    {
+        "Year": 2017,
+        "14-49_Avg_Digital_Inclusion_Index": 63.8,
+        "50+_Avg_Digital_Inclusion_Index": 50.6,
+        "14-49_Avg_Digital_Accessibility_Index": 76.6,
+        "50+_Avg_Digital_Accessibility_Index": 61.6,
+        "14-49_Avg_Digital_Ability_Index": 54.9,
+        "50+_Avg_Digital_Ability_Index": 35.6
+    },
+    {
+        "Year": 2018,
+        "14-49_Avg_Digital_Inclusion_Index": 66.2,
+        "50+_Avg_Digital_Inclusion_Index": 53.3,
+        "14-49_Avg_Digital_Accessibility_Index": 77.1,
+        "50+_Avg_Digital_Accessibility_Index": 65.1,
+        "14-49_Avg_Digital_Ability_Index": 57.2,
+        "50+_Avg_Digital_Ability_Index": 38.2
+    },
+    {
+        "Year": 2019,
+        "14-49_Avg_Digital_Inclusion_Index": 68.3,
+        "50+_Avg_Digital_Inclusion_Index": 54.9,
+        "14-49_Avg_Digital_Accessibility_Index": 80.7,
+        "50+_Avg_Digital_Accessibility_Index": 67.8,
+        "14-49_Avg_Digital_Ability_Index": 58,
+        "50+_Avg_Digital_Ability_Index": 40
+    },
+    {
+        "Year": 2020,
+        "14-49_Avg_Digital_Inclusion_Index": 67.3,
+        "50+_Avg_Digital_Inclusion_Index": 55.7,
+        "14-49_Avg_Digital_Accessibility_Index": 80.8,
+        "50+_Avg_Digital_Accessibility_Index": 69,
+        "14-49_Avg_Digital_Ability_Index": 58.8,
+        "50+_Avg_Digital_Ability_Index": 41.5
+    }
+]

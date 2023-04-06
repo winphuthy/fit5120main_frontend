@@ -9,6 +9,7 @@ import {GetInvolved} from "./page/GetInvolved";
 import {AvoidScam} from "./page/AvoidScam";
 import {About} from "./page/About";
 import {Error} from "./page/Error";
+import {Develop} from "./Develop";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path='avoidingscam' element={<AvoidScam/>}/>
                     <Route path='about' element={<About/>}/>
                     <Route path='*' element={<Error/>}/>
+                    <Route path='develop' element={<Develop/>}/>
                 </Routes>
                 {/*<AppFooter/>*/}
             </BrowserRouter>
