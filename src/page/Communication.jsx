@@ -7,7 +7,7 @@ import settingFaceTime from '../const/Communication/SettingFaceTime.json';
 import {StepContent} from "../components/StepContent";
 import '../images/communication/image42.jpg';
 
-export const Commnication = () => {
+export const Communication = () => {
 
     const whatsappRef = React.createRef();
     const zoomRef = React.createRef();
@@ -15,7 +15,7 @@ export const Commnication = () => {
     const facetimeRef = React.createRef();
 
     function handleClickWhatsAppRef() {
-        whatsappRef.current.scrollIntoView({ behavior: 'smooth' });
+        whatsappRef.current.scrollIntoView({behavior: 'smooth'});
     }
 
     function handleClickZoomRef() {
