@@ -9,7 +9,6 @@ import WhoWeAre from '../../../images/who_we_are.png';
 import WhatGoal from '../../../images/what_our_goal.png';
 import DigitalCommunicationIcon from '../../../images/DigitalCommunication.png';
 import DigitalServiceIcon from '../../../images/DigitalServicesIcon.png';
-import HowDonating from '../../../images/HowDonating.png';
 import AvoidingScams from '../../../images/Avoiding.png';
 
 
@@ -21,6 +20,12 @@ const item = {
 };
 
 const fontcolor = 'White';
+
+const cardColumn = {
+    padding: '20px',
+    border: '2px solid white',
+    borderRadius: '20px'
+}
 
 function ProductValues() {
     return (
@@ -37,8 +42,8 @@ function ProductValues() {
                         sx={{pointerEvents: 'none', position: 'absolute', top: -180}}
                     />
                     <Grid container spacing={5}>
-                        <Grid item xs={12} md={4}>
-                            <Box sx={item}>
+                        <Grid item xs={12} md={4} >
+                            <Box sx={item} style={cardColumn}>
                                 <Box
                                     component="img"
                                     src={WhoWeAre}
@@ -50,7 +55,7 @@ function ProductValues() {
                                 </Typography>
                                 <Typography variant="h5" color={fontcolor}>
                                     {
-                                        'We are team silicon shark, 5 Master of IT students from different disciplines looking to tackle the Digital Poverty issues in Australia'
+                                        'Our team at Silicon Sharks are comprised of 5 Masters of IT students coming from different disciplines to collaborate together'
                                     }
 
                                     {/*{*/}
@@ -59,8 +64,8 @@ function ProductValues() {
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Box sx={item}>
+                        <Grid item xs={12} md={4} >
+                            <Box sx={item} style={cardColumn}>
                                 <Box
                                     component="img"
                                     src={WhatGoal}
@@ -79,8 +84,8 @@ function ProductValues() {
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Box sx={item}>
+                        <Grid item xs={12} md={4} >
+                            <Box sx={item} style={cardColumn}>
                                 <Box
                                     component="img"
                                     src={DigitalCommunicationIcon}
@@ -111,8 +116,8 @@ function ProductValues() {
                         sx={{pointerEvents: 'none', position: 'absolute', top: -180}}
                     />
                     <Grid container spacing={5}>
-                        <Grid item xs={12} md={4}>
-                            <Box sx={item}>
+                        <Grid item xs={12} md={4} >
+                            <Box sx={item} style={cardColumn}>
                                 <Box
                                     component="img"
                                     src={DigitalServiceIcon}
@@ -153,8 +158,8 @@ function ProductValues() {
                         {/*        </Typography>*/}
                         {/*    </Box>*/}
                         {/*</Grid>*/}
-                        <Grid item xs={12} md={4}>
-                            <Box sx={item}>
+                        <Grid item xs={12} md={4} >
+                            <Box sx={item} style={cardColumn}>
                                 <Box
                                     component="img"
                                     src={AvoidingScams}
