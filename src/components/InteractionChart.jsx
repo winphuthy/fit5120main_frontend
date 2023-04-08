@@ -4,7 +4,6 @@ import LandingPageData from '../data/LandingPageData.json'
 import {Bar} from "react-chartjs-2";
 import data from "../data/data.json";
 import Button from "@mui/material/Button";
-import {makeStyles} from "@mui/styles";
 
 const YearList = LandingPageData.map(value => value['Year']);
 const SelectList = ['Inclusion Index', 'Accessibility Index', 'Ability Index'];
@@ -24,15 +23,6 @@ const firstLabel = Object.keys(LandingPageData[0])[2];
 let secondLabel;
 
 secondLabel = Object.keys(LandingPageData[0])[3];
-
-const useStyles = makeStyles({
-    select: {
-        '& .MuiSelect-root': {
-            backgroundColor: 'white !important',
-            color: 'white !important',
-        },
-    },
-});
 
 export default function InteractionChart() {
 
@@ -126,8 +116,6 @@ export default function InteractionChart() {
         setChartData(newData);
 
     }, [year, selection]);
-
-    const classes = useStyles();
 
     const resetCallback = useCallback((event) => {
         setChartData({
