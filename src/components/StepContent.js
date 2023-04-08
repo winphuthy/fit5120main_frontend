@@ -25,7 +25,7 @@ export const StepContent = (props) => {
             let image
             if (object.image) {
                 const path = require('../images/' + object.image);
-                image = <img style={{width: '50%', height: "auto"}} src={path}/>;
+                image = <img style={{width: '50%', height: "auto"}} src={path} alt={'img'}/>;
 
             } else {
                 image = <></>

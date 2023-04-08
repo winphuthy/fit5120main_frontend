@@ -2,7 +2,6 @@ import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import React, {useCallback, useEffect, useState} from "react";
 import LandingPageData from '../data/LandingPageData.json'
 import {Bar} from "react-chartjs-2";
-import data from "../data/data.json";
 import Button from "@mui/material/Button";
 
 const YearList = LandingPageData.map(value => value['Year']);
