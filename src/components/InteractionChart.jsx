@@ -139,8 +139,8 @@ export default function InteractionChart() {
     }, []);
 
     return (
-        <div style={{height: '300px'}} className={classes.select}>
-            <div style={{margin: '20px 0px'}} className={classes.select}>
+        <div style={{height: '300px'}}>
+            <div style={{margin: '20px 0px'}}>
                 <FormControl fullWidth>
                     <InputLabel id="SelectionInput">Selection</InputLabel>
                     <Select
