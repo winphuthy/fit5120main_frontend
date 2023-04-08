@@ -1,5 +1,6 @@
 import React from 'react';
 import {Line} from 'react-chartjs-2';
+import {Chart as ChartJS} from "chart.js/auto";
 import data from '../data/data.json';
 // import {Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement} from "chart.js";
 
