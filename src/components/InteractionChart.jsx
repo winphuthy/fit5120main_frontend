@@ -1,8 +1,10 @@
+import './InteractionChart.css'
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import React, {useCallback, useEffect, useState} from "react";
 import LandingPageData from '../data/LandingPageData.json'
 import {Bar} from "react-chartjs-2";
 import Button from "@mui/material/Button";
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 const YearList = LandingPageData.map(value => value['Year']);
 const SelectList = ['Inclusion Index', 'Accessibility Index', 'Ability Index'];
@@ -13,6 +15,13 @@ const options = {
     maintainAspectRatio: false
 }
 
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#fff',
+        },
+    },
+});
 
 const labelContent = LandingPageData.map(value => value.Year);
 const ageDataFirst = LandingPageData.map(value => Object.values(value)[2]);
@@ -42,10 +51,10 @@ export default function InteractionChart() {
     });
 
     const yearOptions = YearList.map((value) =>
-        < MenuItem value={parseInt(value)}>{value}</MenuItem>
+        < MenuItem value={parseInt(value)} id={parseInt(value)}>{value}</MenuItem>
     )
     const selectOptions = SelectList.map((value) =>
-        < MenuItem value={value}>{value}</MenuItem>
+        < MenuItem value={value} id={value}>{value}</MenuItem>
     )
 
     useEffect(() => {
@@ -53,6 +62,7 @@ export default function InteractionChart() {
         let ageDataFirst, ageDataSecond;
         let labelFirst, labelSecond;
 
+        // console.log('useEffect in actived')
         // console.log('landingPageData: ' + LandingPageData)
 
         // let data = JSON.stringify(LandingPageData);
@@ -64,13 +74,14 @@ export default function InteractionChart() {
         for (let i = 0; i < LandingPageData.length; i++) {
             let key = LandingPageData[i];
             // console.log('key: ' + key['Year'])
+            // console.log('selection: ' + selection);
             if (key['Year'] === year) {
-                if (selection === 'InclusionIndex') {
+                if (selection === 'Inclusion Index') {
                     labelFirst = '14-49_Avg_Digital_Inclusion_Index';
                     labelSecond = '50+_Avg_Digital_Inclusion_Index';
                     ageDataFirst = key['14-49_Avg_Digital_Inclusion_Index'];
                     ageDataSecond = key['50+_Avg_Digital_Inclusion_Index'];
-                } else if (selection === 'AccessibilityIndex') {
+                } else if (selection === 'Accessibility Index') {
                     labelFirst = '14-49_Avg_Digital_Accessibility_Index';
                     labelSecond = '50+_Avg_Digital_Accessibility_Index';
                     ageDataFirst = key['14-49_Avg_Digital_Accessibility_Index'];
@@ -140,26 +151,30 @@ export default function InteractionChart() {
     return (
         <div style={{height: '300px'}}>
             <div style={{margin: '20px 0px'}}>
-                <FormControl fullWidth>
-                    <InputLabel id="SelectionInput">Selection</InputLabel>
-                    <Select
-                        labelId='SelectionInput'
-                        label="Selection"
-                        value={selection}
-                        onChange={event => setSelection(event.target.value)}
-                    >
-                        {selectOptions}
-                    </Select>
-                </FormControl>
+                <ThemeProvider theme={theme}>
+                    <FormControl variant="filled" style={{color: 'white'}} fullWidth>
+                        <InputLabel id="SelectionInput" style={{color: 'white'}}>Selection</InputLabel>
+                        <Select
+                            labelId='SelectionInput'
+                            label="Selection"
+                            value={selection}
+                            onChange={event => setSelection(event.target.value)}
+                            style={{color: 'white'}}
+                        >
+                            {selectOptions}
+                        </Select>
+                    </FormControl>
+                </ThemeProvider>
             </div>
             <div style={{margin: '20px 0px'}}>
-                <FormControl fullWidth>
-                    <InputLabel id="YearInput">Year</InputLabel>
+                <FormControl variant="filled" style={{color: 'white'}} fullWidth>
+                    <InputLabel id="YearInput" style={{color: 'white'}}>Year</InputLabel>
                     <Select
                         labelId='YearInput'
                         label="Year"
                         value={year}
                         onChange={event => setYear(event.target.value)}
+                        style={{color: 'white'}}
                     >
                         {yearOptions}
                     </Select>
@@ -168,5 +183,5 @@ export default function InteractionChart() {
             <Button variant="outlined" onClick={resetCallback}>Reset</Button>
             <Bar data={chartData} options={options}/>
         </div>
-    )
+    );
 };

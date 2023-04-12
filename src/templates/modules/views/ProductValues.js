@@ -55,7 +55,7 @@ function ProductValues() {
                                 </Typography>
                                 <Typography variant="h5" color={fontcolor}>
                                     {
-                                        'Our team at Silicon Sharks are comprised of 5 Masters of IT students coming from different disciplines to collaborate together'
+                                        'We are a team of 5 Masters of IT students from different disciplines collaborating together'
                                     }
 
                                     {/*{*/}
@@ -96,7 +96,7 @@ function ProductValues() {
                                     Digital communication:
                                 </Typography>
                                 <Typography variant="h5" color={fontcolor}>
-                                    {'Step-by-step instructions on some of the most popular applications '}
+                                    {'Step-by-step instructions on how to access some of the most popular digital communications platforms'}
                                     {/*{'that you will not find anywhere else.'}*/}
                                 </Typography>
                             </Box>
@@ -129,7 +129,7 @@ function ProductValues() {
                                 </Typography>
                                 <Typography variant="h5" color={fontcolor}>
                                     {
-                                        'Steps on create,link, and access some of the most common digital service '
+                                        'Step-by-step instructions on how to access some of the most commonly used digital services'
                                     }
 
                                     {/*{*/}

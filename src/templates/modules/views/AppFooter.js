@@ -8,8 +8,8 @@ function Copyright() {
     return (
         <React.Fragment>
             {'© '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
+            <Link color="inherit">
+                SiliconSharks
             </Link>{' '}
             {new Date().getFullYear()}
         </React.Fragment>
