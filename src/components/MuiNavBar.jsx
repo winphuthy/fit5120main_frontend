@@ -1,8 +1,9 @@
 import * as React from 'react';
-import {Stack, Button, AppBar, Toolbar, Typography, MenuItem, Menu} from "@mui/material";
+import {AppBar, Button, Menu, MenuItem, Stack, Toolbar, Typography} from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import {NavLink} from "react-router-dom";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const buttonSX = {
     '&.active': {
@@ -44,6 +45,7 @@ export const MuiNavBar = () => {
                 <Button component={NavLink} to='/' color='inherit' sx={buttonSX}>Home</Button>
                 <Button color='inherit'
                         onClick={handleClick_DC}
+                        endIcon={<KeyboardArrowDownIcon/>}
                         aria-controls={open_DC ? 'basic-menu_DC' : undefined}
                         aria-haspopup="true"
                         aria-expanded={open_DC ? 'true' : undefined}>
@@ -51,6 +53,7 @@ export const MuiNavBar = () => {
                 </Button>
                 <Button color='inherit'
                         onClick={handleClick_DS}
+                        endIcon={<KeyboardArrowDownIcon/>}
                         aria-controls={open_DS ? 'basic-menu_DS' : undefined}
                         aria-haspopup="true"
                         aria-expanded={open_DS ? 'true' : undefined}
