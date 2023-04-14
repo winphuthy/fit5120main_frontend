@@ -118,7 +118,7 @@ export default function InteractionChart() {
 
     }, [year, selection]);
 
-    const resetCallback = useCallback((event) => {
+    const resetCallback = useCallback(() => {
         setChartData({
             labels: labelContent,
             datasets: [

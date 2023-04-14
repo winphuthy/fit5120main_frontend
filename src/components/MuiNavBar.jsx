@@ -1,7 +1,7 @@
 import * as React from 'react';
+import icon from '../images/SiliconSharksIcon_white.png';
 import {AppBar, Button, Menu, MenuItem, Stack, Toolbar, Typography} from "@mui/material";
 import IconButton from "@mui/material/IconButton";
-import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import {NavLink} from "react-router-dom";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
@@ -36,10 +36,9 @@ export const MuiNavBar = () => {
     return (<AppBar position='static'>
         <Toolbar>
             <IconButton component={NavLink} to='/' size='large' edge='start' color='inherit' aria-label='logo'>
-                <CatchingPokemonIcon/>
+                <img src={icon} style={{width: '6vw', height: "auto"}} alt='icon'/>
             </IconButton>
             <Typography variant='h6' component='dic' sx={{flexGrow: 1}}>
-                Test
             </Typography>
             <Stack direction='row' spacing={2}>
                 <Button component={NavLink} to='/' color='inherit' sx={buttonSX}>Home</Button>
