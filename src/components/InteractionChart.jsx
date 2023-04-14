@@ -151,30 +151,26 @@ export default function InteractionChart() {
     return (
         <div style={{height: '300px'}}>
             <div style={{margin: '20px 0px'}}>
-                <ThemeProvider theme={theme}>
-                    <FormControl variant="filled" style={{color: 'white'}} fullWidth>
-                        <InputLabel id="SelectionInput" style={{color: 'white'}}>Selection</InputLabel>
-                        <Select
-                            labelId='SelectionInput'
-                            label="Selection"
-                            value={selection}
-                            onChange={event => setSelection(event.target.value)}
-                            style={{color: 'white'}}
-                        >
-                            {selectOptions}
-                        </Select>
-                    </FormControl>
-                </ThemeProvider>
+                <FormControl variant="outlined" fullWidth>
+                    <InputLabel id="SelectionInput">Selection</InputLabel>
+                    <Select
+                        labelId='SelectionInput'
+                        label="Selection"
+                        value={selection}
+                        onChange={event => setSelection(event.target.value)}
+                    >
+                        {selectOptions}
+                    </Select>
+                </FormControl>
             </div>
             <div style={{margin: '20px 0px'}}>
-                <FormControl variant="filled" style={{color: 'white'}} fullWidth>
-                    <InputLabel id="YearInput" style={{color: 'white'}}>Year</InputLabel>
+                <FormControl variant="outlined" fullWidth>
+                    <InputLabel id="YearInput">Year</InputLabel>
                     <Select
                         labelId='YearInput'
                         label="Year"
                         value={year}
                         onChange={event => setYear(event.target.value)}
-                        style={{color: 'white'}}
                     >
                         {yearOptions}
                     </Select>

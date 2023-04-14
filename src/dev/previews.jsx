@@ -6,6 +6,12 @@ import AppFooter from "../templates/modules/views/AppFooter";
 import ProductValues from "../templates/modules/views/ProductValues";
 import {StepContent} from "../components/StepContent";
 import {DigitalService} from "../page/DigitalService";
+import {MuiNavBar} from "../components/MuiNavBar";
+import {Whatsapp} from "../page/Whatsapp";
+import {Zoom} from "../page/Zoom";
+import {Facebook} from "../page/Facebook";
+import {DigitalCommunication} from "../page/DigitalCommunication";
+import {FaceTime} from "../page/FaceTime";
 
 const ComponentPreviews = () => {
     return (
@@ -24,6 +30,24 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/DigitalService">
                 <DigitalService/>
+            </ComponentPreview>
+            <ComponentPreview path="/MuiNavBar">
+                <MuiNavBar/>
+            </ComponentPreview>
+            <ComponentPreview path="/Whatsapp">
+                <Whatsapp/>
+            </ComponentPreview>
+            <ComponentPreview path="/Zoom">
+                <Zoom/>
+            </ComponentPreview>
+            <ComponentPreview path="/Facebook">
+                <Facebook/>
+            </ComponentPreview>
+            <ComponentPreview path="/DigitalCommunication">
+                <DigitalCommunication/>
+            </ComponentPreview>
+            <ComponentPreview path="/FaceTime">
+                <FaceTime/>
             </ComponentPreview>
         </Previews>
     )

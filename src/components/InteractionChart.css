@@ -4,10 +4,25 @@
 /*    color: white !important;*/
 /*}*/
 
-/*.Mui-focused .MuiOutlinedInput-notchedOutline {*/
-/*    !*border-color: green !important;*!*/
+/*.MuiOutlinedInput-notchedOutline {*/
+/*    border-color: #fff !important;*/
+/*    !*for border color*!*/
 /*}*/
 
-.MuiSelect-select {
-    color: white;
-}
+/*.MuiSelect-icon {*/
+/*    color: #fff !important;*/
+/*    !* for icon drop down icon color*!*/
+/*}*/
+
+/*.MuiInputLabel-root {*/
+/*    color: #fff !important;*/
+/*    !*for lable color*!*/
+/*}*/
+
+/*.Mui-focused .MuiOutlinedInput-notchedOutline {*/
+/*    border-color: #1770c8 !important;*/
+/*}*/
+
+/*.MuiSelect-select {*/
+/*    color: white;*/
+/*}*/

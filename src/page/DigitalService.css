@@ -14,10 +14,12 @@ p {
 }
 
 .maincontent {
-    width: 70%;
+    width: 80%;
     padding-right: 30px;
+    margin: auto;
 }
 
 .maincontent p {
     width: 90%;
 }
+

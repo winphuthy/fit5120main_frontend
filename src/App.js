@@ -1,7 +1,6 @@
 import './App.css';
 import * as React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import NavBar from "./templates/modules/components/navBar/NavBar";
 import HomePage from "./page/HomePage";
 import {DigitalService} from "./page/DigitalService";
 import {Communication} from './page/Communication';
@@ -10,16 +9,37 @@ import {AvoidScam} from "./page/AvoidScam";
 import {About} from "./page/About";
 import {Error} from "./page/Error";
 import {Develop} from "./Develop";
+import {createTheme, ThemeProvider} from '@mui/material/styles';
+import {MuiNavBar} from "./components/MuiNavBar";
+import {Whatsapp} from "./page/Whatsapp";
+import {Zoom} from "./page/Zoom";
+import {Facebook} from "./page/Facebook";
+import {FaceTime} from "./page/FaceTime";
+import {Email} from "./page/Email";
+import {MyGov} from "./page/MyGov";
+import {Medicare} from "./page/Medicare";
+
+const theme = createTheme({
+    palette: {
+        mode: 'dark',
+    },
+});
 
 function App() {
     return (
-        <div>
+        <ThemeProvider theme={theme}>
             <BrowserRouter>
-                <NavBar/>
+                <MuiNavBar/>
                 <Routes>
                     <Route path='/' element={<HomePage/>}/>
                     <Route path='digitalservice' element={<DigitalService/>}/>
-                    <Route path='digitalcommunication' element={<Communication/>}/>
+                    <Route path='whatsapp' element={<Whatsapp/>}/>
+                    <Route path='zoom' element={<Zoom/>}/>
+                    <Route path='facebook' element={<Facebook/>}/>
+                    <Route path='facetime' element={<FaceTime/>}/>
+                    <Route path='email' element={<Email/>}/>
+                    <Route path='mygov' element={<MyGov/>}/>
+                    <Route path='medicare' element={<Medicare/>}/>
                     <Route path='getinvolved' element={<GetInvolved/>}/>
                     <Route path='avoidingscam' element={<AvoidScam/>}/>
                     <Route path='about' element={<About/>}/>
@@ -28,7 +48,7 @@ function App() {
                 </Routes>
                 {/*<AppFooter/>*/}
             </BrowserRouter>
-        </div>
+        </ThemeProvider>
     );
 }
 
