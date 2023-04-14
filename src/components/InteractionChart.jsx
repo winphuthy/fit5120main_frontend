@@ -4,7 +4,6 @@ import React, {useCallback, useEffect, useState} from "react";
 import LandingPageData from '../data/LandingPageData.json'
 import {Bar} from "react-chartjs-2";
 import Button from "@mui/material/Button";
-import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 const YearList = LandingPageData.map(value => value['Year']);
 const SelectList = ['Inclusion Index', 'Accessibility Index', 'Ability Index'];
@@ -14,14 +13,6 @@ const options = {
     // aspectRatio: 2,
     maintainAspectRatio: false
 }
-
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: '#fff',
-        },
-    },
-});
 
 const labelContent = LandingPageData.map(value => value.Year);
 const ageDataFirst = LandingPageData.map(value => Object.values(value)[2]);
