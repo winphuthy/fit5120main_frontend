@@ -1,12 +1,12 @@
 import React from "react";
-import NavBar from "./templates/modules/components/navBar/NavBar";
+import SwiperTest from "./components/swiper/SwiperTest";
 
 // import InteractionChart from "./components/InteractionChart";
 
 export function Develop() {
     return (
         <>
-            <NavBar/>
+            <SwiperTest/>
         </>
     )
 }
