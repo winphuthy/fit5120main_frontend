@@ -1,12 +1,14 @@
 import React from "react";
-import SwiperTest from "./components/swiper/SwiperTest";
+import SwiperTestTwo from "./components/swiper/SwiperTestTwo";
+import settingWhatsApp from './const/Communication/SettingWhatsApp.json';
+
 
 // import InteractionChart from "./components/InteractionChart";
 
 export function Develop() {
     return (
         <>
-            <SwiperTest/>
+            <SwiperTestTwo cardContent={settingWhatsApp}/>
         </>
     )
 }

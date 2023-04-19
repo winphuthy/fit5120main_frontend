@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './MuiNavBar.css'
 import icon from '../images/SiliconSharksIcon_white.png';
 import {AppBar, Button, Menu, MenuItem, Stack, Toolbar, Typography} from "@mui/material";
 import IconButton from "@mui/material/IconButton";
@@ -33,61 +34,69 @@ export const MuiNavBar = () => {
         setAnchorEl_DS(null);
     };
 
-    return (<AppBar position='static'>
-        <Toolbar>
-            <IconButton component={NavLink} to='/' size='large' edge='start' color='inherit' aria-label='logo'>
-                <img src={icon} style={{width: '6vw', height: "auto"}} alt='icon'/>
-            </IconButton>
-            <Typography variant='h6' component='dic' sx={{flexGrow: 1}}>
-            </Typography>
-            <Stack direction='row' spacing={2}>
-                <Button component={NavLink} to='/' color='inherit' sx={buttonSX}>Home</Button>
-                <Button color='inherit'
-                        onClick={handleClick_DC}
-                        endIcon={<KeyboardArrowDownIcon/>}
-                        aria-controls={open_DC ? 'basic-menu_DC' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open_DC ? 'true' : undefined}>
-                    Digital Communication
-                </Button>
-                <Button color='inherit'
-                        onClick={handleClick_DS}
-                        endIcon={<KeyboardArrowDownIcon/>}
-                        aria-controls={open_DS ? 'basic-menu_DS' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open_DS ? 'true' : undefined}
-                >
-                    Digital Service
-                </Button>
-            </Stack>
-            <Menu
-                id="basic-menu_DC"
-                anchorEl={anchorEl_DC}
-                open={open_DC}
-                onClose={handleClose_DC}
-                MenuListProps={{
-                    'aria-labelledby': 'basic-button',
-                }}
-            >
-                <MenuItem component={NavLink} to="whatsapp" onClick={handleClose_DC} sx={buttonSX}>Whatsapp</MenuItem>
-                <MenuItem component={NavLink} to="zoom" onClick={handleClose_DC} sx={buttonSX}>Zoom</MenuItem>
-                <MenuItem component={NavLink} to="facebook" onClick={handleClose_DC} sx={buttonSX}>Facebook</MenuItem>
-                <MenuItem component={NavLink} to="facetime" onClick={handleClose_DC} sx={buttonSX}>FaceTime</MenuItem>
-            </Menu>
+    return (
+        <div className='muinavbar'>
+            <AppBar position='static'>
+                <Toolbar>
+                    <IconButton component={NavLink} to='/' size='large' edge='start' color='inherit' aria-label='logo'>
+                        <img src={icon} style={{width: 'auto', height: "5vh"}} alt='icon'/>
+                    </IconButton>
+                    <Typography variant='h6' component='dic' sx={{flexGrow: 1}}>
+                    </Typography>
+                    <Stack direction='row' spacing={2}>
+                        <Button component={NavLink} to='/' color='inherit' sx={buttonSX}>Home</Button>
+                        <Button color='inherit'
+                                onClick={handleClick_DC}
+                                endIcon={<KeyboardArrowDownIcon/>}
+                                aria-controls={open_DC ? 'basic-menu_DC' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open_DC ? 'true' : undefined}>
+                            Digital Communication
+                        </Button>
+                        <Button color='inherit'
+                                onClick={handleClick_DS}
+                                endIcon={<KeyboardArrowDownIcon/>}
+                                aria-controls={open_DS ? 'basic-menu_DS' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open_DS ? 'true' : undefined}
+                        >
+                            Digital Service
+                        </Button>
+                    </Stack>
+                    <Menu
+                        id="basic-menu_DC"
+                        anchorEl={anchorEl_DC}
+                        open={open_DC}
+                        onClose={handleClose_DC}
+                        MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                        }}
+                    >
+                        <MenuItem component={NavLink} to="whatsapp" onClick={handleClose_DC}
+                                  sx={buttonSX}>Whatsapp</MenuItem>
+                        <MenuItem component={NavLink} to="zoom" onClick={handleClose_DC} sx={buttonSX}>Zoom</MenuItem>
+                        <MenuItem component={NavLink} to="facebook" onClick={handleClose_DC}
+                                  sx={buttonSX}>Facebook</MenuItem>
+                        <MenuItem component={NavLink} to="facetime" onClick={handleClose_DC}
+                                  sx={buttonSX}>FaceTime</MenuItem>
+                    </Menu>
 
-            <Menu
-                id="basic-menu_DS"
-                anchorEl={anchorEl_DS}
-                open={open_DS}
-                onClose={handleClose_DS}
-                MenuListProps={{
-                    'aria-labelledby': 'basic-button',
-                }}
-            >
-                <MenuItem component={NavLink} to="email" onClick={handleClose_DS} sx={buttonSX}>Email</MenuItem>
-                <MenuItem component={NavLink} to="mygov" onClick={handleClose_DS} sx={buttonSX}>MyGov</MenuItem>
-                <MenuItem component={NavLink} to="medicare" onClick={handleClose_DS} sx={buttonSX}>Medicare</MenuItem>
-            </Menu>
-        </Toolbar>
-    </AppBar>);
+                    <Menu
+                        id="basic-menu_DS"
+                        anchorEl={anchorEl_DS}
+                        open={open_DS}
+                        onClose={handleClose_DS}
+                        MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                        }}
+                    >
+                        <MenuItem component={NavLink} to="email" onClick={handleClose_DS} sx={buttonSX}>Email</MenuItem>
+                        <MenuItem component={NavLink} to="mygov" onClick={handleClose_DS} sx={buttonSX}>MyGov</MenuItem>
+                        <MenuItem component={NavLink} to="medicare" onClick={handleClose_DS}
+                                  sx={buttonSX}>Medicare</MenuItem>
+                    </Menu>
+                </Toolbar>
+            </AppBar>
+        </div>
+    );
 }

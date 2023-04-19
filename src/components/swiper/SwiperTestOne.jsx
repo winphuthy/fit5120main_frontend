@@ -7,16 +7,22 @@ import picture from '../../images/mainpage.jpg'
 import "swiper/css";
 import "swiper/css/pagination";
 
-import "./styles.css";
+import "./styles1.css";
 
 // import required modules
 import {Pagination} from "swiper";
 
-export default function SwiperTest() {
+export default function SwiperTestOne() {
     const pagination = {
         clickable: true,
         renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
+            return '<span class="' +
+                className +
+                '">' +
+                (
+                    index + 1
+                ) +
+                "</span>";
         },
     };
 

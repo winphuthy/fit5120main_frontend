@@ -12,6 +12,7 @@ import {Zoom} from "../page/Zoom";
 import {Facebook} from "../page/Facebook";
 import {DigitalCommunication} from "../page/DigitalCommunication";
 import {FaceTime} from "../page/FaceTime";
+import {SlideCard} from "../components/swiper/SlideCard";
 
 const ComponentPreviews = () => {
     return (
@@ -48,6 +49,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/FaceTime">
                 <FaceTime/>
+            </ComponentPreview>
+            <ComponentPreview path="/SlideCard">
+                <SlideCard/>
             </ComponentPreview>
         </Previews>
     )
