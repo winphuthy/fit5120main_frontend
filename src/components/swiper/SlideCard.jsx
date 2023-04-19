@@ -6,7 +6,7 @@ export const SlideCard = (prop) => {
     const input = prop.input;
     if (input.image) {
         const path = require('../../images/' + input.image);
-        cardImg = <img src={path} alt={'img'}/>;
+        cardImg = <img src={path} alt={'img'} id={prop.index}/>;
     } else {
         cardImg = <></>;
     }

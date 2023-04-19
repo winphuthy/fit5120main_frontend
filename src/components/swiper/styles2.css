@@ -19,7 +19,6 @@
 
 /*.swiper-container {
     height: calc(100vh - var(--navbar-height));
-
     width: 100vw;
 }*/
 
@@ -34,7 +33,6 @@
     background: url("../../images/mainpage.jpg");
     background-size: cover;
 
-
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
@@ -42,6 +40,7 @@
 }
 
 .swiper-slide p {
+    color: #194870;
     font-weight: bolder;
     font-size: 2rem;
     width: 45vw;

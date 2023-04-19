@@ -7,13 +7,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+// CSS
 import "./styles2.css";
 
 // import required modules
 import {Keyboard, Mousewheel, Navigation, Pagination} from "swiper";
 import {SlideCard} from "./SlideCard";
 
-export default function SwiperTestTwo(prop) {
+export default function SwiperModified(props) {
+
+    let insert;
+    if (props.insertCard) {
+        insert = <SwiperSlide>{props.insertCard}</SwiperSlide>;
+    } else {
+        insert = <></>;
+    }
 
     return (
         <>
@@ -26,10 +34,11 @@ export default function SwiperTestTwo(prop) {
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="mySwiper"
             >
-                {prop.cardContent.map((item) => (
-                    <div key={item.id + 1}>
+                {insert}
+                {props.cardContent.map((item, index) => (
+                    <div key={index}>
                         <SwiperSlide>
-                            <SlideCard input={item}/>
+                            <SlideCard index={index} input={item}/>
                         </SwiperSlide>
                     </div>
                 ))}

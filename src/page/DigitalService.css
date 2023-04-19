@@ -6,10 +6,22 @@
     margin-top: 20px;
 }
 
-h2  {
+.insertCard {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-content: center;
+    backdrop-filter: blur(5px);
 }
 
-p {
+.EmailContent h2 {
+    color: #7451f8;
+    text-align: center;
+    margin: auto;
+}
+
+.EmailContent p {
+    text-align: center;
     margin: auto;
 }
 

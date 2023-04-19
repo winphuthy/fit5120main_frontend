@@ -1,5 +1,5 @@
 import React from "react";
-import SwiperTestTwo from "./components/swiper/SwiperTestTwo";
+import SwiperModified from "./components/swiper/SwiperModified";
 import settingWhatsApp from './const/Communication/SettingWhatsApp.json';
 
 
@@ -8,7 +8,7 @@ import settingWhatsApp from './const/Communication/SettingWhatsApp.json';
 export function Develop() {
     return (
         <>
-            <SwiperTestTwo cardContent={settingWhatsApp}/>
+            <SwiperModified cardContent={settingWhatsApp}/>
         </>
     )
 }

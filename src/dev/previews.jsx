@@ -14,7 +14,7 @@ import {DigitalCommunication} from "../page/DigitalCommunication";
 import {FaceTime} from "../page/FaceTime";
 import {SlideCard} from "../components/swiper/SlideCard";
 import {Develop} from "../Develop";
-import SwiperTestTwo from "../components/swiper/SwiperTestTwo";
+import SwiperModified from "../components/swiper/SwiperModified";
 
 const ComponentPreviews = () => {
     return (
@@ -59,7 +59,7 @@ const ComponentPreviews = () => {
                 <Develop/>
             </ComponentPreview>
             <ComponentPreview path="/SwiperTestTwo">
-                <SwiperTestTwo/>
+                <SwiperModified/>
             </ComponentPreview>
         </Previews>
     )
