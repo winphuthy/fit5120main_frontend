@@ -13,6 +13,8 @@ import {Facebook} from "../page/Facebook";
 import {DigitalCommunication} from "../page/DigitalCommunication";
 import {FaceTime} from "../page/FaceTime";
 import {SlideCard} from "../components/swiper/SlideCard";
+import {Develop} from "../Develop";
+import SwiperTestTwo from "../components/swiper/SwiperTestTwo";
 
 const ComponentPreviews = () => {
     return (
@@ -52,6 +54,12 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/SlideCard">
                 <SlideCard/>
+            </ComponentPreview>
+            <ComponentPreview path="/Develop">
+                <Develop/>
+            </ComponentPreview>
+            <ComponentPreview path="/SwiperTestTwo">
+                <SwiperTestTwo/>
             </ComponentPreview>
         </Previews>
     )

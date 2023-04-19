@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React from "react";
 // Import Swiper React components
 import {Swiper, SwiperSlide} from "swiper/react";
 
@@ -10,26 +10,8 @@ import "swiper/css/pagination";
 import "./styles2.css";
 
 // import required modules
-import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper";
+import {Keyboard, Mousewheel, Navigation, Pagination} from "swiper";
 import {SlideCard} from "./SlideCard";
-
-/*const cardContent = [
-    {
-        "id": 1,
-        "content": "Step 2: Please click on the green rectangle that says: “Create new account”.      ",
-        "image": "communication/image35.png"
-    },
-    {
-        "id": 1,
-        "content": "Step 2: Please click on the green rectangle that says: “Create new account”.      ",
-        "image": "communication/image35.png"
-    },
-    {
-        "id": 1,
-        "content": "Step 2: Please click on the green rectangle that says: “Create new account”.      ",
-        "image": "communication/image35.png"
-    }
-]*/
 
 export default function SwiperTestTwo(prop) {
 
@@ -39,13 +21,13 @@ export default function SwiperTestTwo(prop) {
                 cssMode={true}
                 navigation={true}
                 pagination={true}
-                mousewheel={true}
                 keyboard={true}
+                mousewheel={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="mySwiper"
             >
                 {prop.cardContent.map((item) => (
-                    <div key={item.id}>
+                    <div key={item.id + 1}>
                         <SwiperSlide>
                             <SlideCard input={item}/>
                         </SwiperSlide>
