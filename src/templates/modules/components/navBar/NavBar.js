@@ -13,7 +13,7 @@ export default function NavBar() {
                 <NavLink to="digitalcommunication" className="nav">Digital Communication</NavLink>
                 <NavLink to="digitalservice" className="nav">Digital Service</NavLink>
                 {/*<NavLink to="getinvolved" className="nav">Get Involved</NavLink>*/}
-                {/*<NavLink to="avoidingscam" className="nav">Avoiding Scams</NavLink>*/}
+                <NavLink to="avoidingscam" className="nav">Avoiding Scams</NavLink>
                 {/*<NavLink to="about" className="nav">About</NavLink>*/}
             </div>
         </div>

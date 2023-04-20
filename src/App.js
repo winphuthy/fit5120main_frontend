@@ -41,7 +41,7 @@ function App() {
                     <Route path='medicare' element={<Medicare/>}/>
                     <Route path='getinvolved' element={<GetInvolved/>}/>
                     <Route path='avoidingscam' element={<AvoidScam/>}/>
-                    <Route path='about' element={<About/>}/>
+                    <Route path='learningsuggestions' element={<About/>}/>
                     <Route path='*' element={<Error/>}/>
                     <Route path='develop' element={<Develop/>}/>
                 </Routes>
