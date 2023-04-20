@@ -22,12 +22,12 @@ export function LearningSuggestion() {
       </div>
       <h1></h1>
       <div style={{position: 'relative', width: '70%',margin: 'auto'}}>
-    <select value={inputValue} style={{ height:100, width:'100%',backgroundColor:'rgba(220, 220, 220, 0.5)'}}>
-      <option value="word 1">word 1</option>
-      <option value="word 2">word 2</option>
-      <option value="word 3">word 3</option>
-    </select>
-  </div>
+  <select value={inputValue} onChange={(e) => setInputValue(e.target.value)} style={{ height:100, width:'100%',backgroundColor:'rgba(220, 220, 220, 0.5)'}}>
+    <option value="word 1">word 1</option>
+    <option value="word 2">word 2</option>
+    <option value="word 3">word 3</option>
+  </select>
+</div>
       <h1></h1>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <img src={KeywordImage} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
