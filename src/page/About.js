@@ -1,6 +1,8 @@
 import './About.css';
 import AboutContent from '../const/AboutContent.json'
 import LineChart from '../components/LineChart';
+import ScamImage from '../images/avoidingScam/WechatIMG189.jpeg'
+
 
 export const About = () => {
 
@@ -9,19 +11,30 @@ export const About = () => {
     ));
 
     return (
-        <div className='Chart'>
-            <h1>About</h1>
-            <div>
-                {content}
-            </div>
-            <div style={{height: '400px', width: 'auto'}} >
-                <LineChart/>
-            </div>
-            <div>
-                <p>
-                    Fusce scelerisque velit velit, sit amet interdum nibh lacinia id. Fusce et lacus sed lacus efficitur consequat. Nullam diam mauris, finibus aliquam tempus at, ultrices id purus. Suspendisse nulla arcu, sollicitudin ut pulvinar non, consequat in erat. Nam varius justo sed nulla auctor, nec convallis purus aliquet. Sed porttitor leo quis ante suscipit, sit amet consectetur nulla euismod. Sed euismod et nibh id vestibulum. Morbi tincidunt dolor elit, non porttitor ante cursus nec. Phasellus ac elit tincidunt, efficitur arcu sed, congue velit. Maecenas nec magna eu mauris pellentesque tempus et nec nibh. Aenean imperdiet tellus erat, et volutpat felis vulputate sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla varius feugiat libero vitae commodo. Proin nunc erat, ultricies at mauris eget, cursus blandit dui. In in pretium velit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                </p>
-            </div>
+        <div style={{height: "auto", paddingTop: '50px', paddingBottom: '50px'}}>
+        <div style={{width: '70%', margin: "auto", color: "black",display: 'flex',justifyContent: 'center',alignItems: 'center'}}>
+            <h1>Learning Suggestions</h1></div>
+            <h1></h1>
+        <div style={{backgroundColor: 'gainsboro', color: 'black',height:100,width: '70%', margin: "auto"}}>
+        <p>Intro text about the word cloud just below this</p></div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <img src={ScamImage} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
+      <h1></h1>
+      <div style={{backgroundColor: 'gainsboro', color: 'black',height:100,width: '70%', margin: "auto"}}>
+        <p>Intro message paragraph to our generated word cloud function </p></div>
+        <h2></h2>
+        <input type="text" style={{ display: 'flex',margin: "auto", height:80, width:'70%',backgroundColor:'gainsboro'}} />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <img src={ScamImage} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
+      <div style={{backgroundColor: 'gainsboro', color: 'black',height:100,width: '70%', margin: "auto"}}>
+        <p>Leaderboard for most voted platform/app/website:</p>
+        <p>1: </p>
+        <p>2: </p>
+        <p>3: </p>
+        <p>4: </p> </div>
+
+
         </div>
+
     )
 }
