@@ -9,10 +9,7 @@ export function AvoidScam() {
 
     return (
         <div className='avoidScamMain'>
-            <div>
-                <h1> Avoiding Scams</h1>
-                {content}
-            </div>
+            
         </div>
     )
 }
