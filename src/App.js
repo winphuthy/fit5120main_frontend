@@ -5,7 +5,7 @@ import HomePage from "./page/HomePage";
 import {DigitalService} from "./page/DigitalService";
 import {GetInvolved} from "./page/GetInvolved";
 import {AvoidScam} from "./page/AvoidScam";
-import {About} from "./page/About";
+import {LearningSuggestion} from "./page/LearningSuggestion";
 import {Error} from "./page/Error";
 import {Develop} from "./Develop";
 import {createTheme, ThemeProvider} from '@mui/material/styles';
@@ -41,7 +41,7 @@ function App() {
                     <Route path='medicare' element={<Medicare/>}/>
                     <Route path='getinvolved' element={<GetInvolved/>}/>
                     <Route path='avoidingscam' element={<AvoidScam/>}/>
-                    <Route path='learningsuggestions' element={<About/>}/>
+                    <Route path='learningsuggestions' element={<LearningSuggestion/>}/>
                     <Route path='*' element={<Error/>}/>
                     <Route path='develop' element={<Develop/>}/>
                 </Routes>
