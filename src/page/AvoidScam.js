@@ -61,7 +61,7 @@ export function AvoidScam() {
       <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', alignItems: 'flex-end'}}>
         <div style={{position: 'relative', width: '50%',margin: 'auto'}}>
           <input type="text" value={inputValue} onChange={handleInputChange} style={{ height:60,backgroundColor: 'rgba(220, 220, 220, 0.2)', color: 'black',fontWeight: 'bolder',fontSize: '1.3rem', width: '45vw',margin:'auto'}} />
-          <Button type ='submit'style={{position: 'absolute', bottom: 1, right: 70,height:40,width:100,backgroundColor:"whitesmoke"}} variant="contained" endIcon={<SendIcon />}>
+          <Button type ='submit'style={{position: 'absolute', bottom: 2, right: 70,height:40,width:100,backgroundColor:"whitesmoke"}} variant="contained" endIcon={<SendIcon />}>
         Submit
       </Button>
         </div>
