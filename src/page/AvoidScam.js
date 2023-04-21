@@ -1,6 +1,6 @@
 import './AvoidScam.css';
 import KeywordImage from '../images/keywordPage.jpeg';
-import ScamImage from '../images/scamImage.jpg'
+import ScamImage from '../images/third.jpeg'
 import { useState } from 'react';
 
 export function AvoidScam() {
@@ -45,24 +45,25 @@ export function AvoidScam() {
             <h1>Avoiding Scams</h1>
         </div>
         <h1></h1>
-        <div style={{backgroundColor: 'rgba(220, 220, 220, 0.5)', color: 'black',height:100,width: '70%', margin: "auto"}}>
+        <div style={{backgroundColor: 'rgba(220, 220, 220, 0.2)', color: '#194870',fontWeight: 'bolder',fontSize: '1.5rem', width: '45vw',margin:'auto'}}>
         <p>General info Best practices in detecting scams </p>
         </div>
+        <h1></h1>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <img src={KeywordImage} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
-      <div style={{backgroundColor: 'rgba(220, 220, 220, 0.5)', color: 'black',height:150,width: '70%', margin: "auto"}}>
+      <div style={{backgroundColor: 'rgba(220, 220, 220, 0.3)', color: '#194870',fontWeight: 'bolder',fontSize: '1.4rem', width: '45vw',margin:'auto'}}>
         <p>Instruction: </p>
         <p> - Put text or email you think might be a scam to below box. And we will tell you how likely it is a spam</p>
       </div>
       <h1></h1>
       <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', alignItems: 'flex-end'}}>
-        <div style={{position: 'relative', width: '70%',margin: 'auto'}}>
-          <input type="text" value={inputValue} onChange={handleInputChange} style={{ height:100, width:'100%',backgroundColor:'rgba(220, 220, 220, 0.5)'}} />
-          <button type="submit" style={{position: 'absolute', bottom: 0, right: 0}}>Submit</button>
+        <div style={{position: 'relative', width: '50%',margin: 'auto'}}>
+          <input type="text" value={inputValue} onChange={handleInputChange} style={{ height:80,backgroundColor: 'rgba(220, 220, 220, 0.2)', color: 'black',fontWeight: 'bolder',fontSize: '1.3rem', width: '45vw',margin:'auto'}} />
+          <button type="submit" style={{position: 'absolute', bottom: 0, right: 68,height:40,width:100}}>Submit</button>
         </div>
       </form>
       <h1></h1>
-      <div style={{backgroundColor: 'rgba(220, 220, 220, 0.5)', color: 'black',height:50,width: '70%', margin: "auto"}}>
+      <div style={{backgroundColor: 'rgba(220, 220, 220, 0.2)', color: '#194870',fontWeight: 'bolder',fontSize: '1.4rem', width: '45vw',margin:'auto'}}>
   <p>RESULT: {result}</p>
 </div>
 
