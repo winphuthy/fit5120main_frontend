@@ -18,6 +18,31 @@ import {Email} from "./page/Email";
 import {MyGov} from "./page/MyGov";
 import {Medicare} from "./page/Medicare";
 
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement
+  } from 'chart.js'
+  import { Chart } from 'react-chartjs-2'
+  
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement
+  )
+
+
 const theme = createTheme({
     palette: {
         mode: 'dark',

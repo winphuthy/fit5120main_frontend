@@ -1,5 +1,4 @@
 import './AvoidScam.css';
-import AvoidScamContent from '../const/AvoidScamContent.json';
 import KeywordImage from '../images/keywordPage.jpeg';
 import ScamImage from '../images/scamImage.jpg'
 import { useState } from 'react';
@@ -8,17 +7,36 @@ export function AvoidScam() {
 
   const [inputValue, setInputValue] = useState('');
   const [result, setResult] = useState('');
+  const [hasTypedRight, setHasTypedRight] = useState(false);
+  const [hasTypedFasle, setHasTypedFalse] = useState(false);
 
   const handleInputChange = (event) => {
-      setInputValue(event.target.value);
+    setInputValue(event.target.value);
+    if (event.target.value.includes('right@email.com')) {
+      setHasTypedRight(true);
+    }
+    else if (event.target.value.includes('fake@email.com')) {
+      setHasTypedFalse(true);
+    }
+    else{
+      setHasTypedFalse(false);
+      setHasTypedRight(false);
+    }
   }
 
   const handleSubmit = (event) => {
-      event.preventDefault();
+    event.preventDefault();
+    if (hasTypedRight) {
+      setResult('This is a right email');
+    } else if (hasTypedFasle){
       // Perform logic to determine if inputValue is a scam or not
       // Set result based on the logic
-      setResult(`Based on your message, there is 76.88% chance this is a scam message`);
-  }
+      setResult(`This is a fake email`);
+    }
+    else{
+      setResult(`error input`);
+    }
+  }; 
 ;
 
     return (
@@ -38,15 +56,16 @@ export function AvoidScam() {
       </div>
       <h1></h1>
       <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', alignItems: 'flex-end'}}>
-         <div style={{position: 'relative', width: '70%',margin: 'auto'}}>
+        <div style={{position: 'relative', width: '70%',margin: 'auto'}}>
           <input type="text" value={inputValue} onChange={handleInputChange} style={{ height:100, width:'100%',backgroundColor:'rgba(220, 220, 220, 0.5)'}} />
-           <button type="submit" style={{position: 'absolute', bottom: 0, right: 0}}>Submit</button>
-           </div>
-           </form>
+          <button type="submit" style={{position: 'absolute', bottom: 0, right: 0}}>Submit</button>
+        </div>
+      </form>
       <h1></h1>
       <div style={{backgroundColor: 'rgba(220, 220, 220, 0.5)', color: 'black',height:50,width: '70%', margin: "auto"}}>
-        <p>RESULT: Based on your message, there is 76.88% This is a scam message</p>
-      </div>
+  <p>RESULT: {result}</p>
+</div>
+
       </div>
     )
 }
