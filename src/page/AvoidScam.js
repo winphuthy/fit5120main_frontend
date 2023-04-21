@@ -1,7 +1,9 @@
 import './AvoidScam.css';
 import KeywordImage from '../images/keywordPage.jpeg';
-import ScamImage from '../images/third.jpeg'
+import ScamImage from '../images/sixth.jpg'
 import { useState } from 'react';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 export function AvoidScam() {
 
@@ -58,8 +60,10 @@ export function AvoidScam() {
       <h1></h1>
       <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', alignItems: 'flex-end'}}>
         <div style={{position: 'relative', width: '50%',margin: 'auto'}}>
-          <input type="text" value={inputValue} onChange={handleInputChange} style={{ height:80,backgroundColor: 'rgba(220, 220, 220, 0.2)', color: 'black',fontWeight: 'bolder',fontSize: '1.3rem', width: '45vw',margin:'auto'}} />
-          <button type="submit" style={{position: 'absolute', bottom: 0, right: 68,height:40,width:100}}>Submit</button>
+          <input type="text" value={inputValue} onChange={handleInputChange} style={{ height:60,backgroundColor: 'rgba(220, 220, 220, 0.2)', color: 'black',fontWeight: 'bolder',fontSize: '1.3rem', width: '45vw',margin:'auto'}} />
+          <Button type ='submit'style={{position: 'absolute', bottom: 1, right: 70,height:40,width:100,backgroundColor:"whitesmoke"}} variant="contained" endIcon={<SendIcon />}>
+        Submit
+      </Button>
         </div>
       </form>
       <h1></h1>
