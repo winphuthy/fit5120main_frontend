@@ -39,7 +39,7 @@ export const MuiNavBar = () => {
             <AppBar position='static'>
                 <Toolbar>
                     <IconButton component={NavLink} to='/' size='large' edge='start' color='inherit' aria-label='logo'>
-                        <img src={icon} style={{width: 'auto', height: "5vh"}} alt='icon'/>
+                        <img src={icon} style={{width: 'auto', height: "5vh", minHeight: '25px'}} alt='icon'/>
                     </IconButton>
                     <Typography variant='h6' component='dic' sx={{flexGrow: 1}}>
                     </Typography>
