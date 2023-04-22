@@ -34,7 +34,7 @@ export function LearningSuggestion() {
             disablePortal
             id="word-list"
             options={councilList}
-            sx={{ width: 400,marginLeft:'-100%',backgroundColor:"darkgrey"}}
+            sx={{ width: 400,marginLeft:'-70%',backgroundColor:"darkgrey"}}
             renderInput={(params) => <TextField {...params} label="List of word" />}
         />
         </div>
