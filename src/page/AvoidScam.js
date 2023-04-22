@@ -39,38 +39,31 @@ export function AvoidScam() {
       setResult(`error input`);
     }
   }; 
-;
 
-    return (
-        <div style={{backgroundImage:`url(${ScamImage})`,backgroundRepeat:"no-repeat",height: "auto", paddingTop: '50px', paddingBottom: '50px',backgroundSize: 'cover'}}>
-        <div style={{width: '70%', margin: "auto", color: "black",display: 'flex',justifyContent: 'center',alignItems: 'center'}}>
-            <h1>Avoiding Scams</h1>
+  return (
+    <div style={{backgroundImage:`url(${ScamImage})`,backgroundRepeat:"no-repeat",height: "auto", paddingTop: '50px', paddingBottom: '50px',backgroundSize: 'cover', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <h1 style={{color: "black", margin: '0'}}>Avoiding Scams</h1>
+      <div style={{backgroundColor: 'rgba(220, 220, 220, 0.2)', color: '#194870',fontWeight: 'bolder',fontSize: '1.5rem', width: '60vw',margin:'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px', padding: '50px'}}>
+        <p style={{margin: '0'}}>General info Best practices in detecting scams </p>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px' }}>
+          <img src={KeywordImage} alt="word image" style={{ width: '50%', height: 'auto' }} />
         </div>
-        <h1></h1>
-        <div style={{backgroundColor: 'rgba(220, 220, 220, 0.2)', color: '#194870',fontWeight: 'bolder',fontSize: '1.5rem', width: '45vw',margin:'auto'}}>
-        <p>General info Best practices in detecting scams </p>
+        <div style={{width: '45vw',margin:'auto', marginTop: '50px'}}>
+          <p style={{margin: '0'}}>Instruction: </p>
+          <p style={{margin: '0'}}> - Put text or email you think might be a scam to below box. And we will tell you how likely it is a spam</p>
         </div>
-        <h1></h1>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <img src={KeywordImage} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
-      <div style={{backgroundColor: 'rgba(220, 220, 220, 0.3)', color: '#194870',fontWeight: 'bolder',fontSize: '1.4rem', width: '45vw',margin:'auto'}}>
-        <p>Instruction: </p>
-        <p> - Put text or email you think might be a scam to below box. And we will tell you how likely it is a spam</p>
+        <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: '50px'}}>
+          <div style={{position: 'relative', width: '100%'}}>
+            <input type="text" value={inputValue} onChange={handleInputChange} style={{ height:150,backgroundColor: 'rgba(220, 220, 220, 0.2)', color: 'black',fontWeight: 'bolder',fontSize: '1.3rem', width: 800}} />
+            <Button type ='submit'style={{position: 'absolute', bottom: 2, right: 2,height:40,width:100,backgroundColor:"whitesmoke"}} variant="contained" endIcon={<SendIcon />}>
+              Submit
+            </Button>
+          </div>
+        </form>
+        <div style={{width: '45vw',margin:'auto', marginTop: '50px'}}>
+          <p style={{margin: '0'}}>RESULT: {result}</p>
+        </div>
       </div>
-      <h1></h1>
-      <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'row', alignItems: 'flex-end'}}>
-        <div style={{position: 'relative', width: '50%',margin: 'auto'}}>
-          <input type="text" value={inputValue} onChange={handleInputChange} style={{ height:60,backgroundColor: 'rgba(220, 220, 220, 0.2)', color: 'black',fontWeight: 'bolder',fontSize: '1.3rem', width: '45vw',margin:'auto'}} />
-          <Button type ='submit'style={{position: 'absolute', bottom: 2, right: 70,height:40,width:100,backgroundColor:"whitesmoke"}} variant="contained" endIcon={<SendIcon />}>
-        Submit
-      </Button>
-        </div>
-      </form>
-      <h1></h1>
-      <div style={{backgroundColor: 'rgba(220, 220, 220, 0.2)', color: '#194870',fontWeight: 'bolder',fontSize: '1.4rem', width: '45vw',margin:'auto'}}>
-  <p>RESULT: {result}</p>
-</div>
-
-      </div>
-    )
+    </div>
+  )
 }
