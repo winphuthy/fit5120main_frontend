@@ -27,7 +27,6 @@ export function LearningSuggestion() {
             <p style={{textAlign: 'justify'}}>If you’re interested in learning about which are the most popular digital websites, applications and services, look no further. The word cloud below this shows off some of the most currently popular ones.</p>
             <p style={{textAlign: 'justify'}}> If there’s not already a guide for one of the digital tools you’d like to learn about on this website, feel free to scroll down and have a look at the “Making a Suggestion” area.</p>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          
       <img src={"http://20.25.180.39/wordcloud"} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
       <div>
         <h3 style={{color: 'black'}}>Making a Suggestion</h3>
