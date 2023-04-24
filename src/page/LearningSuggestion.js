@@ -16,11 +16,11 @@ export function LearningSuggestion() {
 const [WordList, setWordList] = useState([]);
 
   useEffect(() => {
-    fetch('http://20.25.180.39/wordcloud')
+    fetch('http://20.25.180.39/wordcloud', { mode: 'no-cors' })
       .then(response => response.json())
       .then(data => {
         // Assuming the data obtained from the back-end is an array of objects with a 'label' property
-        setWordList(data);
+        this.setWordList(data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
@@ -66,6 +66,7 @@ const [WordList, setWordList] = useState([]);
         <p style={{textAlign: 'justify'}}>3: </p>
         <p style={{textAlign: 'justify'}}>4: </p>
         <p style={{textAlign: 'justify'}}>5: </p>
+        
       </div>
       <div>
     </div>
