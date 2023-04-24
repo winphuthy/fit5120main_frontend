@@ -1,8 +1,8 @@
 import './AvoidScam.css';
-import KeywordImage from '../images/keywordPage.jpeg';
 import MainImage from '../images/mainpage.jpg'
 import { useState } from 'react';
 import Button from '@mui/material/Button';
+import WordCloudPage from '../images/output.png'
 
 
 export function AvoidScam() {
@@ -43,7 +43,7 @@ export function AvoidScam() {
 
   return (
     <div style={{backgroundImage:`url(${MainImage})`,backgroundRepeat:"no-repeat",height: "auto", paddingTop: '50px', paddingBottom: '50px',backgroundSize: 'cover', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <div style={{ backdropFilter: 'blur(15px)', backgroundColor: 'rgba(255, 255, 255, 0.3)' , color: '#194870',fontWeight: 'bolder',fontSize: '1.5rem', width: '70vw',margin:'auto'}}>
+      <div style={{ backdropFilter: 'blur(15px)', backgroundColor: 'rgba(255, 255, 255, 0.3)' , color: '#194870',fontWeight: 'bolder',fontSize: '1.5rem', width: '70vw',margin:'auto',paddingLeft: '50px',paddingRight: '50px'}}>
       <h2 style={{color: "black",display: 'flex',justifyContent: 'center',alignItems: 'center'}}>Avoiding Scams</h2>
         <h3 style={{color: 'black'}}> Best Practices to Avoid Scams</h3>
         <p style={{textAlign: 'justify'}}>As you start to become more digitally literate, it’s important to note that there are also risks that come with digital platforms. One of the major risks would be that of scams. Online scams tend to come in the form of emails or messages, and it can sometimes be hard to tell when someone or something is a scam.</p>
@@ -51,7 +51,7 @@ export function AvoidScam() {
         <p style={{textAlign: 'justify'}}>Below is a word cloud of some commonly used phrases and terms in scams. If you see a combination of the phrases shown below, do be careful when providing personal and sensitive information.</p>
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px' }}>
-          <img src={KeywordImage} alt="word image" style={{ width: '50%', height: 'auto' }} />
+          <img src={WordCloudPage} alt="word image" style={{ width: '50%', height: 'auto' }} />
         </div>
         <div style={{margin:'auto', marginTop: '50px'}}>
         <h3 style={{color: 'black'}}> Scam Detector</h3>
