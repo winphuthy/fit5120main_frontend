@@ -1,53 +1,70 @@
 
 import './About.css';
 import KeywordImage from '../images/keywordPage.jpeg';
-import SuggestionImage from '../images/learningsuggestions.jpg'
+import MainImage from '../images/mainpage.jpg'
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import React from 'react';
+import Button from '@mui/material/Button';
 
 
 export function LearningSuggestion() {
-  const councilList = [
-    { label: 'Word 1', weight: 0, category: 'landfill' },
-    { label: 'Word 2', weight: 0, category:  'recyclable'  },
-    { label: 'Word 3', weight: 0, category: 'landfill'  },
-    { label: 'Word 4', weight: 0, category: 'organic' },
+  const WordList = [
+    { label: 'Word 1'},
+    { label: 'Word 2'},
+    { label: 'Word 3'},
+    { label: 'Word 4'},
    
 ];
 
+
+
     return (
-        <div style={{backgroundImage:`url(${SuggestionImage})`,backgroundRepeat:"no-repeat",height: "auto", paddingTop: '50px', paddingBottom: '50px',backgroundSize: 'cover'}}>
-        <div style={{width: '70%', margin: "auto", color: "black",display: 'flex',justifyContent: 'center',alignItems: 'center'}}>
-            <h1>Learning Suggestions</h1>
-        </div>
-        <h1></h1>
-        <div style={{backgroundColor: 'rgba(220, 220, 220, 0.2)', color: '#194870',fontWeight: 'bolder',fontSize: '1.5rem', width: '45vw',margin:'auto'}}>
-        <p>Intro text about the word cloud just below this </p>
+        <div style={{backgroundImage:`url(${MainImage})`, backgroundRepeat:"no-repeat",height: "auto", paddingTop: '50px', paddingBottom: '50px',backgroundSize: 'cover'}}>
+        <div style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(255, 255, 255, 0.2)' , color: '#194870',fontWeight: 'bolder',fontSize: '1.5rem', width: '70vw',margin:'auto'}}>
+            <h2 style={{color: "black",display: 'flex',justifyContent: 'center',alignItems: 'center'}}>Learning Suggestions</h2>
+            <h3 style={{color: 'black'}}>Popular Digital Tools</h3>
+            <p style={{textAlign: 'justify'}}>If you’re interested in learning about which are the most popular digital websites, applications and services, look no further. The word cloud below this shows off some of the most currently popular ones.</p>
+            <p style={{textAlign: 'justify'}}> If there’s not already a guide for one of the digital tools you’d like to learn about on this website, feel free to scroll down and have a look at the “Making a Suggestion” area.</p>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <img src={KeywordImage} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
+      <img src={"http://20.25.180.39/wordcloud"} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
       <div>
-        <p>Intro message paragraph to our generated word cloud function</p>
+        <h3 style={{color: 'black'}}>Making a Suggestion</h3>
+        <p style={{textAlign: 'justify'}}>If any of these digital tools are of great interest to you and you’d like to learn about them, please use the drop down menu just below this to vote for a digital tool you’d like to learn about. </p>
+        <p style={{textAlign: 'justify'}}>At the end of each month, us over at SillionSharks will proceed to make an informative guide on the top 3 most voted for digital tools. </p>
+        <p style={{textAlign: 'justify'}}>If you can’t find what you’re looking for within the drop down menu, simply type in the name of what you’d be interested in learning, and if it gets voted to the top 3, we’ll also look into the digital tool and proceed to create a guide for it.</p>
       </div>
       <h1></h1>
       <div style={{position: 'relative', width: '25%',margin: 'auto'}}>
-          <Autocomplete
+                <Autocomplete
             disablePortal
             id="word-list"
-            options={councilList}
-            sx={{ width: 400,marginLeft:'-70%',backgroundColor:"darkgrey"}}
-            renderInput={(params) => <TextField {...params} label="List of word" />}
+            options={WordList}
+            sx={{ width: 400,marginLeft:'-30%',backgroundColor:"darkgrey"}}
+            renderInput={(params) => <TextField {...params} label="Select your chosen digital tool" />}
         />
+        < Button style={{position: 'absolute', bottom: 5, left: 340,height:50,width:100,backgroundColor:"grey"}}  variant="outlined" href="#outlined-buttons">
+        Submit
+      </Button>
+
+
         </div>
       <h1></h1>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <img src={KeywordImage} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
+      <img src={"http://20.25.180.39/wordcloud"} alt="word image" style={{ width: '50%', height: 'auto' }} /></div>
       <div>
-        <p>Leaderboard for most voted platform/app/website:</p>
-        <p>1: </p>
-        <p>2: </p>
-        <p>3: </p>
+        <h3 style={{color: 'black'}}>Leaderboard for most voted digital tools:</h3>
+        <p style={{textAlign: 'justify'}}>1: </p>
+        <p style={{textAlign: 'justify'}}>2: </p>
+        <p style={{textAlign: 'justify'}}>3: </p>
+        <p style={{textAlign: 'justify'}}>4: </p>
+        <p style={{textAlign: 'justify'}}>5: </p>
       </div>
+      <div>
+    </div>
         </div>
       </div>
+      
     )
+    
 }
