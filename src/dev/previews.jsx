@@ -15,6 +15,7 @@ import {FaceTime} from "../page/FaceTime";
 import {SlideCard} from "../components/swiper/SlideCard";
 import {Develop} from "../Develop";
 import SwiperModified from "../components/swiper/SwiperModified";
+import {LearningSuggestion} from "../page/LearningSuggestion";
 
 const ComponentPreviews = () => {
     return (
@@ -60,6 +61,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/SwiperTestTwo">
                 <SwiperModified/>
+            </ComponentPreview>
+            <ComponentPreview path="/LearningSuggestion">
+                <LearningSuggestion/>
             </ComponentPreview>
         </Previews>
     )
