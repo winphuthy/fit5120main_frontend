@@ -10,6 +10,7 @@ import WhatGoal from '../../../images/what_our_goal.png';
 import DigitalCommunicationIcon from '../../../images/DigitalCommunication.png';
 import DigitalServiceIcon from '../../../images/DigitalServicesIcon.png';
 import AvoidingScams from '../../../images/Avoiding.png';
+import LearningSuggestions from '../../../images/ls.png';
 
 
 const item = {
@@ -175,7 +176,26 @@ function ProductValues() {
                                 </Typography>
                             </Box>
                         </Grid>
+                        <Grid item xs={12} md={4} >
+                            <Box sx={item} style={cardColumn}>
+                                <Box
+                                    component="img"
+                                    src={LearningSuggestions}
+                                    alt="clock"
+                                    sx={{height: 100}}
+                                />
+                                <Typography variant="h6" sx={{my: 5}} color={fontcolor}>
+                                    Learning Suggestions:
+                                </Typography>
+                                <Typography variant="h5" color={fontcolor}>
+                                    {"Can't find a specific guide? Visit the learning suggestions page to vote for the next guide to be created"}
+                                    {/*{'that you will not find anywhere else.'}*/}
+                                </Typography>
+                            </Box>
+                        </Grid>
+                
                     </Grid>
+                    
                 </Container>
             </Box>
         </div>

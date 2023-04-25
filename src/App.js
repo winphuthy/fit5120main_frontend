@@ -5,7 +5,7 @@ import HomePage from "./page/HomePage";
 import {DigitalService} from "./page/DigitalService";
 import {GetInvolved} from "./page/GetInvolved";
 import {AvoidScam} from "./page/AvoidScam";
-import {About} from "./page/About";
+import {LearningSuggestion} from "./page/LearningSuggestion";
 import {Error} from "./page/Error";
 import {Develop} from "./Develop";
 import {createTheme, ThemeProvider} from '@mui/material/styles';
@@ -17,6 +17,31 @@ import {FaceTime} from "./page/FaceTime";
 import {Email} from "./page/Email";
 import {MyGov} from "./page/MyGov";
 import {Medicare} from "./page/Medicare";
+
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement
+  } from 'chart.js'
+  import { Chart } from 'react-chartjs-2'
+  
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement
+  )
+
 
 const theme = createTheme({
     palette: {
@@ -41,7 +66,7 @@ function App() {
                     <Route path='medicare' element={<Medicare/>}/>
                     <Route path='getinvolved' element={<GetInvolved/>}/>
                     <Route path='avoidingscam' element={<AvoidScam/>}/>
-                    <Route path='about' element={<About/>}/>
+                    <Route path='learningsuggestions' element={<LearningSuggestion/>}/>
                     <Route path='*' element={<Error/>}/>
                     <Route path='develop' element={<Develop/>}/>
                 </Routes>
