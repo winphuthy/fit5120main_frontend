@@ -148,43 +148,38 @@ export function LearningSuggestion() {
 
     return (
         <div style={{
-            backgroundImage: `url(${MainImage})`,
-            backgroundRepeat: "no-repeat",
-            height: "auto",
-            paddingTop: '50px',
-            paddingBottom: '50px',
-            backgroundSize: 'cover'
+            backgroundColor:"dimgray"
         }}>
             <div style={{
-                backdropFilter: 'blur(10px)',
-                backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                color: '#194870',
+                color: 'floralwhite',
                 fontWeight: 'bolder',
                 fontSize: '1.5rem',
-                width: '70vw',
                 margin: 'auto',
-                paddingLeft: '50px',
-                paddingRight: '50px'
+
             }}>
-                <h2 style={{color: "black", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Learning
-                    Suggestions</h2>
-                <h3 style={{color: 'black'}}>Popular Digital Tools</h3>
-                <p style={{textAlign: 'justify'}}>If you’re interested in learning about which are the most popular
+                  <div style={{height: '70vh', backgroundImage:`url(${MainImage})`,backgroundSize: 'cover', display: 'flex', justifyContent: 'center', alignItems: 'center',color:'black'}}>
+                    <h2>Learning Suggestions</h2>
+                 </div>
+                <div style={{width: '70vw',margin:'auto'}}>
+                <h3>Popular Digital Tools</h3>
+                <p style={{textAlign: 'justify',fontSize: '1.2rem'}}>If you’re interested in learning about which are the most popular
                     digital websites, applications and services, look no further. The word cloud below this shows off
                     some of the most currently popular ones.</p>
-                <p style={{textAlign: 'justify'}}> If there’s not already a guide for one of the digital tools you’d
+                <p style={{textAlign: 'justify',fontSize: '1.2rem'}}> If there’s not already a guide for one of the digital tools you’d
                     like to learn about on this website, feel free to scroll down and have a look at the “Making a
                     Suggestion” area.</p>
+                <hr style={{width: '70vw', margin:'auto', marginTop: '50px',marginBottom:"50px"}}/>
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <img src={WordCloudPage} alt="word image" style={{width: '50%', height: 'auto'}}/></div>
                 <div>
-                    <h3 style={{color: 'black'}}>Making a Suggestion</h3>
-                    <p style={{textAlign: 'justify'}}>If any of these digital tools are of great interest to you and
+                <hr style={{width: '70vw', margin:'auto', marginTop: '50px',marginBottom:"50px"}}/>
+                    <h3>Making a Suggestion</h3>
+                    <p style={{textAlign: 'justify',fontSize: '1.2rem'}}>If any of these digital tools are of great interest to you and
                         you’d like to learn about them, please use the drop down menu just below this to vote for a
                         digital tool you’d like to learn about. </p>
-                    <p style={{textAlign: 'justify'}}>At the end of each month, us over at SillionSharks will proceed to
+                    <p style={{textAlign: 'justify',fontSize: '1.2rem'}}>At the end of each month, us over at SillionSharks will proceed to
                         make an informative guide on the top 3 most voted for digital tools. </p>
-                    <p style={{textAlign: 'justify'}}>If you can’t find what you’re looking for within the drop down
+                    <p style={{textAlign: 'justify',fontSize: '1.2rem'}}>If you can’t find what you’re looking for within the drop down
                         menu, simply type in the name of what you’d be interested in learning, and if it gets voted to
                         the top 3, we’ll also look into the digital tool and proceed to create a guide for it.</p>
                 </div>
@@ -213,12 +208,15 @@ export function LearningSuggestion() {
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <img src={wordCloud} alt="word image" style={{width: '50%', height: 'auto'}}/></div>
                 <div>
-                    <h3 style={{color: 'black'}}>Leaderboard for most voted digital tools:</h3>
+                <hr style={{width: '70vw', margin:'auto', marginTop: '50px',marginBottom:"50px"}}/>
+
+                    <h3>Leaderboard for most voted digital tools:</h3>
                     {topWord.map((item, index) => (
-                        <p style={{textAlign: 'justify'}}> {index + 1}: {item} </p>
+                        <p style={{textAlign: 'justify',fontSize: '1.2rem'}}> {index + 1}: {item} </p>
                     ))}
                 </div>
                 <div>
+                </div>
                 </div>
             </div>
         </div>
