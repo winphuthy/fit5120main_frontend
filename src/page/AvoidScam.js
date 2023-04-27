@@ -1,5 +1,5 @@
 import './AvoidScam.css';
-import MainImage from '../images/mainpage.jpg'
+import MainImage from '../images/websitebackgroundnew.jpg'
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import WordCloudPage from '../images/output.png'

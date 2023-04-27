@@ -1,5 +1,5 @@
 import './About.css';
-import MainImage from '../images/mainpage.jpg'
+import MainImage from '../images/websitebackgroundnew2.jpg'
 import TextField from '@mui/material/TextField';
 import Autocomplete, {createFilterOptions} from '@mui/material/Autocomplete';
 import React, {useEffect, useRef, useState} from 'react';
