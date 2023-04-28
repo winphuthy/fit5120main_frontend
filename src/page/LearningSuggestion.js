@@ -1,5 +1,5 @@
 import './About.css';
-import MainImage from '../images/websitebackgroundnew2.jpg'
+import MainImage from '../images/learningsuggestions.jpg'
 import TextField from '@mui/material/TextField';
 import Autocomplete, {createFilterOptions} from '@mui/material/Autocomplete';
 import React, {useEffect, useRef, useState} from 'react';
@@ -20,7 +20,7 @@ export function LearningSuggestion() {
     console.log('isVote: ', isVote.current);
 
     function fetch_top_word() {
-        fetch(backendIP + '/gettopword', {
+        fetch(backendIP + 'gettopword', {
             mode: 'cors'
         })
             .then((response) => response.json())
@@ -35,7 +35,7 @@ export function LearningSuggestion() {
     }
 
     async function fetch_word_cloud() {
-        await fetch(backendIP + '/wordcloud', {
+        await fetch(backendIP + 'wordcloud', {
             mode: 'cors'
         })
             .then((response) => response.blob())
@@ -49,7 +49,7 @@ export function LearningSuggestion() {
     }
 
     function fetch_word_list() {
-        fetch(backendIP + '/getwordlist', {
+        fetch(backendIP + 'getwordlist', {
             mode: 'cors'
         })
             .then((response) => response.json())
@@ -71,7 +71,7 @@ export function LearningSuggestion() {
     function post_word(newValue) {
         console.log(newValue)
         if (!newValue) return;
-        fetch(backendIP + '/wordcloud', {
+        fetch(backendIP + 'wordcloud', {
             method: "POST", mode: "cors", headers: {
                 'Content-Type': 'application/json'
             }, body: JSON.stringify({"word": newValue})

@@ -69,6 +69,9 @@ const ComponentPreviews = () => {
             <ComponentPreview path="/AvoidScam">
                 <AvoidScam/>
             </ComponentPreview>
+            <ComponentPreview path="/AvoidScam">
+                <AvoidScam/>
+            </ComponentPreview>
         </Previews>
     )
 }

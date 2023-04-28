@@ -1,9 +1,10 @@
 import './AvoidScam.css';
-import MainImage from '../images/Avoiding_scam.jpeg'
+import MainImage from '../images/websitebackgroundnew2.jpg'
 import {useRef, useState} from 'react';
 import Button from '@mui/material/Button';
 import output from '../images/output2.png'
 import {backendIP} from "../const/const";
+import TextField from "@mui/material/TextField";
 
 
 export function AvoidScam() {
@@ -15,7 +16,7 @@ export function AvoidScam() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(scamInputRef.current.value);
-        fetch_scamInput();
+        // fetch_scamInput();
     };
 
     async function fetch_scamInput() {
