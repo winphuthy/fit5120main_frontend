@@ -5,7 +5,9 @@ import Button from '@mui/material/Button';
 import output from '../images/output2.png'
 import {backendIP} from "../const/const";
 
-
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 
 export function AvoidScam() {
@@ -70,11 +72,7 @@ export function AvoidScam() {
                 <p style={{textAlign: 'justify', fontSize: '1.3rem'}}>Digital scams tend to impersonate digital services
                     from organisations such as banks and credit card companies, they’ll tend to try and steal personal
                     information, passwords, and money from you, so as you begin digitalising yourself, it’s best to be
-                    aware of how to detect if something is a scam.
-                    <br/>
-                    <br/>
-                    Below is a word cloud of some commonly used phrases and terms in scams. If you see a combination of
-                    the phrases shown below, do be careful when providing personal and sensitive information. </p>
+                    aware of how to detect if something is a scam.</p>
                 <hr style={{width: '70vw', margin: 'auto', marginTop: '50px'}}/>
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px'}}>
                     <img src={output} alt="word image" style={{width: '50%', height: 'auto'}}/>
@@ -85,20 +83,22 @@ export function AvoidScam() {
                     potentially be a scam, use our scam detector below to get our view on how likely it is that it is in
                     fact a scam. Our Scam detector will read your inputted text, and let you know the percentage
                     likelihood of the text being a scam. </p>
+                <hr style={{width: '70vw', margin: 'auto', marginTop: '50px'}}/>
                 <h3> How to use the scam detector:</h3>
                 <p style={{textAlign: 'justify', fontSize: '1.1rem'}}> - Using your mouse, left click on the first
-                    letter of the message you’d like us to scan, whilst holding the left click down, drag your mouse
+                    letter of the message you’d like us to scan</p>
+                <p style={{textAlign: 'justify', fontSize: '1.1rem'}}> - Whilst holding the left click down, drag your mouse
                     down to the last letter within the same message</p>
                 <p style={{textAlign: 'justify', fontSize: '1.1rem'}}> - Press the “CTRL” and “C” keys at the same time
                     to copy the text</p>
-                <p style={{textAlign: 'justify', fontSize: '1.1rem'}}> - Navigate to our Scam Detector, and within the
-                    input box available, press the “CTRL” and “V” keys at the same time to paste the text into our
+                <p style={{textAlign: 'justify', fontSize: '1.1rem'}}> - Press the “CTRL” and “V” keys at the same time to paste the text into our
                     detector</p>
                 <p style={{textAlign: 'justify', fontSize: '1.1rem'}}> - Hit the “SUBMIT VOTE” button</p>
                 <p style={{textAlign: 'justify', fontSize: '1.1rem'}}> - Our detector will then inform you of the
                     percentage likelihood of the message being a scam</p>
             </div>
             <hr style={{width: '70vw', margin: 'auto', marginTop: '50px'}}/>
+            
             <form onSubmit={handleSubmit} style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -107,13 +107,13 @@ export function AvoidScam() {
                 marginTop: '50px'
             }}>
                 <div style={{position: 'relative', width: '100%'}}>
-                    <input type="text" ref={scamInputRef} style={{
-                        height: 150,
-                        backgroundColor: 'rgba(220, 220, 220, 0.4)',
-                        fontWeight: 'bolder',
-                        fontSize: '1.3rem',
-                        width: 800
-                    }}/>
+                    <Box component="form" sx={{'& .MuiTextField-root': {width: 800, backgroundColor:'rgba(220, 220, 220, 0.4)',position: 'relative',fontWeight: 'bolder',fontSize: '1.3rem'},}} noValidate autoComplete="off">
+                        <TextField 
+                        id="filled-textarea" 
+                        label="Paste your message/email here"
+                        multiline 
+                        variant="filled"/>
+                    </Box>
                     
                     < Button onClick={handleSubmit} style={{
                         position: 'absolute',
