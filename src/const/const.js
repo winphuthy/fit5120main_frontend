@@ -1,1 +1,1 @@
-export const backendIP = 'http://127.0.0.1:8000'
+export const backendIP = 'http://20.53.225.36/'

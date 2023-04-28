@@ -32,11 +32,13 @@ export default function InteractionChart() {
         datasets: [
             {
                 label: firstLabel,
-                data: ageDataFirst
+                data: ageDataFirst,
+                backgroundColor: ['#34698e']
             },
             {
                 label: secondLabel,
-                data: ageDataSecond
+                data: ageDataSecond,
+                backgroundColor: ['#98495a']
             }
         ]
     });
