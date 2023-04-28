@@ -6,6 +6,8 @@ import output from '../images/output2.png'
 import {backendIP} from "../const/const";
 
 
+
+
 export function AvoidScam() {
 
     const [inputValue, setInputValue] = useState('');
@@ -112,6 +114,7 @@ export function AvoidScam() {
                         fontSize: '1.3rem',
                         width: 800
                     }}/>
+                    
                     < Button onClick={handleSubmit} style={{
                         position: 'absolute',
                         bottom: 2,

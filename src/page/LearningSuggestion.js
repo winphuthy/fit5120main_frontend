@@ -1,5 +1,5 @@
 import './About.css';
-import MainImage from '../images/websitebackgroundnew2.jpg'
+import MainImage from '../images/mainpage.jpg'
 import TextField from '@mui/material/TextField';
 import Autocomplete, {createFilterOptions} from '@mui/material/Autocomplete';
 import React, {useEffect, useRef, useState} from 'react';
@@ -169,7 +169,7 @@ export function LearningSuggestion() {
                     color: 'black',
                     // fontSize: '2.8rem',
                 }}>
-                    <h2>Learning Suggestions</h2>
+                    <p style={{fontSize: "xxx-large", color: 'black'}}>Learning Suggestions</p>
                 </div>
                 <div style={{width: '70vw', margin: 'auto'}}>
                     <h3>Popular Digital Tools</h3>
