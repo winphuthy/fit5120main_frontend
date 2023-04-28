@@ -69,12 +69,13 @@ export function LearningSuggestion() {
 
 
     function post_word(newValue) {
-        console.log(newValue)
+        console.log(newValue);
+        console.log(JSON.stringify(newValue));
         if (!newValue) return;
         fetch(backendIP + 'wordcloud', {
             method: "POST", mode: "cors", headers: {
                 'Content-Type': 'application/json'
-            }, body: JSON.stringify({"word": newValue})
+            }, body: JSON.stringify(newValue)
         })
             .then((response) => response.blob())
             .then((imageBlob) => {
@@ -180,7 +181,8 @@ export function LearningSuggestion() {
                         some of the most currently popular ones.</p>
                     <p style={{textAlign: 'justify', fontSize: '1.2rem'}}> If there’s not already a guide for one of the
                         digital tools you’d
-                        like to learn about on this website, feel free to scroll down and have a look at the “Making a
+                        like to learn about on this website, feel free to scroll down and have a look at the “Making
+                        aearn
                         Suggestion” area.</p>
                     <hr style={{width: '70vw', margin: 'auto', marginTop: '50px', marginBottom: "50px"}}/>
                     <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
