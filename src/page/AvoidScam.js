@@ -16,7 +16,7 @@ export function AvoidScam() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(scamInputRef.current.value);
-        // fetch_scamInput();
+        fetch_scamInput();
     };
 
     async function fetch_scamInput() {
