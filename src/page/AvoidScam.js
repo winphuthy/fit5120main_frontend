@@ -3,7 +3,7 @@ import MainImage from '../images/websitebackgroundnew2.jpg'
 import * as React from 'react';
 import {useRef, useState} from 'react';
 import Button from '@mui/material/Button';
-import output from '../images/output2.png'
+import output from '../images/wc_new.png'
 import {backendIP} from "../const/const";
 import TextField from '@mui/material/TextField';
 
