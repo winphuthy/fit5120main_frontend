@@ -1,5 +1,5 @@
 import './About.css';
-import MainImage from '../images/learningsuggestions.jpg'
+import MainImage from '../images/mainpage.jpg'
 import TextField from '@mui/material/TextField';
 import Autocomplete, {createFilterOptions} from '@mui/material/Autocomplete';
 import React, {useEffect, useRef, useState} from 'react';
@@ -16,7 +16,7 @@ export function LearningSuggestion() {
     const [wordCloud, setWordCloud] = useState('');
     const [value, setValue] = useState('');
     const [wordCloudError, setWordCloudError] = useState('');
-    const [isImgErr, setIsImgErr] = useState(true);
+    // const [isImgErr, setIsImgErr] = useState(true);
     const isVote = useRef(false);
 
     console.log('isVote: ', isVote.current);
@@ -77,6 +77,7 @@ export function LearningSuggestion() {
     function post_word(newValue) {
         console.log(newValue);
         console.log(JSON.stringify(newValue));
+        let isImgErr;
         if (!newValue) return;
         fetch(backendIP + 'wordcloud', {
             method: "POST", mode: "cors", headers: {
@@ -87,10 +88,11 @@ export function LearningSuggestion() {
                 const contentType = response.headers.get('content-type');
                 console.log('content-type: ', contentType);
                 if (contentType.includes('application/json')) {
-                    setIsImgErr(true);
+                    isImgErr = true;
                     return response.json();
                 } else if (contentType.includes('image/png')) {
-                    setIsImgErr(false);
+                    isImgErr = false;
+                    setWordCloudError('');
                     return response.blob();
                 } else {
                     throw new Error(`Unsupported content type: ${contentType}`);
@@ -100,9 +102,12 @@ export function LearningSuggestion() {
                 if (!isImgErr) {
                     const imageUrl = URL.createObjectURL(result);
                     setWordCloud(imageUrl);
+                    isVote.current = true;
+                    console.log('post_word() => isVote.current: ', isVote.current);
                 } else {
                     console.log('word post error: ', result);
-                    setWordCloudError(result.message);
+                    setWordCloudError(result.message + ' please try another suggestion.');
+                    isVote.current = false;
                 }
             })
             .catch((error) => {
@@ -112,12 +117,11 @@ export function LearningSuggestion() {
 
     function sendWord(newValue) {
         console.log('on sendWord');
+        console.log('newValue: ', newValue);
         console.log('sendWord => isVote: ', isVote.current);
-        if (isVote.current === false && newValue != null) {
+        if (isVote.current === false) {
             post_word(newValue);
-            console.log('sendWord => isVote: ', isVote.current);
-            isVote.current = true;
-            console.log('sendWord => isVote: ', isVote.current);
+            console.log('sendWord => after post_word() => isVote.current: ', isVote.current);
         }
     }
 
@@ -129,16 +133,19 @@ export function LearningSuggestion() {
                     word: newValue,
                 };
                 setValue(newOp);
+                sendWord(newOp);
             } else if (newValue && newValue.inputValue) {
                 // Create a new value from the user input
                 newOp = {
                     word: newValue.inputValue,
                 };
                 setValue(newOp);
+                sendWord(newOp);
             } else {
                 setValue(newValue);
+                sendWord(newValue);
             }
-            sendWord(newOp);
+            // sendWord(newOp);
         };
     }
 
@@ -151,7 +158,8 @@ export function LearningSuggestion() {
             const isExisting = options.some((option) => inputValue === option.word);
             if (inputValue !== '' && !isExisting) {
                 filtered.push({
-                    inputValue, word: `${inputValue}`,
+                    inputValue,
+                    word: `Add "${inputValue}"`,
                 });
             }
             return filtered;
@@ -183,6 +191,7 @@ export function LearningSuggestion() {
                 <div style={{
                     height: '45vh',
                     backgroundImage: `url(${MainImage})`,
+                    backgroundPositionY: '-120px',
                     opacity: '0.8',
                     backgroundSize: 'cover',
                     display: 'flex',
@@ -190,7 +199,7 @@ export function LearningSuggestion() {
                     alignItems: 'center',
                     color: 'black', // fontSize: '2.8rem',
                 }}>
-                    <h2>Learning Suggestions</h2>
+                    <h1>Learning Suggestions</h1>
                 </div>
                 <div style={{width: '70vw', margin: 'auto'}}>
                     <h3>Popular Digital Tools</h3>
@@ -199,11 +208,11 @@ export function LearningSuggestion() {
                         digital websites, applications and services, look no further. The word cloud below this shows
                         off
                         some of the most currently popular ones.</p>
-                    <p style={{textAlign: 'justify', fontSize: '1.2rem'}}> If there’s not already a guide for one of the
-                        digital tools you’d
-                        like to learn about on this website, feel free to scroll down and have a look at the “Making
-                        aearn
-                        Suggestion” area.</p>
+                    {/*<p style={{textAlign: 'justify', fontSize: '1.2rem'}}> If there’s not already a guide for one of the*/}
+                    {/*    digital tools you’d*/}
+                    {/*    like to learn about on this website, feel free to scroll down and have a look at the “Making*/}
+                    {/*    aearn*/}
+                    {/*    Suggestion” area.</p>*/}
                     <hr style={{width: '70vw', margin: 'auto', marginTop: '50px', marginBottom: "50px"}}/>
                     <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <img src={WordCloudPage} alt="word image" style={{width: '50%', height: 'auto'}}/></div>
