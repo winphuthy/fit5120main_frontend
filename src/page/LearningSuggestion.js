@@ -237,7 +237,7 @@ export function LearningSuggestion() {
                         options={wordList}
                         getOptionLabel={ac_getOptionLabel()}
                         renderOption={(props, option) => <li {...props}>{option.word}</li>}
-                        sx={{width: 300}}
+                        sx={{width: 600}}
                         freeSolo
                         disabled={isVote.current}
                         renderInput={(params) => (
