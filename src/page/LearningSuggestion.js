@@ -15,6 +15,8 @@ export function LearningSuggestion() {
     const [topWord, setTopWord] = useState([]);
     const [wordCloud, setWordCloud] = useState('');
     const [value, setValue] = useState('');
+    const [wordCloudError, setWordCloudError] = useState('');
+    const [isImgErr, setIsImgErr] = useState(true);
     const isVote = useRef(false);
 
     console.log('isVote: ', isVote.current);
@@ -67,6 +69,10 @@ export function LearningSuggestion() {
         fetch_top_word();
     }, []);
 
+    // useEffect(() => {
+    //     console.log('on value useEffect')
+    //     sendWord(value)
+    // }, [value]);
 
     function post_word(newValue) {
         console.log(newValue);
@@ -77,10 +83,27 @@ export function LearningSuggestion() {
                 'Content-Type': 'application/json'
             }, body: JSON.stringify(newValue)
         })
-            .then((response) => response.blob())
-            .then((imageBlob) => {
-                const imageUrl = URL.createObjectURL(imageBlob);
-                setWordCloud(imageUrl);
+            .then((response) => {
+                const contentType = response.headers.get('content-type');
+                console.log('content-type: ', contentType);
+                if (contentType.includes('application/json')) {
+                    setIsImgErr(true);
+                    return response.json();
+                } else if (contentType.includes('image/png')) {
+                    setIsImgErr(false);
+                    return response.blob();
+                } else {
+                    throw new Error(`Unsupported content type: ${contentType}`);
+                }
+            })
+            .then((result) => {
+                if (!isImgErr) {
+                    const imageUrl = URL.createObjectURL(result);
+                    setWordCloud(imageUrl);
+                } else {
+                    console.log('word post error: ', result);
+                    setWordCloudError(result.message);
+                }
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -90,7 +113,7 @@ export function LearningSuggestion() {
     function sendWord(newValue) {
         console.log('on sendWord');
         console.log('sendWord => isVote: ', isVote.current);
-        if (isVote.current === false) {
+        if (isVote.current === false && newValue != null) {
             post_word(newValue);
             console.log('sendWord => isVote: ', isVote.current);
             isVote.current = true;
@@ -100,19 +123,22 @@ export function LearningSuggestion() {
 
     function ac_onchange() {
         return (event, newValue) => {
+            let newOp;
             if (typeof newValue === 'string') {
-                setValue({
+                newOp = {
                     word: newValue,
-                });
+                };
+                setValue(newOp);
             } else if (newValue && newValue.inputValue) {
                 // Create a new value from the user input
-                setValue({
+                newOp = {
                     word: newValue.inputValue,
-                });
+                };
+                setValue(newOp);
             } else {
                 setValue(newValue);
             }
-            sendWord(newValue);
+            sendWord(newOp);
         };
     }
 
@@ -128,7 +154,6 @@ export function LearningSuggestion() {
                     inputValue, word: `${inputValue}`,
                 });
             }
-
             return filtered;
         };
     }
@@ -150,14 +175,10 @@ export function LearningSuggestion() {
 
     return (
         <div style={{
-            backgroundColor: "#333333",
-            paddingBottom: '100px',
+            backgroundColor: "#333333", paddingBottom: '100px',
         }}>
             <div style={{
-                color: 'whitesmoke',
-                fontWeight: 'bolder',
-                fontSize: '1.5rem',
-                margin: 'auto',
+                color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.5rem', margin: 'auto',
             }}>
                 <div style={{
                     height: '45vh',
@@ -167,8 +188,7 @@ export function LearningSuggestion() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    color: 'black',
-                    // fontSize: '2.8rem',
+                    color: 'black', // fontSize: '2.8rem',
                 }}>
                     <h2>Learning Suggestions</h2>
                 </div>
@@ -224,16 +244,17 @@ export function LearningSuggestion() {
                             <TextField {...params} label="Select word to vote"/>
                         )}
                         style={{margin: "auto"}}
+                        // error={isImgErr}
+                        // helperTest={wordCloudError}
                     />
 
-                    <h1></h1>
+                    <p style={{fontSize: '1.5rem', textAlign: "center", color: "darkred"}}>{wordCloudError}</p>
                     <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        marginBottom: "10vh"
+                        display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: "10vh"
                     }}>
-                        <img src={wordCloud} alt="word image" style={{width: '50%', height: 'auto'}}/></div>
+                        <img src={wordCloud} alt="word image" style={{width: '50%', height: 'auto'}}/>
+
+                    </div>
                     <div>
                         <hr style={{width: '70vw', margin: 'auto', marginTop: '50px', marginBottom: "50px"}}/>
 
@@ -245,5 +266,5 @@ export function LearningSuggestion() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
