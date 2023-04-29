@@ -111,8 +111,9 @@ export function AvoidScam() {
                         <TextField 
                         id="filled-textarea" 
                         label="Paste your message/email here"
-                        multiline 
-                        variant="filled"/>
+                        multiline
+                        rows={5}
+                        variant="standard"/>
                     </Box>
                     
                     < Button onClick={handleSubmit} style={{
