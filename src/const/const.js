@@ -1,1 +1,1 @@
-export const backendIP = 'http://20.53.225.36/'
+export const backendIP = 'https://wastecounter.live/'
