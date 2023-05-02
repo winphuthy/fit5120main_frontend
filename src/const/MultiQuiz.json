@@ -1,0 +1,92 @@
+[
+    {
+      "id": 0,
+      "content": "Q1. How can you apply for a Medicare card online?",
+      "options": [
+        {
+          "text": "A) Through myGov account",
+          "isCorrect": false
+        },
+        {
+          "text": "B) Through the Medicare website",
+          "isCorrect": true
+        },
+        {
+          "text": "C) Through the Department of Human Services",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+        "id": 1,
+        "content": "Q2. Which of the following can be used as both social media and messaging application?",
+        "options": [
+          {
+            "text": "A) Whatsapp",
+            "isCorrect": false
+          },
+          {
+            "text": "B) Mygov",
+            "isCorrect": true
+          },
+          {
+            "text": "C) Facebook",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "content": "Q3. What is myGov and what services does it provide?   ",
+        "options": [
+          {
+            "text": "A) MyGov is an online government service portal that provides access to a range of government services, including Medicare, Centrelink, and the Australian Taxation Office (ATO).",
+            "isCorrect": false
+          },
+          {
+            "text": "B) MyGov is an online social networking platform that connects people around the world.            ",
+            "isCorrect": true
+          },
+          {
+            "text": "C) MyGov is an online education platform that provides free courses on various subjects.            ",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "content": "Q4.What are the benefits of linking your myGov account to your ATO account?        ",
+        "options": [
+          {
+            "text": "A) You can access and manage your payments and services in one place.            ",
+            "isCorrect": false
+          },
+          {
+            "text": "B) You can receive notifications and updates from ATO.",
+            "isCorrect": true
+          },
+          {
+            "text": "C) Both A and B.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "content": "Q5 Can you use FaceTime on non-Apple devices?        ",
+        "options": [
+          {
+            "text": "A) Yes, you can use FaceTime on non-Apple devices.            ",
+            "isCorrect": false
+          },
+          {
+            "text": "B) No, FaceTime is only available on Apple devices. ",
+            "isCorrect": true
+          },
+          {
+            "text": "C) FaceTime is available on non-Apple devices but with limited functionality.            ",
+            "isCorrect": false
+          }
+        ]
+      }
+  ]

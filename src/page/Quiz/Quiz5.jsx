@@ -2,25 +2,33 @@ import * as React from 'react';
 import { useState } from 'react'; // import useState hook
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import multiQuiz from '../../const/MultiQuiz.json'; // import MultiQuiz json file
 
 export function Quiz5() {
     const [selectedColor, setSelectedColor] = useState(''); // create state for selected color
 
+    const currentQuestion = multiQuiz[4]; // get the first question from MultiQuiz
+
     return (
         <div style={{backgroundColor: 'darkgray',paddingTop: '50px', height: '100vh', width: '100vw'}}>
             <h1 style={{textAlign:'center'}}>Digital Securities Quiz</h1>
-            <div style={{width: '55vw', margin: 'auto',textAlign: 'justify'}}>
-            <h2 style={{color:'orange'}}>Question 5 of 10</h2>
-            <h2>Click on an answer and select next once you’ve confirmed your answer</h2>
-            <h2>Sample Question: if website uses cookies, what does this mean?</h2>
+            <div style={{width: '40vw', margin: 'auto',textAlign: 'justify',paddingTop: '50px'}}>
+            <h2 style={{color:'orange'}}>Question {currentQuestion.id + 1} of {multiQuiz.length}</h2> {/* display current question number */}
+            <h2>{currentQuestion.content}</h2> {/* display current question */}
             <Stack direction="column" spacing={1} sx={{display: 'flex', alignItems: 'center', marginTop: '50px'}} > 
-                <Button variant="contained" sx={{width: '300px', backgroundColor: selectedColor === 'op1' ? 'cornflowerblue' : 'initial'}} onClick={() => setSelectedColor('op1')}>op1</Button>
-                <Button variant="contained" sx={{width: '300px', backgroundColor: selectedColor === 'op2' ? 'cornflowerblue' : 'initial'}} onClick={() => setSelectedColor('op2')}>op2</Button>
-                <Button variant="contained" sx={{width: '300px', backgroundColor: selectedColor === 'op3' ? 'cornflowerblue' : 'initial'}} onClick={() => setSelectedColor('op3')}>op3</Button>
-                <Button variant="contained" sx={{width: '300px', backgroundColor: selectedColor === 'op4' ? 'cornflowerblue' : 'initial'}} onClick={() => setSelectedColor('op4')}>op4</Button>
+                {/* map through current question's options and display them */}
+                {currentQuestion.options.map((option, index) => (
+                    <Button 
+                        key={index} 
+                        variant="contained" 
+                        sx={{width: '500px', backgroundColor: selectedColor === `op${index + 1}` ? 'cornflowerblue' : 'initial'}} 
+                        onClick={() => setSelectedColor(`op${index + 1}`)}
+                    >
+                        {option.text}
+                    </Button>
+                ))}
             </Stack>
-            <Button variant="contained" sx={{width: '300px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange'}} onClick={() => window.location.href='quiz6'}>NEXT</Button>            
-            </div>
+            <Button variant="contained" sx={{width: '300px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange'}} onClick={() => window.location.href='quizresult'}>NEXT</Button>            </div>
         </div>
     );
 }

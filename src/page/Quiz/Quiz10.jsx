@@ -19,7 +19,7 @@ export function Quiz10() {
                 <Button variant="contained" sx={{width: '300px', backgroundColor: selectedColor === 'op3' ? 'cornflowerblue' : 'initial'}} onClick={() => setSelectedColor('op3')}>op3</Button>
                 <Button variant="contained" sx={{width: '300px', backgroundColor: selectedColor === 'op4' ? 'cornflowerblue' : 'initial'}} onClick={() => setSelectedColor('op4')}>op4</Button>
             </Stack>
-            <Button variant="contained" sx={{width: '300px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange'}} onClick={() => window.location.href='quizresult'}>NEXT</Button>            
+            <Button variant="contained" sx={{width: '300px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange'}} onClick={() => window.location.href='colorchange'}>NEXT</Button>            
             </div>
         </div>
     );
