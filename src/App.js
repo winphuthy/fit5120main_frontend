@@ -17,6 +17,20 @@ import {FaceTime} from "./page/FaceTime";
 import {Email} from "./page/Email";
 import {MyGov} from "./page/MyGov";
 import {Medicare} from "./page/Medicare";
+import {Quiz1} from './page/Quiz/Quiz1'
+import {Quiz2} from './page/Quiz/Quiz2'
+import {Quiz3} from './page/Quiz/Quiz3'
+import {Quiz4} from './page/Quiz/Quiz4'
+import {Quiz5} from './page/Quiz/Quiz5'
+import {Quiz6} from './page/Quiz/Quiz6'
+import {Quiz7} from './page/Quiz/Quiz7'
+import {Quiz8} from './page/Quiz/Quiz8'
+import {Quiz9} from './page/Quiz/Quiz9'
+import {Quiz10} from './page/Quiz/Quiz10'
+import {QuizResult} from './page/Quiz/QuizResult'
+
+
+
 
 import {
     Chart as ChartJS,
@@ -30,6 +44,7 @@ import {
     BarElement
   } from 'chart.js'
   import { Chart } from 'react-chartjs-2'
+import { Home, Quiz } from '@mui/icons-material';
   
   ChartJS.register(
     CategoryScale,
@@ -69,6 +84,25 @@ function App() {
                     <Route path='learningsuggestions' element={<LearningSuggestion/>}/>
                     <Route path='*' element={<Error/>}/>
                     <Route path='develop' element={<Develop/>}/>
+                    <Route path='quiz1' element = {<Quiz1/>}/>
+                    <Route path='quiz2' element = {<Quiz2/>}/>
+                    <Route path='quiz3' element = {<Quiz3/>}/>
+                    <Route path='quiz4' element = {<Quiz4/>}/>                    <Route path='quiz4' element = {<Quiz4/>}/>
+                    <Route path='quiz5' element = {<Quiz5/>}/>
+                    <Route path='quiz6' element = {<Quiz6/>}/>
+                    <Route path='quiz7' element = {<Quiz7/>}/>
+                    <Route path='quiz8' element = {<Quiz8/>}/>
+                    <Route path='quiz9' element = {<Quiz9/>}/>
+                    <Route path='quiz10' element = {<Quiz10/>}/>
+
+
+                    <Route path='quizresult' element = {<QuizResult/>}/>
+
+
+
+
+
+
                 </Routes>
                 {/*<AppFooter/>*/}
             </BrowserRouter>
