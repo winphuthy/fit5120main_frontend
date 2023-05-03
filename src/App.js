@@ -75,7 +75,7 @@ const main =
 
 function App() {
 
-    const [enter, setEnter] = useState(false);
+    const [enter, setEnter] = useState(true);
 
     const handValueChange = (value) => {
         console.log(`The new value is ${value}`);
