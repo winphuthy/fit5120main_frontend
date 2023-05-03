@@ -268,9 +268,15 @@ export function LearningSuggestion() {
                         <hr style={{width: '70vw', margin: 'auto', marginTop: '50px', marginBottom: "50px"}}/>
 
                         <h3>Leaderboard for most voted digital tools:</h3>
-                        {topWord.map((item, index) => (
-                            <p style={{textAlign: 'justify', fontSize: '1.2rem'}} id={index}> {index + 1}: {item} </p>
-                        ))}
+                        {
+                            topWord.map(
+                                (item, index) => (
+                                    <p style={{textAlign: 'justify', fontSize: '1.2rem'}} key={index.toString()}>
+                                        {index + 1}: {item}
+                                    </p>
+                                )
+                            )
+                        }
                     </div>
                 </div>
             </div>
