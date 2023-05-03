@@ -269,7 +269,7 @@ export function LearningSuggestion() {
 
                         <h3>Leaderboard for most voted digital tools:</h3>
                         {topWord.map((item, index) => (
-                            <p style={{textAlign: 'justify', fontSize: '1.2rem'}}> {index + 1}: {item} </p>
+                            <p style={{textAlign: 'justify', fontSize: '1.2rem'}} id={index}> {index + 1}: {item} </p>
                         ))}
                     </div>
                 </div>
