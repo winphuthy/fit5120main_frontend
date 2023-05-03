@@ -26,12 +26,22 @@ export const MuiNavBar = () => {
         setAnchorEl_DS(event.currentTarget);
     };
 
+    const [anchorEl_S, setAnchorEl_S] = React.useState(null);
+    const open_S = Boolean(anchorEl_S);
+    const handleClick_S = (event) => {
+        setAnchorEl_S(event.currentTarget);
+    };
+
     const handleClose_DC = () => {
         setAnchorEl_DC(null);
     };
 
     const handleClose_DS = () => {
         setAnchorEl_DS(null);
+    };
+
+    const handleClose_S = () => {
+        setAnchorEl_S(null);
     };
 
     return (
@@ -62,8 +72,18 @@ export const MuiNavBar = () => {
                         >
                             Digital Service
                         </Button>
-                        <Button component={NavLink} to= 'avoidingscam' color='inherit' sx={buttonSX}>Avoiding Scams</Button>
-                        <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning Suggestions</Button>   
+                        <Button color='inherit'
+                                onClick={handleClick_S}
+                                endIcon={<KeyboardArrowDownIcon/>}
+                                aria-controls={open_S ? 'basic-menu_S' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open_S ? 'true' : undefined}
+                        >
+                            Security
+                        </Button>
+                        {/*<Button component={NavLink} to= 'avoidingscam' color='inherit' sx={buttonSX}>Avoiding Scams</Button>*/}
+                        <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning
+                            Suggestions</Button>
                     </Stack>
                     <Menu
                         id="basic-menu_DC"
@@ -96,6 +116,21 @@ export const MuiNavBar = () => {
                         <MenuItem component={NavLink} to="mygov" onClick={handleClose_DS} sx={buttonSX}>MyGov</MenuItem>
                         <MenuItem component={NavLink} to="medicare" onClick={handleClose_DS}
                                   sx={buttonSX}>Medicare</MenuItem>
+                    </Menu>
+
+                    <Menu
+                        id="basic-menu_S"
+                        anchorEl={anchorEl_S}
+                        open={open_S}
+                        onClose={handleClose_S}
+                        MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                        }}
+                    >
+                        <MenuItem component={NavLink} to="avoidingscam" onClick={handleClose_S} sx={buttonSX}>Avoiding
+                            Scams</MenuItem>
+                        <MenuItem component={NavLink} to="" onClick={handleClose_S} sx={buttonSX}>Password
+                            Evaluate</MenuItem>
                     </Menu>
                 </Toolbar>
             </AppBar>
