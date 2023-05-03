@@ -92,7 +92,6 @@ function App() {
         <ThemeProvider theme={theme}>
             {enter || login}
             {enter && main}
-
         </ThemeProvider>
     );
 }
