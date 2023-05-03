@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import output from '../images/wc_new.png'
 import {backendIP} from "../const/const";
 import TextField from '@mui/material/TextField';
+import ReactSpeedometer from "react-d3-speedometer";
 
 
 export function AvoidScam() {
@@ -110,13 +111,57 @@ export function AvoidScam() {
             </div>
             <hr style={{width: '70vw', margin: 'auto', marginTop: '50px'}}/>
 
+            <div style={{
+                // width: '70vw',
+                // height: "auto",
+                margin: 'auto',
+                marginTop: '30px',
+                display: "flex",
+                justifyContent: "center"
+            }}>
+                <ReactSpeedometer
+                    width={600}
+                    height={350}
+                    // fluidWidth={true}
+                    value={10}
+                    maxValue={0}
+                    minValue={100}
+                    ringWidth={90}
+                    customSegmentLabels={[
+                        {
+                            text: "Very height",
+                            position: "INSIDE",
+                            color: "#555",
+                        },
+                        {
+                            text: "Height",
+                            position: "INSIDE",
+                            color: "#555",
+                        },
+                        {
+                            text: "Medium",
+                            position: "INSIDE",
+                            color: "#555",
+                            fontSize: "19px",
+                        },
+                        {
+                            text: "Low chance",
+                            position: "INSIDE",
+                            color: "#555",
+                        },
+                        {
+                            text: "Very low",
+                            position: "INSIDE",
+                            color: "#555",
+                        },]}
+                />
+            </div>
 
             <form onSubmit={handleSubmit} style={{
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginTop: '30px',
                 width: '60vw'
             }}>
                 <div style={{position: 'relative', width: '100%'}}>
@@ -142,7 +187,8 @@ export function AvoidScam() {
                 </div>
             </form>
 
-            <div style={{width: '45vw', margin: 'auto', marginTop: '30px'}}>
+
+            <div style={{width: '45vw', margin: 'auto'}}>
                 <p style={{textAlign: 'justify', fontSize: '1.5rem', color: "floralwhite"}}> {result}</p>
             </div>
         </div>
