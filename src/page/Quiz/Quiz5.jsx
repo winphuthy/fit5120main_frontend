@@ -28,7 +28,7 @@ export function Quiz5() {
                     </Button>
                 ))}
             </Stack>
-            <Button variant="contained" sx={{width: '300px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange'}} onClick={() => window.location.href='quizresult'}>NEXT</Button>            </div>
+            <Button variant="contained" sx={{width: '300px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange'}} onClick={() => window.location.href='quizresult'}>Submit</Button>            </div>
         </div>
     );
 }

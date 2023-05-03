@@ -12,7 +12,8 @@ export function Quiz1() {
     return (
         <div style={{backgroundColor: 'darkgray',paddingTop: '50px', height: '100vh', width: '100vw'}}>
             <h1 style={{textAlign:'center'}}>Digital Securities Quiz</h1>
-            <div style={{width: '40vw', margin: 'auto',textAlign: 'justify',paddingTop: '50px'}}>
+            <div style={{width: '40vw', margin: 'auto',textAlign: 'justify',paddingTop: '30px'}}>
+            <h2>Click on an answer and select next once you’ve confirmed your answer</h2>
             <h2 style={{color:'orange'}}>Question {currentQuestion.id + 1} of {multiQuiz.length}</h2> {/* display current question number */}
             <h2>{currentQuestion.content}</h2> {/* display current question */}
             <Stack direction="column" spacing={1} sx={{display: 'flex', alignItems: 'center', marginTop: '50px'}} > 
