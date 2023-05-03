@@ -142,8 +142,7 @@ export function AvoidScam() {
                         {
                             text: "Medium",
                             position: "INSIDE",
-                            color: "#555",
-                            fontSize: speedometerColor,
+                            color: speedometerColor
                         },
                         {
                             text: "Low chance",

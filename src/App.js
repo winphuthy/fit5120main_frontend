@@ -1,5 +1,6 @@
 import './App.css';
 import * as React from "react";
+import {useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomePage from "./page/HomePage";
 import {DigitalService} from "./page/DigitalService";
@@ -19,7 +20,19 @@ import {MyGov} from "./page/MyGov";
 import {Medicare} from "./page/Medicare";
 
 import {
+    BarElement,
+    CategoryScale,
     Chart as ChartJS,
+    Legend,
+    LinearScale,
+    LineElement,
+    PointElement,
+    Title,
+    Tooltip
+} from 'chart.js'
+import {Login} from "./page/Login";
+
+ChartJS.register(
     CategoryScale,
     LinearScale,
     PointElement,
@@ -28,19 +41,7 @@ import {
     Tooltip,
     Legend,
     BarElement
-  } from 'chart.js'
-  import { Chart } from 'react-chartjs-2'
-  
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-    BarElement
-  )
+)
 
 
 const theme = createTheme({
@@ -49,29 +50,49 @@ const theme = createTheme({
     },
 });
 
+const main =
+    <BrowserRouter>
+        <MuiNavBar/>
+        <Routes>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='digitalservice' element={<DigitalService/>}/>
+            <Route path='whatsapp' element={<Whatsapp/>}/>
+            <Route path='zoom' element={<Zoom/>}/>
+            <Route path='facebook' element={<Facebook/>}/>
+            <Route path='facetime' element={<FaceTime/>}/>
+            <Route path='email' element={<Email/>}/>
+            <Route path='mygov' element={<MyGov/>}/>
+            <Route path='medicare' element={<Medicare/>}/>
+            <Route path='getinvolved' element={<GetInvolved/>}/>
+            <Route path='avoidingscam' element={<AvoidScam/>}/>
+            <Route path='learningsuggestions' element={<LearningSuggestion/>}/>
+            <Route path='*' element={<Error/>}/>
+            <Route path='develop' element={<Develop/>}/>
+        </Routes>
+        {/*<AppFooter/>*/}
+    </BrowserRouter>
+
+
 function App() {
+
+    const [enter, setEnter] = useState(false);
+
+    const handValueChange = (value) => {
+        console.log(`The new value is ${value}`);
+        setEnter(value)
+    }
+
+    const login =
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Login onValueChange={handValueChange}/>}/>
+            </Routes>
+        </BrowserRouter>
     return (
         <ThemeProvider theme={theme}>
-            <BrowserRouter>
-                <MuiNavBar/>
-                <Routes>
-                    <Route path='/' element={<HomePage/>}/>
-                    <Route path='digitalservice' element={<DigitalService/>}/>
-                    <Route path='whatsapp' element={<Whatsapp/>}/>
-                    <Route path='zoom' element={<Zoom/>}/>
-                    <Route path='facebook' element={<Facebook/>}/>
-                    <Route path='facetime' element={<FaceTime/>}/>
-                    <Route path='email' element={<Email/>}/>
-                    <Route path='mygov' element={<MyGov/>}/>
-                    <Route path='medicare' element={<Medicare/>}/>
-                    <Route path='getinvolved' element={<GetInvolved/>}/>
-                    <Route path='avoidingscam' element={<AvoidScam/>}/>
-                    <Route path='learningsuggestions' element={<LearningSuggestion/>}/>
-                    <Route path='*' element={<Error/>}/>
-                    <Route path='develop' element={<Develop/>}/>
-                </Routes>
-                {/*<AppFooter/>*/}
-            </BrowserRouter>
+            {enter || login}
+            {enter && main}
+
         </ThemeProvider>
     );
 }
