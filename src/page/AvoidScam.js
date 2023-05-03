@@ -8,6 +8,7 @@ import {backendIP} from "../const/const";
 import TextField from '@mui/material/TextField';
 import ReactSpeedometer from "react-d3-speedometer";
 
+const speedometerColor = '#030303';
 
 export function AvoidScam() {
 
@@ -131,28 +132,28 @@ export function AvoidScam() {
                         {
                             text: "Very height",
                             position: "INSIDE",
-                            color: "#555",
+                            color: speedometerColor,
                         },
                         {
                             text: "Height",
                             position: "INSIDE",
-                            color: "#555",
+                            color: speedometerColor,
                         },
                         {
                             text: "Medium",
                             position: "INSIDE",
                             color: "#555",
-                            fontSize: "19px",
+                            fontSize: speedometerColor,
                         },
                         {
                             text: "Low chance",
                             position: "INSIDE",
-                            color: "#555",
+                            color: speedometerColor,
                         },
                         {
                             text: "Very low",
                             position: "INSIDE",
-                            color: "#555",
+                            color: speedometerColor,
                         },]}
                 />
             </div>
