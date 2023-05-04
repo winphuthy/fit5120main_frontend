@@ -1,11 +1,12 @@
-import MainImage from '../../images/mainpage.jpg'
+import MainImage from '../images/mainpage.jpg'
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 
 
+export const QuestionnaireA = () => {
+    
 
-export function QuizResult() {
 
     return (
         <div style={{
@@ -25,18 +26,18 @@ export function QuizResult() {
                     alignItems: 'center',
                     color: 'black', // fontSize: '2.8rem',
                 }}>
-                    <h1>Quiz Result</h1>
+                    <h1>Digital Service</h1>
                 </div>
-                <div style={{width: '55vw', margin: 'auto'}}>
-                    <p style={{textAlign: 'justify', fontSize: '1.2rem'}}>Have a look at your response breakdown below for information on how you’ve done, and where you could have improved on </p>
-                    <hr style={{width: '55vw', marginTop: '70px', marginBottom: "60px"}}/>
-                    <Stack justifyContent="center" alignItems="center">
-                        <Button variant="contained" sx = {{width:'200px',height:'60px'}} onClick={() => window.location.href='/'}>Home page</Button> {/* add onClick event to button */}
-                    </Stack>
+                <div style={{width: '50vw', margin: 'auto'}}>
+                    <p style={{textAlign: 'justify', fontSize: '1.2rem'}}>Questionnaire Survey</p>
+                    <hr style={{width: '50vw', marginTop: '50px', marginBottom: "50px"}}/>
+
+
   
                 </div>
             </div>
         </div>
         
-    );
+    )
+
 }

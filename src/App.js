@@ -31,6 +31,9 @@ import {QuizResult} from './page/Quiz/QuizResult'
 import {ColorChange} from './page/Quiz/ColorChange'
 import{Questionnaire} from './page/Questinnaire'
 import{QuizPage} from './page/QuizPage'
+import {QuestionnaireA} from './page/QuestionnaireA';
+import {QuestionnaireB} from './page/QuestionnaireB';
+
 
 
 
@@ -101,6 +104,10 @@ function App() {
                     <Route path='colorchange' element = {<ColorChange/>}/>
                     <Route path='quizresult' element = {<QuizResult/>}/>
                     <Route path='questionnaire' element = {<Questionnaire/>}/>
+                    <Route path='questionnairea' element = {<QuestionnaireA/>}/>
+                    <Route path='questionnaireb' element = {<QuestionnaireB/>}/>
+
+
 
 
 
