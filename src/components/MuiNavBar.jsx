@@ -63,7 +63,11 @@ export const MuiNavBar = () => {
                             Digital Service
                         </Button>
                         <Button component={NavLink} to= 'avoidingscam' color='inherit' sx={buttonSX}>Avoiding Scams</Button>
-                        <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning Suggestions</Button>   
+                        <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning Suggestions</Button> 
+                        <Button component={NavLink} to='quizpage' color='inherit' sx={buttonSX}>Quiz</Button>   
+                        <Button component={NavLink} to='questionnaire' color='inherit' sx={buttonSX}>Questionnaire</Button>   
+
+  
                     </Stack>
                     <Menu
                         id="basic-menu_DC"

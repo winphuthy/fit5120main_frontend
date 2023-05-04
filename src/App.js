@@ -29,6 +29,8 @@ import {Quiz9} from './page/Quiz/Quiz9'
 import {Quiz10} from './page/Quiz/Quiz10'
 import {QuizResult} from './page/Quiz/QuizResult'
 import {ColorChange} from './page/Quiz/ColorChange'
+import{Questionnaire} from './page/Questinnaire'
+import{QuizPage} from './page/QuizPage'
 
 
 
@@ -85,10 +87,11 @@ function App() {
                     <Route path='learningsuggestions' element={<LearningSuggestion/>}/>
                     <Route path='*' element={<Error/>}/>
                     <Route path='develop' element={<Develop/>}/>
+                    <Route path='quizpage' element = {<QuizPage/>}/>
                     <Route path='quiz1' element = {<Quiz1/>}/>
                     <Route path='quiz2' element = {<Quiz2/>}/>
                     <Route path='quiz3' element = {<Quiz3/>}/>
-                    <Route path='quiz4' element = {<Quiz4/>}/>                    <Route path='quiz4' element = {<Quiz4/>}/>
+                    <Route path='quiz4' element = {<Quiz4/>}/>                 
                     <Route path='quiz5' element = {<Quiz5/>}/>
                     <Route path='quiz6' element = {<Quiz6/>}/>
                     <Route path='quiz7' element = {<Quiz7/>}/>
@@ -97,6 +100,7 @@ function App() {
                     <Route path='quiz10' element = {<Quiz10/>}/>
                     <Route path='colorchange' element = {<ColorChange/>}/>
                     <Route path='quizresult' element = {<QuizResult/>}/>
+                    <Route path='questionnaire' element = {<Questionnaire/>}/>
 
 
 

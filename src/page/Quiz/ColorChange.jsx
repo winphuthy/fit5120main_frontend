@@ -3,20 +3,20 @@ import { useState } from 'react'; // import useState hook
 
 
 export function ColorChange() {
-    const [inputValue, setInputValue] = useState(''); // initialize state for input value
+    const [inputValue, setInputValue] = useState(''); 
 
     const handleInputChange = (event) => {
-        setInputValue(event.target.value); // update input value state on change
+        setInputValue(event.target.value); 
     };
 
     let backgroundColor = 'blue'; // initialize background color to blue
 
     if (inputValue.length > 3) {
-        backgroundColor = 'yellow'; // change background color to yellow if input length is greater than 3
+        backgroundColor = 'yellow'; 
     }
 
     if (inputValue.length > 6) {
-        backgroundColor = 'gray'; // change background color to gray if input length is greater than 6
+        backgroundColor = 'gray'; 
     }
 
     return (
