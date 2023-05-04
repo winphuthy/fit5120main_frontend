@@ -10,6 +10,7 @@ import ReactSpeedometer from "react-d3-speedometer";
 
 const speedometerColor = '#030303';
 
+
 export function AvoidScam() {
 
     const [result, setResult] = useState('');
