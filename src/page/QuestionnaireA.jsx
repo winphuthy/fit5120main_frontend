@@ -77,6 +77,7 @@ export const QuestionnaireA = () => {
                             <br />
                             <FormControlLabel control={<Checkbox value="option5" checked={selectedOption === "option5"} onChange={handleOptionChange} />} label="E. Not of above." labelPlacement="end" />
                             <br />
+                            <br />
                             <Button variant="contained" sx = {{width:'150px',height:'50px',backgroundColor: 'aliceblue',fontsize:'1.5rem',fontWeight: 'bolder',display: 'block',margin:'auto'}} onClick={handleButtonClick}>submit</Button>                        </div>
                     </div>
                 </div>
