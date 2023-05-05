@@ -14,6 +14,8 @@ const speedometerColor = '#030303';
 export function AvoidScam() {
 
     const [result, setResult] = useState('');
+    const [rate, setRate] = useState(0);
+
     const scamInputRef = useRef();
 
     const handleSubmit = (event) => {
@@ -30,7 +32,10 @@ export function AvoidScam() {
         })
             .then((response) => response.json())
             .then((data) => {
-                setResult(data);
+                console.log(data)
+                data = JSON.parse(data);
+                console.log(data.result)
+                setResult(data.result);
             })
             .catch((error) => {
                 console.error('Error:', error);
