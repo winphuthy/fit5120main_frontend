@@ -1,7 +1,6 @@
 import MainImage from '../images/mainpage.jpg'
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
