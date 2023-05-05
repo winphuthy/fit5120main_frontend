@@ -1,8 +1,9 @@
 import MainImage from '../images/mainpage.jpg'
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import Checkbox from '@mui/material/Checkbox';
+import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 
 export const QuestionnaireA = () => {
@@ -10,7 +11,8 @@ export const QuestionnaireA = () => {
     const [selectedOption, setSelectedOption] = React.useState("");
 
     const handleOptionChange = (event) => {
-        setSelectedOption(event.target.value);
+        const value = event.target.value;
+        setSelectedOption(prevSelectedOption => prevSelectedOption === value ? "" : value);
     };
 
     const handleButtonClick = () => {
@@ -65,15 +67,15 @@ export const QuestionnaireA = () => {
                     <div style={{backgroundColor: 'cornsilk', padding: '20px'}}>
                         <div style={{backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
                             <p>Question: Which of the following best describes your need?</p>
-                            <FormControlLabel control={<Checkbox value="option1" onChange={handleOptionChange} />} label="A. I want to receive and send email." />
+                            <FormControlLabel control={<Checkbox value="option1" checked={selectedOption === "option1"} onChange={handleOptionChange} />} label="A. I want to receive and send email." labelPlacement="end" />
                             <br />
-                            <FormControlLabel control={<Checkbox value="option2" onChange={handleOptionChange} />} label="B. I want to check out Super summary for this financial year." />
+                            <FormControlLabel control={<Checkbox value="option2" checked={selectedOption === "option2"} onChange={handleOptionChange} />} label="B. I want to check out Super summary for this financial year." labelPlacement="end" />
                             <br />
-                            <FormControlLabel control={<Checkbox value="option3" onChange={handleOptionChange} />} label="C. I want to access government services online." />
+                            <FormControlLabel control={<Checkbox value="option3" checked={selectedOption === "option3"} onChange={handleOptionChange} />} label="C. I want to access government services online." labelPlacement="end" />
                             <br />
-                            <FormControlLabel control={<Checkbox value="option4" onChange={handleOptionChange} />} label="D. I want to check my Medicare claims and statements." />
+                            <FormControlLabel control={<Checkbox value="option4" checked={selectedOption === "option4"} onChange={handleOptionChange} />} label="D. I want to check my Medicare claims and statements." labelPlacement="end" />
                             <br />
-                            <FormControlLabel control={<Checkbox value="option5" onChange={handleOptionChange} />} label="E. Not of above." />
+                            <FormControlLabel control={<Checkbox value="option5" checked={selectedOption === "option5"} onChange={handleOptionChange} />} label="E. Not of above." labelPlacement="end" />
                             <br />
                             <Button variant="contained" sx = {{width:'150px',height:'50px',backgroundColor: 'aliceblue',fontsize:'1.5rem',fontWeight: 'bolder',display: 'block',margin:'auto'}} onClick={handleButtonClick}>submit</Button>                        </div>
                     </div>
@@ -82,3 +84,7 @@ export const QuestionnaireA = () => {
         </div>
     );
 }
+
+
+
+
