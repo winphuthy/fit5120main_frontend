@@ -7,8 +7,14 @@ import MainImage from '../../images/mainpage.jpg'
 
 export function Quiz1() {
     const [selectedColor, setSelectedColor] = useState(''); // create state for selected color
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // create state for current question index
 
-    const currentQuestion = multiQuiz[0]; // get the first question from MultiQuiz
+    const currentQuestion = multiQuiz[currentQuestionIndex]; // get the current question from MultiQuiz based on currentQuestionIndex
+
+    const handleNextQuestion = () => {
+        setCurrentQuestionIndex(currentQuestionIndex + 1); // increment currentQuestionIndex by 1 to move to the next question
+        setSelectedColor(''); 
+    }
 
     return (
         <div style={{
@@ -46,7 +52,15 @@ export function Quiz1() {
                     </Button>
                 ))}
             </Stack>
-            <Button variant="contained" sx={{width: '300px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange'}} onClick={() => window.location.href='quiz2'}>NEXT</Button>            </div>
+            <Button 
+                variant="contained" 
+                sx={{width: '300px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange'}}
+                onClick={handleNextQuestion} // add onClick event to move to the next question
+            >
+                Submit
+            </Button>            
+            </div>
+
             </div>
         </div>
     );
