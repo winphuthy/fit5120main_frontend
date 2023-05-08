@@ -37,7 +37,7 @@ export const Questionnaire = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    color: 'black', // fontSize: '2.8rem',
+                    color: 'black', 
                 }}>
                     <h1>Learning Recommendation</h1>
                 </div>
@@ -55,7 +55,7 @@ export const Questionnaire = () => {
                         <br />-  Video calling</p>
                     <hr style={{ width: '50vw', marginTop: '50px', marginBottom: "50px" }} />
                     <Stack direction="column" spacing={1} sx={{ display: 'flex', alignItems: 'center', marginTop: '50px' }} >
-                        <Button variant="contained" sx={{ width: '350px', height: '70px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder' }} onClick={handleDigitalServiceButtonClick}>Digital Service</Button> {/* add onClick event to button */}
+                        <Button variant="contained" sx={{ width: '350px', height: '70px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder' }} onClick={handleDigitalServiceButtonClick}>Digital Service</Button> 
                         <Button variant="contained" sx={{ width: '350px', height: '70px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder' }} onClick={handleDigitalCommunicationButtonClick}>Digital Communications</Button>
                     </Stack>
                 </div>

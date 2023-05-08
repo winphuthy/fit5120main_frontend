@@ -15,14 +15,13 @@ export function QuizPage() {
 
     const handleNextQuestion = () => {
         const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text); // get the answer object of the selected option
-        setAnswers([...answers, { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }]); // add the answer object to state
+        setAnswers([...answers, { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }]); 
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setSelectedColor('');
     }
 
     const handleFinish = () => {
-        const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text); // get the answer object of the selected option
-        setAnswers([...answers, { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }]); // add the answer object to state
+        const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text); 
         setShowQuiz(false);
     }
 
@@ -57,13 +56,13 @@ export function QuizPage() {
                             <Stack direction="column" spacing={1} sx={{ display: 'flex', alignItems: 'center', marginTop: '50px' }} >
                                 {currentQuestion.options.map((option, index) => (
                                     <Button
-                                        key={index}
-                                        variant="contained"
-                                        sx={{ width: '500px', color: 'white', backgroundColor: selectedColor === `op${index + 1}` ? 'cornflowerblue' : 'initial' }}
-                                        onClick={() => setSelectedColor(`op${index + 1}`)}
-                                    >
-                                        {option.text}
-                                    </Button>
+                                    key={index}
+                                    variant="contained"
+                                    sx={{ width: '600px', color: 'black', backgroundColor: selectedColor === `op${index + 1}` ? 'cornflowerblue' : 'antiquewhite' }}
+                                    onClick={() => setSelectedColor(`op${index + 1}`)}
+                                  >
+                                    {option.text}
+                                  </Button>
                                 ))}
                             </Stack>
                             {currentQuestionIndex === multiQuiz.length - 1 ? (
@@ -130,4 +129,4 @@ export function QuizPage() {
             </div>
         </div>
     );                             
-                                    }
+}
