@@ -96,15 +96,15 @@ export const Questionnaire = () => {
                         <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
 
                             <p>Question: Which of the following best describes your need?</p>
-                            <FormControlLabel control={<Checkbox />} label="A. I want to receive and send email." labelPlacement="end" />
+                            <FormControlLabel control={<Checkbox />} label="A. I want to chat with my friend and family via text but don’t want to pay." labelPlacement="whatsapp" />
                             <br />
-                            <FormControlLabel control={<Checkbox />} label="B. I want to check out Super summary for this financial year." labelPlacement="end" />
+                            <FormControlLabel control={<Checkbox />} label="B. I want to chat with my friends and family face to face, I want to see them clearly." labelPlacement="zoom" />
                             <br />
-                            <FormControlLabel control={<Checkbox />} label="C. I want to access government services online." labelPlacement="end" />
+                            <FormControlLabel control={<Checkbox />} label="C. I want to see what my friends and families are doing, meet some new people, and want to know if there is anything happening in my neighbourhood. " labelPlacement="facebook" />
                             <br />
-                            <FormControlLabel control={<Checkbox />} label="D. I want to check my Medicare claims and statements." labelPlacement="end" />
+                            <FormControlLabel control={<Checkbox />} label="D. I want to chat with my friends and family face to face, wherever I am." labelPlacement="facetime" />
                             <br />
-                            <FormControlLabel control={<Checkbox />} label="E. Not of above." labelPlacement="end" />
+                            <FormControlLabel control={<Checkbox />} label="E. Not of above." labelPlacement="learningsuggestions" />
                             <br />
                             <br />
                             <Button variant="contained" sx={{ width: '150px', heighåt: '50px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder', display: 'block', margin: 'auto' }} >submit</Button>
