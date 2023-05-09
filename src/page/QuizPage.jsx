@@ -3,18 +3,17 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import multiQuiz from '../const/MultiQuiz.json';
-import MainImage from '../images/mainpage.jpg'
+import MainImage from '../images/mainpage.jpg';
 
 export function QuizPage() {
     const [selectedColor, setSelectedColor] = useState('');
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [showQuiz, setShowQuiz] = useState(false);
     const [answers, setAnswers] = useState([]); // create state for storing answers
-
     const currentQuestion = multiQuiz[currentQuestionIndex];
 
     const handleNextQuestion = () => {
-        const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text); // get the answer object of the selected option
+        const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text); 
         setAnswers([...answers, { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }]); 
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setSelectedColor('');
@@ -23,7 +22,10 @@ export function QuizPage() {
     const handleFinish = () => {
         const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text); 
         setShowQuiz(false);
-    }
+        setAnswers([...answers,
+            { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }
+        ]);
+    };
 
     return (
         <div style={{
@@ -100,16 +102,17 @@ export function QuizPage() {
                         <div style={{ width: '55vw', margin: 'auto', marginTop: '50px' }}>
                             <hr style={{ width: '55vw', marginTop: '70px', marginBottom: "60px" }} />
                             <h3 style={{ color: 'orange', marginBottom: '20px' }}>Result:</h3>
-                            {answers.map((answer) => (
-                                <div key={answer.id} style={{ marginBottom: '15px', color: answer.isCorrect ? 'green' : 'red' ,textAlign: 'justify'}}>
-                                    <p>Question {answer.id + 1}: <br/> Your answer: {currentQuestion.options[answer.selectedOption - 1].text}</p>
-                                    {answer.isCorrect ? (
-                                        <p>Correct!</p>
-                                    ) : (
-                                        <p>Incorrect. <br/> The correct answer is: {currentQuestion.options.find(option => option.isCorrect).text}</p>
-                                    )}
-                                </div>                                
-                            ))}
+                           
+                                    <div key={answers[answers.length-1].id} style={{ marginBottom: '15px', color: answers[answers.length-1].isCorrect ? 'green' : 'red' ,textAlign: 'justify'}}>
+                                        <p>Question {answers[answers.length-1].id + 1}: <br/> Your answer: {currentQuestion.options[answers[answers.length-1].selectedOption - 1].text}</p>
+                                        {answers[answers.length-1].isCorrect ? (
+                                            <p>Correct!</p>
+                                        ) : (
+                                            <p>Incorrect. <br/> The correct answer is: {currentQuestion.options.find(option => option.isCorrect).text}</p>
+                                        )}
+                                    </div>  
+                              
+                            
                             <hr style={{ width: '55vw', marginTop: '70px', marginBottom: "60px" }} />
                             <Button
                                 variant="outlined"
