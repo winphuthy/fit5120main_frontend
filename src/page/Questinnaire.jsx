@@ -39,7 +39,7 @@ export const Questionnaire = () => {
     const submitFormB = () => {
         if(selectedOptionB !== ""){
             console.log(`Option B Selected: ${selectedOptionB}`);
-            // Do something with the selected option B
+           
         }
         else{
             console.log("No option selected for Question B");
