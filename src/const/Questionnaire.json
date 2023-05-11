@@ -1,128 +1,47 @@
 [
     {
       "id": 0,
-      "content": "Which of the following best describes your need?",
+      "content": "Which of the following questions best identify your goals?      ",
       "options": [
         {
-          "text": "A) I want to receive and send email.",
-          "guide": "email"
+          "text": "A. Are you looking to set up an individual health identifier?          ",
+          "feedback":"Medicare is the publicly-funded universal health care insurance in Victoria, and is what is used to access healthcare services. To learn how to set your Medicare up, you can go through our guide here: https://lesterwithhistreasure.de/medicare"
         },
         {
-          "text": "B) Through the Medicare website",
-          "isCorrect": true
+          "text": "B. Are you looking to access government related services?          ",
+          "feedback":"MyGov is a simple and secure way to access government services, some examples of what you can access here are the ATO, Centrelink, health identifier, etc. To learn how to set your MyGov up, you can go through our guide here: https://lesterwithhistreasure.de/mygov "
         },
         {
-          "text": "C) Through the Department of Human Services",
-          "isCorrect": false
+          "text": "C. Are you looking to set up an online mailing address?   ",
+          "feedback":"Gmail is a free web-based online mailing service, many services require an email to be used as a form of communication and identification. To learn how to set up a gmail account, you can do so through our guide here: https://lesterwithhistreasure.de/email"
+        },
+        {
+          "text": "D. None of the above   ",
+          "feedback":"It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: https://lesterwithhistreasure.de/learningsuggestions"
         }
       ]
     },
     {
-        "id": 1,
-        "content": "Q2. Which of the following can be used as both social media and messaging application?",
-        "options": [
-          {
-            "text": "A) Whatsapp",
-            "isCorrect": false
-          },
-          {
-            "text": "B) Mygov",
-            "isCorrect": true
-          },
-          {
-            "text": "C) Facebook",
-            "isCorrect": false
-          }
-        ]
+    "id": 1,
+    "content": "Which of the following descriptions best matches yours goals ?",
+    "options": [
+      {
+        "text": "A. Online Messaging",
+        "feedback":"WhatsApp is a free to use messaging and calling digital application that works with all mobile devices. It can send messages from anywhere to anyone as long as you’ve got an internet connection. To learn how to set Whatsapp up, you can go through our guide here: https://lesterwithhistreasure.de/whatsapp "
       },
       {
-        "id": 2,
-        "content": "Q3. What is myGov and what services does it provide?   ",
-        "options": [
-          {
-            "text": "A) MyGov is an online government service portal that provides access to a range of government services, including Medicare, Centrelink, and the Australian Taxation Office (ATO).",
-            "isCorrect": false
-          },
-          {
-            "text": "B) MyGov is an online social networking platform that connects people around the world.            ",
-            "isCorrect": true
-          },
-          {
-            "text": "C) MyGov is an online education platform that provides free courses on various subjects.            ",
-            "isCorrect": false
-          }
-        ]
+        "text": "B. Video Calling         ",
+        "feedback":"WhatsApp is a free to use messaging and calling digital application that works with all mobile devices. It can send messages from anywhere to anyone as long as you’ve got an internet connection. To learn how to set WhatsApp up, you can through our guide here: https://lesterwithhistreasure.de/whatsapp"
       },
       {
-        "id": 3,
-        "content": "Q4. What are the benefits of linking your myGov account to your ATO account?        ",
-        "options": [
-          {
-            "text": "A) You can access and manage your payments and services in one place.            ",
-            "isCorrect": false
-          },
-          {
-            "text": "B) You can receive notifications and updates from ATO.",
-            "isCorrect": true
-          },
-          {
-            "text": "C) Both A and B.",
-            "isCorrect": false
-          }
-        ]
+        "text": "C. Social networking/Online Communities   ",
+        "feedback":"Zoom is a free to use video conferencing software. It is great for big family catch-up sessions. To learn how to use and set Zoom up, you can go through our guide here: https://lesterwithhistreasure.de/zoom"
       },
       {
-        "id": 4,
-        "content": "Q5. Can you use FaceTime on non-Apple devices?        ",
-        "options": [
-          {
-            "text": "A) Yes, you can use FaceTime on non-Apple devices.            ",
-            "isCorrect": false
-          },
-          {
-            "text": "B) No, FaceTime is only available on Apple devices. ",
-            "isCorrect": true
-          },
-          {
-            "text": "C) FaceTime is available on non-Apple devices but with limited functionality.            ",
-            "isCorrect": false
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "content": "Q6. How can you protect your Facebook account from hackers?",
-        "options": [
-          {
-            "text": "A) Use a strong and unique password. ",
-            "isCorrect": false
-          },
-          {
-            "text": "B) Enable two-factor authentication.",
-            "isCorrect": true
-          },
-          {
-            "text": "C)  Both A and B  ",
-            "isCorrect": false
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "content": "Q7. Which is the best practice for creating a strong password?        ",
-        "options": [
-          {
-            "text": "A) Use a combination of upper and lower case, special characters and not related to personal informations            ",
-            "isCorrect": false
-          },
-          {
-            "text": "B) Use my birthday as my password",
-            "isCorrect": true
-          },
-          {
-            "text": "C) Write my password on a sticky note and stick it on my monitor",
-            "isCorrect": false
-          }
-        ]
+        "text": "D. None of the above   ",
+        "feedback":"It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: https://lesterwithhistreasure.de/learningsuggestions"
       }
+    ]
+  }
+
   ]

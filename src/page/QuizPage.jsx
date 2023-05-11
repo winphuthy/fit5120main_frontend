@@ -11,20 +11,26 @@ export function QuizPage() {
     const [showQuiz, setShowQuiz] = useState(false);
     const [answers, setAnswers] = useState([]); // create state for storing answers
     const currentQuestion = multiQuiz[currentQuestionIndex];
+    const [previousQuestionIndex, setPreviousQuestionIndex] = useState(-1);
+
 
     const handleNextQuestion = () => {
-        const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text); 
-        setAnswers([...answers, { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }]); 
+        const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text);
+        setAnswers([...answers, { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }]);
+        setPreviousQuestionIndex(currentQuestionIndex);
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setSelectedColor('');
+        window.scrollTo(0, 700);
     }
 
+    // Update handleFinish function to set previousQuestionIndex to currentQuestionIndex
     const handleFinish = () => {
-        const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text); 
+        const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text);
         setShowQuiz(false);
         setAnswers([...answers,
-            { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }
+        { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }
         ]);
+        setPreviousQuestionIndex(currentQuestionIndex);
     };
 
     return (
@@ -58,20 +64,20 @@ export function QuizPage() {
                             <Stack direction="column" spacing={1} sx={{ display: 'flex', alignItems: 'center', marginTop: '50px' }} >
                                 {currentQuestion.options.map((option, index) => (
                                     <Button
-                                    key={index}
-                                    variant="contained"
-                                    sx={{ width: '600px', color: 'black', backgroundColor: selectedColor === `op${index + 1}` ? 'cornflowerblue' : 'antiquewhite' }}
-                                    onClick={() => setSelectedColor(`op${index + 1}`)}
-                                  >
-                                    {option.text}
-                                  </Button>
+                                        key={index}
+                                        variant="contained"
+                                        sx={{ width: '600px', color: 'black', backgroundColor: selectedColor === `op${index + 1}` ? 'cornflowerblue' : 'antiquewhite' }}
+                                        onClick={() => setSelectedColor(`op${index + 1}`)}
+                                    >
+                                        {option.text}
+                                    </Button>
                                 ))}
                             </Stack>
                             {currentQuestionIndex === multiQuiz.length - 1 ? (
                                 selectedColor ? (
                                     <Button
                                         variant="contained"
-                                        sx={{ width: '300px', height:'60px',marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange' }}
+                                        sx={{ width: '300px', height: '60px', marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange' }}
                                         onClick={handleFinish}
                                     >
                                         View the result
@@ -83,7 +89,7 @@ export function QuizPage() {
                                 selectedColor ? (
                                     <Button
                                         variant="contained"
-                                        sx={{ width: '300px',height:'60px', marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange' }}
+                                        sx={{ width: '300px', height: '60px', marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange' }}
                                         onClick={handleNextQuestion}
                                     >
                                         NEXT
@@ -102,21 +108,28 @@ export function QuizPage() {
                         <div style={{ width: '55vw', margin: 'auto', marginTop: '50px' }}>
                             <hr style={{ width: '55vw', marginTop: '70px', marginBottom: "60px" }} />
                             <h3 style={{ color: 'orange', marginBottom: '20px' }}>Result:</h3>
-                           
-                                    <div key={answers[answers.length-1].id} style={{ marginBottom: '15px', color: answers[answers.length-1].isCorrect ? 'green' : 'red' ,textAlign: 'justify'}}>
-                                        <p>Question {answers[answers.length-1].id + 1}: <br/> Your answer: {currentQuestion.options[answers[answers.length-1].selectedOption - 1].text}</p>
-                                        {answers[answers.length-1].isCorrect ? (
-                                            <p>Correct!</p>
+                            {answers.map((answer, index) => (
+                                <div key={answer.id} style={{ marginBottom: '15px', color: answer.isCorrect ? 'green' : 'red', textAlign: 'justify' }}>
+                                    {index === previousQuestionIndex && (
+                                        <p>Question {answer.id + 1}: <br /> Your answer: {multiQuiz[answer.id].options[answer.selectedOption - 1].text}</p>
+                                    )}
+                                    {index === previousQuestionIndex && (
+                                        answer.isCorrect ? (
+                                            <p>Correct!
+                                                <br/> Feedback:  {multiQuiz[answer.id].options[answer.selectedOption - 1].feedback}
+                                            </p>
+                                            
                                         ) : (
-                                            <p>Incorrect. <br/> The correct answer is: {currentQuestion.options.find(option => option.isCorrect).text}</p>
-                                        )}
-                                    </div>  
-                              
-                            
+                                            <p>Incorrect. <br /> The correct answer is: {multiQuiz[answer.id].options.find(option => option.isCorrect).text} <br/>
+                                            <br/> Feedback: <br/>{multiQuiz[answer.id].options[answer.selectedOption - 1].feedback}</p>
+                                        )
+                                    )}
+                                </div>
+                            ))}
                             <hr style={{ width: '55vw', marginTop: '70px', marginBottom: "60px" }} />
                             <Button
                                 variant="outlined"
-                                sx={{ width: '300px',height:'60px', marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block',backgroundColor: 'lightsteelblue', color: 'black' }}
+                                sx={{ width: '300px', height: '60px', marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'lightsteelblue', color: 'black' }}
                                 onClick={() => {
                                     setShowQuiz(false); // reset to show quiz button again
                                     setCurrentQuestionIndex(0); // reset current question index
@@ -131,5 +144,5 @@ export function QuizPage() {
                 </div>
             </div>
         </div>
-    );                             
+    );
 }
