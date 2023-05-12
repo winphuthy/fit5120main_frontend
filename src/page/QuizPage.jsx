@@ -9,12 +9,13 @@ export function QuizPage() {
     const [selectedColor, setSelectedColor] = useState('');
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [showQuiz, setShowQuiz] = useState(false);
-    const [answers, setAnswers] = useState([]); // create state for storing answers
+    const [answers, setAnswers] = useState([]); 
     const currentQuestion = multiQuiz[currentQuestionIndex];
     const [previousQuestionIndex, setPreviousQuestionIndex] = useState(-1);
 
 
     const handleNextQuestion = () => {
+
         const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text);
         setAnswers([...answers, { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }]);
         setPreviousQuestionIndex(currentQuestionIndex);
@@ -23,7 +24,6 @@ export function QuizPage() {
         window.scrollTo(0, 700);
     }
 
-    // Update handleFinish function to set previousQuestionIndex to currentQuestionIndex
     const handleFinish = () => {
         const answer = currentQuestion.options.find(option => option.text === currentQuestion.options[selectedColor.slice(-1) - 1].text);
         setShowQuiz(false);
@@ -54,7 +54,7 @@ export function QuizPage() {
                     <h1>How much do you know about digital security?</h1>
                 </div>
                 <div style={{ width: '55vw', margin: 'auto' }}>
-                    <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>Test your knowledge on digital safety and cyber security by taking our quick 10 question quiz. </p>
+                    <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>Test your knowledge on digital safety and cyber security by taking our quick  question quiz. </p>
                     <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>Once you’ve finished, we’ll show you how you did on the quiz, and give you some extra information on questions you may have gotten wrong </p>
                     <hr style={{ width: '55vw', marginTop: '70px', marginBottom: "60px" }} />
                     {showQuiz ? (
@@ -115,14 +115,16 @@ export function QuizPage() {
                                     )}
                                     {index === previousQuestionIndex && (
                                         answer.isCorrect ? (
-                                            <p>Correct!
-                                                <br/> Feedback:  {multiQuiz[answer.id].options[answer.selectedOption - 1].feedback}
+                                            <p>Correct!<br/> 
+                                            <br/>Feedback:  {multiQuiz[answer.id].options[answer.selectedOption - 1].feedback}
                                             </p>
+
                                             
                                         ) : (
                                             <p>Incorrect. <br /> The correct answer is: {multiQuiz[answer.id].options.find(option => option.isCorrect).text} <br/>
                                             <br/> Feedback: <br/>{multiQuiz[answer.id].options[answer.selectedOption - 1].feedback}</p>
                                         )
+                                        
                                     )}
                                 </div>
                             ))}

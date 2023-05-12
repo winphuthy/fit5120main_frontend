@@ -5,6 +5,7 @@ import MainImage from '../images/mainpage.jpg'
 import Button from '@mui/material/Button';
 import data from '../const/Questionnaire.json'
 import { useState } from 'react';
+import ArrowImage from '../images/productHeroArrowDown.png'
 
 
 export const Questionnaire = () => {
@@ -15,6 +16,7 @@ export const Questionnaire = () => {
     const [selectedOptionA, setSelectedOptionA] = React.useState("");
     const [selectedOptionB, setSelectedOptionB] = React.useState("");
     const [feedback, setFeedback] = useState(null);
+    const [displayFeedback, setDisplayFeedback] = useState(false);
 
 
     const handleDigitalServiceButtonClick = () => {
@@ -58,12 +60,11 @@ export const Questionnaire = () => {
     }
 
     const submitFormA = () => {
-
         const feedbackText = data[0].options.find(
             (option) => option.text === selectedOptionA
         ).feedback;
         setFeedback(feedbackText);
-
+        setDisplayFeedback(true);
     }
 
     const submitFormB = () => {
@@ -71,6 +72,7 @@ export const Questionnaire = () => {
             (option) => option.text === selectedOptionB
         ).feedback;
         setFeedback(feedbackText);
+        setDisplayFeedback(true);
     }
 
 
@@ -99,26 +101,26 @@ export const Questionnaire = () => {
                     <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>If you’re unsure about what software might best suit your needs, have a quick go at our recommendations questionnaire, and we’ll provide you with the best recommendations</p>
                     <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "50px" }} />
                     <Stack direction="column" spacing={1} sx={{ display: 'flex', alignItems: 'center', marginTop: '50px' }} >
-                        <Button variant="outlined" sx={{ width: '50vw', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalServiceButtonClick}>
-                            Digital Service: Platforms which can be used for multiple purposes such as:
-                            <br />-  Sending electronic mail
-                            <br />-  Storing medical information
-                            <br />-  Storing personally identifying info for government services</Button>
+                        <Button variant="outlined" sx={{ width: '50vw', height: '50px',fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalServiceButtonClick}>
+                        Digital services: Access to online tools that can aid with public services</Button>
                         <Button variant="outlined" sx={{ width: '50vw', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalCommunicationButtonClick}>
-                            Digital Communications: Platforms that can be used for online messaging, features include:
-                            <br />-  Group messaging
-                            <br />-  Messaging from anywhere with an internet connection
-                            <br />-  Video calling</Button>
+                        Digital Communications: Online communication tools for messaging, calling, video calling, etc</Button>
                         <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleNoneButtonClick}>
                             None
                         </Button>
                     </Stack>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                        <img src={ArrowImage} alt="arrow" />
+                    </div>
+                    <hr style={{ width: '50vw', marginTop: '30px' }} />
+
                 </div>
             </div>
 
+
             {displayQuestionnaireA && (
-                <div id="questionA" style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify' }}>
-                    <hr style={{ width: '50vw', marginTop: '50px', marginBottom: "50px" }} />
+                <div id="questionA" style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
+
                     <div style={{ backgroundColor: 'cornsilk', padding: '20px' }}>
                         <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
 
@@ -134,16 +136,21 @@ export const Questionnaire = () => {
                             <Button variant="contained" sx={{ width: '150px', height: '50px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder', display: 'block', margin: 'auto' }} onClick={submitFormA}>submit</Button>
                         </div>
                     </div>
-                    <hr style={{ width: '50vw', marginTop: '50px', marginBottom: "50px" }} />
-                    <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
-                        <p>{feedback}</p>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
+                        <img src={ArrowImage} alt="arrow" />
                     </div>
+                    <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
+                    {displayFeedback && (
+                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                            <p>{feedback}</p>
+                        </div>
+                    )}
 
                 </div>
             )}
             {displayQuestionnaireB && (
-                <div id='questionB' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify' }}>
-                    <hr style={{ width: '50vw', marginTop: '50px', marginBottom: "50px" }} />
+                <div id='questionB' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify' ,marginTop:'30px'}}>
+
                     <div style={{ backgroundColor: 'cornsilk', padding: '20px' }}>
                         <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
 
@@ -159,18 +166,23 @@ export const Questionnaire = () => {
                             <Button variant="contained" sx={{ width: '150px', heighåt: '50px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder', display: 'block', margin: 'auto' }} onClick={submitFormB}>submit</Button>
                         </div>
                     </div>
-                    <hr style={{ width: '50vw', marginTop: '50px', marginBottom: "50px" }} />
-                    <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
-                        <p>{feedback}</p>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
+                        <img src={ArrowImage} alt="arrow" />
                     </div>
+                    <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
+                    {displayFeedback && (
+                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                            <p>{feedback}</p>
+                        </div>
+                    )}
+
                 </div>
             )}
 
             {displayQuestionnaireC && (
-                <div id='questionC' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify' }}>
-                    <hr style={{ width: '50vw', marginTop: '50px', marginBottom: "50px" }} />
+                <div id='questionC' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify',marginTop:'30px'}}>
                     <div style={{ backgroundColor: 'grey', padding: '20px' }}>
-                            <p>It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: https://lesterwithhistreasure.de/learningsuggestions</p>
+                        <p>It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: https://lesterwithhistreasure.de/learningsuggestions</p>
                     </div>
                 </div>
             )}
