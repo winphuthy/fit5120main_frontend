@@ -33,8 +33,7 @@ export function AvoidScam() {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-                data = JSON.parse(data);
-                console.log(data.result)
+                setRate(data.result_num)
                 setResult(data.result);
             })
             .catch((error) => {
@@ -130,7 +129,7 @@ export function AvoidScam() {
                     width={600}
                     height={350}
                     // fluidWidth={true}
-                    value={10}
+                    value={rate}
                     maxValue={0}
                     minValue={100}
                     ringWidth={90}
