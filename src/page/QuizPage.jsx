@@ -118,7 +118,6 @@ export function QuizPage() {
                                             <p>Correct!<br/> 
                                             <br/>Feedback:  {multiQuiz[answer.id].options[answer.selectedOption - 1].feedback}
                                             </p>
-
                                             
                                         ) : (
                                             <p>Incorrect. <br /> The correct answer is: {multiQuiz[answer.id].options.find(option => option.isCorrect).text} <br/>
