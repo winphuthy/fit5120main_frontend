@@ -1,0 +1,185 @@
+[
+    {
+      "id": 0,
+      "content": "Q1. What is an email attachment?",
+      "options": [
+        {
+          "text": "a) A file that is sent along with an email message",
+          "isCorrect": true,
+          "feedback":"That's correct, an attachment can be many file types like an image, text document etc."
+        },
+        {
+          "text": "b) A type of virus that infects computers  ",
+          "isCorrect": false,
+          "feedback":"The correct answer is A. An attachment is a file that comes with the email. It can be many format from a text file to a image etc"
+      
+        },
+        {
+          "text": "c) An email address for customer support      ",
+          "isCorrect": false,
+          "feedback":"The correct answer is A. An attachment is a file that comes with the email. It can be many format from a text file to a image etc"
+
+        },
+        {
+          "text": "d) A feature that allows you to mark important messages  ",
+          "isCorrect": false,
+          "feedback":"The correct answer is A. An attachment is a file that comes with the email. It can be many format from a text file to a image etc"
+
+        }
+
+      ]
+    },
+    {
+        "id": 1,
+        "content": "Q2. In a web browser, what is the keyboard shortcut 'Ctrl + F' used for?",
+        "options": [
+          {
+            "text": "A) Zoom in on the webpage",
+            "isCorrect": false,
+            "feedback":"The correct answer is C.the ‘Ctrl + F’ shortcut is used for searching text on a webpage. This function is universal across almost all browsers.           "
+
+          },
+          {
+            "text": "B) Zoom out on the webpage",
+            "isCorrect": false,
+            "feedback":"The correct answer is C.the ‘Ctrl + F’ shortcut is used for searching text on a webpage. This function is universal across almost all browsers.           "
+
+          },
+          {
+            "text": "C) Find text on the webpage",
+            "isCorrect": true,
+            "feedback":"That's correct, you can use the shortcut for searching word or sentence in a webpage"
+
+          },
+          {
+            "text": "D) Open a new tab",
+            "isCorrect": false,
+            "feedback":"The correct answer is C.the ‘Ctrl + F’ shortcut is used for searching text on a webpage. This function is universal across almost all browsers.           "
+
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "content": "Q3. What is a website hyperlink?   ",
+        "options": [
+          {
+            "text": "A) The main title of a website",
+            "isCorrect": false,
+            "feedback":"The correct answer is C.the ‘Ctrl + F’ shortcut is used for searching text on a webpage. This function is universal across almost all browsers."
+          },
+          {
+            "text": "B) The address of another website            ",
+            "isCorrect": false,
+            "feedback":"The correct answer is C.the ‘Ctrl + F’ shortcut is used for searching text on a webpage. This function is universal across almost all browsers."
+
+          },
+          {
+            "text": "C) A clickable button            ",
+            "isCorrect": true,
+            "feedback":"That's correct, you can use the shortcut for searching word or sentence in a webpage"
+          },
+          {
+            "text": "D) A form used to submit data          ",
+            "isCorrect": false,
+            "feedback":"The correct answer is C.the ‘Ctrl + F’ shortcut is used for searching text on a webpage. This function is universal across almost all browsers."
+
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "content": "Q4. What is a web browser?       ",
+        "options": [
+          {
+            "text": "A) A program used to create websites           ",
+            "isCorrect": false,
+            "feedback":"The correct answer is B. Browser is the software/program that you use to visit different websites, actually, the program you are using now to visit us is a browser."
+          },
+          {
+            "text": "B) A program used to search the internet   ",
+            "isCorrect": true,
+            "feedback":"That’s correct, in fact you are using it now to browse this page.            "
+          },
+          {
+            "text": "C) A type of computer virus            ",
+            "isCorrect": false,
+            "feedback":"The correct answer is B. Browser is the software/program that you use to visit different websites, actually, the program you are using now to visit us is a browser."
+
+          },
+          {
+            "text": "D) A program used to edit videos ",
+            "isCorrect": false,
+            "feedback":"The correct answer is B. Browser is the software/program that you use to visit different websites, actually, the program you are using now to visit us is a browser."
+
+          }
+
+        ]
+      },
+      {
+        "id": 4,
+        "content": "Q5. What are the benefits of linking your myGov account to your ATO account?        ",
+        "options": [
+          {
+            "text": "A) You can access and manage your payments and services in one place.            ",
+            "isCorrect": false,
+            "feedback":"The correct answer is C. You can do both of them once you linked your myGov with your ATO account"
+          },
+          {
+            "text": "B) You can receive notifications and updates from ATO. ",
+            "isCorrect": false,
+            "feedback":"The correct answer is C. You can do both of them once you linked your myGov with your ATO account"
+
+          },
+          {
+            "text": "C) Both A and B.         ",
+            "isCorrect": true,
+            "feedback":"That’s correct, both of them are the the benefit once you linked your myGov account"
+
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "content": "Q6. Which is the best practice for creating a strong password?",
+        "options": [
+          {
+            "text": "A) Use a combination of upper and lower case, special characters and not related to personal informations            ",
+            "isCorrect": true,
+            "feedback":"That is correct, the best practice for creating a password is to include various elements.            "
+          },
+          {
+            "text": "B) Use my birthday as my password            ",
+            "isCorrect": false,
+            "feedback":"The correct answer is A, using a password that is related to yourself can be easily hacked by others, for example, your birthday details are open in some social media like facebook.You should also avoid marking it down as open text.            "
+          },
+          {
+            "text": "C) Write my password on a sticky note and stick it on my monitor  ",
+            "isCorrect": false,
+            "feedback":"The correct answer is A, using a password that is related to yourself can be easily hacked by others, for example, your birthday details are open in some social media like facebook.You should also avoid marking it down as open text. "
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "content": "Q7. Can you use FaceTime on non-Apple devices?      ",
+        "options": [
+          {
+            "text": "A) Yes, you can use FaceTime on non-Apple devices.            ",
+            "isCorrect": false,
+            "feedback":"The correct answer is B, Facetime is still unique to Apple devices only. As an android user, you can still join a facetime conversation hosted by the apple user. "
+          },
+          {
+            "text": "B)  No, FaceTime is only available on Apple devices.",
+            "isCorrect": true,
+            "feedback":"That is correct, Facetime is unique to apple device, however you can still join a facetime conversation hosted by an apple user            "
+          },
+          {
+            "text": "C) FaceTime is available on non-Apple devices but with limited functionality. ",
+            "isCorrect": false,
+            "feedback":"The correct answer is B, Facetime is still unique to Apple devices only. As an android user, you can still join a facetime conversation hosted by the apple user. "
+
+          }
+        ]
+      }
+  ]
