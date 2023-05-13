@@ -42,13 +42,12 @@ export default function InteractionChart() {
             }
         ]
     });
-
-    const yearOptions = YearList.map((value) =>
+    /*const yearOptions = YearList.map((value) =>
         < MenuItem value={parseInt(value)} id={parseInt(value)}>{value}</MenuItem>
     )
     const selectOptions = SelectList.map((value) =>
         < MenuItem value={value} id={value}>{value}</MenuItem>
-    )
+    )*/
 
     useEffect(() => {
 
@@ -152,7 +151,14 @@ export default function InteractionChart() {
                         value={selection}
                         onChange={event => setSelection(event.target.value)}
                     >
-                        {selectOptions}
+                        {/*{selectOptions}*/}
+                        {
+                            SelectList.map(
+                                (value, index) => (
+                                    < MenuItem value={value} id={index.toString()}>{value}</MenuItem>
+                                )
+                            )
+                        }
                     </Select>
                 </FormControl>
             </div>
@@ -165,7 +171,15 @@ export default function InteractionChart() {
                         value={year}
                         onChange={event => setYear(event.target.value)}
                     >
-                        {yearOptions}
+                        {/*{yearOptions}*/}
+                        {
+                            YearList.map(
+                                (value, index) =>
+                                    < MenuItem value={parseInt(value)} id={index.toString()}>
+                                        {value}
+                                    </MenuItem>
+                            )
+                        }
                     </Select>
                 </FormControl>
             </div>
