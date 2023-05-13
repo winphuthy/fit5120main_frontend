@@ -31,6 +31,8 @@ import {
     Tooltip
 } from 'chart.js'
 import {Login} from "./page/Login";
+import {QuizPage} from "./page/QuizPage";
+import {Questionnaire} from "./page/Questinnaire";
 
 ChartJS.register(
     CategoryScale,
@@ -66,6 +68,8 @@ const main =
             <Route path='getinvolved' element={<GetInvolved/>}/>
             <Route path='avoidingscam' element={<AvoidScam/>}/>
             <Route path='learningsuggestions' element={<LearningSuggestion/>}/>
+            <Route path='quizpage' element={<QuizPage/>}/>
+            <Route path='questionnaire' element={<Questionnaire/>}/>
             <Route path='*' element={<Error/>}/>
             <Route path='develop' element={<Develop/>}/>
         </Routes>
