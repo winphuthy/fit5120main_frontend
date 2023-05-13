@@ -17,6 +17,7 @@ export const Questionnaire = () => {
     const [selectedOptionB, setSelectedOptionB] = React.useState("");
     const [feedback, setFeedback] = useState(null);
     const [displayFeedback, setDisplayFeedback] = useState(false);
+    const [link,setLink] = useState(null);
 
 
     const handleDigitalServiceButtonClick = () => {
@@ -64,6 +65,9 @@ export const Questionnaire = () => {
             (option) => option.text === selectedOptionA
         ).feedback;
         setFeedback(feedbackText);
+        setLink(data[0].options.find(
+            (option) => option.text === selectedOptionA
+        ).link);
         setDisplayFeedback(true);
     }
 
@@ -71,6 +75,9 @@ export const Questionnaire = () => {
         const feedbackText = data[1].options.find(
             (option) => option.text === selectedOptionB
         ).feedback;
+        setLink(data[1].options.find(
+            (option) => option.text === selectedOptionB
+        ).link);
         setFeedback(feedbackText);
         setDisplayFeedback(true);
     }
@@ -103,8 +110,8 @@ export const Questionnaire = () => {
                     <Stack direction="column" spacing={1} sx={{ display: 'flex', alignItems: 'center', marginTop: '50px' }} >
                         <Button variant="outlined" sx={{ width: '50vw', height: '50px',fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalServiceButtonClick}>
                         Digital services: Access to online tools that can aid with public services</Button>
-                        <Button variant="outlined" sx={{ width: '50vw', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalCommunicationButtonClick}>
-                        Digital Communications: Online communication tools for messaging, calling, video calling, etc</Button>
+                        <Button variant="outlined" sx={{ width: '50vw',height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalCommunicationButtonClick}>
+                        Digital Communications: Online tools for messaging, calling, video calling</Button>
                         <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleNoneButtonClick}>
                             None
                         </Button>
@@ -141,8 +148,9 @@ export const Questionnaire = () => {
                     </div>
                     <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
                     {displayFeedback && (
-                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
                             <p>{feedback}</p>
+                            <a  href= {link}>{link}</a>
                         </div>
                     )}
 
@@ -173,6 +181,7 @@ export const Questionnaire = () => {
                     {displayFeedback && (
                         <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
                             <p>{feedback}</p>
+                            <a  href= {link}>{link}</a>
                         </div>
                     )}
 
@@ -182,7 +191,8 @@ export const Questionnaire = () => {
             {displayQuestionnaireC && (
                 <div id='questionC' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify',marginTop:'30px'}}>
                     <div style={{ backgroundColor: 'grey', padding: '20px' }}>
-                        <p>It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: https://lesterwithhistreasure.de/learningsuggestions</p>
+                        <p>It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: </p>
+                        <a  href= "https://lesterwithhistreasure.de/learningsuggestions">https://lesterwithhistreasure.de/learningsuggestions</a>
                     </div>
                 </div>
             )}
