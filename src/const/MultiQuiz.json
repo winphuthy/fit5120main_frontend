@@ -4,24 +4,24 @@
       "content": "Q1. What is an email attachment?",
       "options": [
         {
-          "text": "a) A file that is sent along with an email message",
+          "text": "A) A file that is sent along with an email message",
           "isCorrect": true,
           "feedback":"That's correct, an attachment can be many file types like an image, text document etc."
         },
         {
-          "text": "b) A type of virus that infects computers  ",
+          "text": "B) A type of virus that infects computers  ",
           "isCorrect": false,
           "feedback":"The correct answer is A. An attachment is a file that comes with the email. It can be many format from a text file to a image etc"
       
         },
         {
-          "text": "c) An email address for customer support      ",
+          "text": "C) An email address for customer support      ",
           "isCorrect": false,
           "feedback":"The correct answer is A. An attachment is a file that comes with the email. It can be many format from a text file to a image etc"
 
         },
         {
-          "text": "d) A feature that allows you to mark important messages  ",
+          "text": "D) A feature that allows you to mark important messages  ",
           "isCorrect": false,
           "feedback":"The correct answer is A. An attachment is a file that comes with the email. It can be many format from a text file to a image etc"
 

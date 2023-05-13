@@ -33,7 +33,7 @@ export function QuizPage() {
         { id: currentQuestion.id, selectedOption: selectedColor.slice(-1), isCorrect: answer.isCorrect }
         ]);
         setPreviousQuestionIndex(currentQuestionIndex);
-        window.scrollTo(0, 1500);
+        window.scrollTo(0, 1530);
 
     };
 
