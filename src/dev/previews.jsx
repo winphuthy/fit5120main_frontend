@@ -17,6 +17,7 @@ import {Develop} from "../Develop";
 import SwiperModified from "../components/swiper/SwiperModified";
 import {LearningSuggestion} from "../page/LearningSuggestion";
 import {AvoidScam} from "../page/AvoidScam";
+import {Questionnaire} from "../page/Questinnaire";
 
 const ComponentPreviews = () => {
     return (
@@ -71,6 +72,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/AvoidScam">
                 <AvoidScam/>
+            </ComponentPreview>
+            <ComponentPreview path="/Questionnaire">
+                <Questionnaire/>
             </ComponentPreview>
         </Previews>
     )

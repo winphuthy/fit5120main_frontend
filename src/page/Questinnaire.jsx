@@ -1,10 +1,10 @@
 import Stack from '@mui/material/Stack';
 import Checkbox from '@mui/material/Checkbox';
 import * as React from 'react';
+import {useState} from 'react';
 import MainImage from '../images/mainpage.jpg'
 import Button from '@mui/material/Button';
 import data from '../const/Questionnaire.json'
-import { useState } from 'react';
 import ArrowImage from '../images/productHeroArrowDown.png'
 
 
@@ -32,7 +32,7 @@ export const Questionnaire = () => {
 
         const questionA = document.getElementById('questionA');
         if (questionA) {
-            questionA.scrollIntoView({ behavior: "smooth" });
+            questionA.scrollIntoView({behavior: "smooth"});
         }
 
     };
@@ -44,7 +44,7 @@ export const Questionnaire = () => {
         setDisplayQuestionnaireD(false);
         const questionB = document.getElementById('questionB');
         if (questionB) {
-            questionB.scrollIntoView({ behavior: "smooth" });
+            questionB.scrollIntoView({behavior: "smooth"});
         }
     };
 
@@ -55,7 +55,7 @@ export const Questionnaire = () => {
         setDisplayQuestionnaireD(false);
         const questionC = document.getElementById('questionC');
         if (questionC) {
-            questionC.scrollIntoView({ behavior: "smooth" });
+            questionC.scrollIntoView({behavior: "smooth"});
         }
     }
 
@@ -113,10 +113,9 @@ export const Questionnaire = () => {
     }
 
 
-
     return (
         <div style={{
-            backgroundColor: "#333333", paddingBottom: '100px',
+            backgroundColor: "#333333", paddingBottom: '100px', height: '100vh',
         }}>
             <div style={{
                 color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.5rem', margin: 'auto',
@@ -134,51 +133,90 @@ export const Questionnaire = () => {
                 }}>
                     <h1>Learning Recommendation</h1>
                 </div>
-                <div style={{ width: '50vw', margin: 'auto' }}>
-                    <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>If you’re unsure about what software might best suit your needs, have a quick go at our recommendations questionnaire, and we’ll provide you with the best recommendations</p>
-                    <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "50px" }} />
-                    <Stack direction="column" spacing={1} sx={{ display: 'flex', alignItems: 'center', marginTop: '50px' }} >
-                        <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalServiceButtonClick}>
+                <div style={{width: '50vw', margin: 'auto'}}>
+                    <p style={{textAlign: 'justify', fontSize: '1.2rem'}}>If you’re unsure about what software might
+                        best suit your needs, have a quick go at our recommendations questionnaire, and we’ll provide
+                        you with the best recommendations</p>
+                    <hr style={{width: '50vw', marginTop: '30px', marginBottom: "50px"}}/>
+                    <Stack direction="column" spacing={1} sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        marginTop: '50px'
+                    }}>
+                        <Button variant="outlined" sx={{
+                            width: '50vw',
+                            height: '50px',
+                            fontWeight: 'bolder',
+                            color: 'white'
+                        }} onClick={handleDigitalServiceButtonClick}>
                             Digital services: Access to online tools that can aid with public services</Button>
-                        <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalCommunicationButtonClick}>
+                        <Button variant="outlined" sx={{
+                            width: '50vw',
+                            height: '50px',
+                            fontWeight: 'bolder',
+                            color: 'white'
+                        }} onClick={handleDigitalCommunicationButtonClick}>
                             Digital Communications: Online tools for messaging, calling, video calling</Button>
-                        <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleNoneButtonClick}>
+                        <Button variant="outlined" sx={{
+                            width: '50vw',
+                            height: '50px',
+                            fontWeight: 'bolder',
+                            color: 'white'
+                        }} onClick={handleNoneButtonClick}>
                             None
                         </Button>
                     </Stack>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                        <img src={ArrowImage} alt="arrow" />
+                    <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
+                        <img src={ArrowImage} alt="arrow"/>
                     </div>
-                    <hr style={{ width: '50vw', marginTop: '30px' }} />
+                    <hr style={{width: '50vw', marginTop: '30px'}}/>
 
                 </div>
             </div>
 
 
             {displayQuestionnaireA && (
-                <div id="questionA" style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
+                <div id="questionA" style={{
+                    width: '50vw',
+                    margin: 'auto',
+                    color: 'whitesmoke',
+                    fontWeight: 'bolder',
+                    fontSize: '1.0rem',
+                    textAlign: 'justify',
+                    marginTop: '30px'
+                }}>
 
-                    <div style={{ backgroundColor: 'cornsilk', padding: '20px' }}>
-                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                    <div style={{backgroundColor: 'cornsilk', padding: '20px'}}>
+                        <div style={{backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
 
                             <p>Question A: Which of the following best describes your need?</p>
                             {data[0].options.map((option) => (
                                 <div>
-                                    <Checkbox checked={selectedOptionA === option.text} onChange={handleOptionChangeA} value={option.text} /> <label>{option.text}</label>
-                                    <br />
+                                    <Checkbox checked={selectedOptionA ===
+                                        option.text} onChange={handleOptionChangeA} value={option.text}/>
+                                    <label>{option.text}</label>
+                                    <br/>
                                 </div>
                             ))}
-                            <br />
-                            <br />
-                            <Button variant="contained" sx={{ width: '150px', height: '50px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder', display: 'block', margin: 'auto' }} onClick={submitFormA}>submit</Button>
+                            <br/>
+                            <br/>
+                            <Button variant="contained" sx={{
+                                width: '150px',
+                                height: '50px',
+                                backgroundColor: 'aliceblue',
+                                fontsize: '1.5rem',
+                                fontWeight: 'bolder',
+                                display: 'block',
+                                margin: 'auto'
+                            }} onClick={submitFormA}>submit</Button>
                         </div>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
-                        <img src={ArrowImage} alt="arrow" />
+                    <div style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
+                        <img src={ArrowImage} alt="arrow"/>
                     </div>
-                    <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
+                    <hr style={{width: '50vw', marginTop: '30px', marginBottom: "30px"}}/>
                     {displayFeedback && (
-                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                        <div style={{backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
                             <p>{feedback}</p>
                             <a href={link}>{link}</a>
                         </div>
@@ -187,29 +225,47 @@ export const Questionnaire = () => {
                 </div>
             )}
             {displayQuestionnaireB && (
-                <div id='questionB' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
+                <div id='questionB' style={{
+                    width: '50vw',
+                    margin: 'auto',
+                    color: 'whitesmoke',
+                    fontWeight: 'bolder',
+                    fontSize: '1.0rem',
+                    textAlign: 'justify',
+                    marginTop: '30px'
+                }}>
 
-                    <div style={{ backgroundColor: 'cornsilk', padding: '20px' }}>
-                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                    <div style={{backgroundColor: 'cornsilk', padding: '20px'}}>
+                        <div style={{backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
 
                             <p>Question B: Which of the following best describes your need?</p>
                             {data[1].options.map((option) => (
                                 <div>
-                                    <Checkbox checked={selectedOptionB === option.text} onChange={handleOptionChangeB} value={option.text} /> <label>{option.text}</label>
-                                    <br />
+                                    <Checkbox checked={selectedOptionB ===
+                                        option.text} onChange={handleOptionChangeB} value={option.text}/>
+                                    <label>{option.text}</label>
+                                    <br/>
                                 </div>
                             ))}
-                            <br />
-                            <br />
-                            <Button variant="contained" sx={{ width: '150px', heighåt: '50px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder', display: 'block', margin: 'auto' }} onClick={submitFormB}>submit</Button>
+                            <br/>
+                            <br/>
+                            <Button variant="contained" sx={{
+                                width: '150px',
+                                heighåt: '50px',
+                                backgroundColor: 'aliceblue',
+                                fontsize: '1.5rem',
+                                fontWeight: 'bolder',
+                                display: 'block',
+                                margin: 'auto'
+                            }} onClick={submitFormB}>submit</Button>
                         </div>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
-                        <img src={ArrowImage} alt="arrow" />
+                    <div style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
+                        <img src={ArrowImage} alt="arrow"/>
                     </div>
-                    <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
+                    <hr style={{width: '50vw', marginTop: '30px', marginBottom: "30px"}}/>
                     {displayFeedback && (
-                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                        <div style={{backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
                             <p>{feedback}</p>
                             <a href={link}>{link}</a>
                         </div>
@@ -219,37 +275,65 @@ export const Questionnaire = () => {
             )}
 
             {displayQuestionnaireC && (
-                <div id='questionC' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
-                    <div style={{ backgroundColor: 'grey', padding: '20px' }}>
-                        <p>It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: </p>
+                <div id='questionC' style={{
+                    width: '50vw',
+                    margin: 'auto',
+                    color: 'whitesmoke',
+                    fontWeight: 'bolder',
+                    fontSize: '1.0rem',
+                    textAlign: 'justify',
+                    marginTop: '30px'
+                }}>
+                    <div style={{backgroundColor: 'grey', padding: '20px'}}>
+                        <p>It looks like none of our current guides will match your desired goal. If you’d like a guide
+                            created for a specific platform, you can make a suggestion over on our learning suggestions
+                            page: </p>
                         <a href="https://lesterwithhistreasure.de/learningsuggestions">https://lesterwithhistreasure.de/learningsuggestions</a>
                     </div>
                 </div>
             )}
 
             {displayQuestionnaireD && (
-                <div id='questionD' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
-                    <div style={{ backgroundColor: 'cornsilk', padding: '20px' }}>
-                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                <div id='questionD' style={{
+                    width: '50vw',
+                    margin: 'auto',
+                    color: 'whitesmoke',
+                    fontWeight: 'bolder',
+                    fontSize: '1.0rem',
+                    textAlign: 'justify',
+                    marginTop: '30px'
+                }}>
+                    <div style={{backgroundColor: 'cornsilk', padding: '20px'}}>
+                        <div style={{backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
 
-                            <p>Which of the following  best describes your digital situation?</p>
+                            <p>Which of the following best describes your digital situation?</p>
                             {data[2].options.map((option) => (
                                 <div>
-                                    <Checkbox checked={selectedOptionD === option.text} onChange={handleOptionChangeD} value={option.text} /> <label>{option.text}</label>
-                                    <br />
+                                    <Checkbox checked={selectedOptionD ===
+                                        option.text} onChange={handleOptionChangeD} value={option.text}/>
+                                    <label>{option.text}</label>
+                                    <br/>
                                 </div>
                             ))}
-                            <br />
-                            <br />
-                            <Button variant="contained" sx={{ width: '150px', heighåt: '50px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder', display: 'block', margin: 'auto' }} onClick={submitFormD}>submit</Button>
+                            <br/>
+                            <br/>
+                            <Button variant="contained" sx={{
+                                width: '150px',
+                                heighåt: '50px',
+                                backgroundColor: 'aliceblue',
+                                fontsize: '1.5rem',
+                                fontWeight: 'bolder',
+                                display: 'block',
+                                margin: 'auto'
+                            }} onClick={submitFormD}>submit</Button>
                         </div>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
-                        <img src={ArrowImage} alt="arrow" />
+                    <div style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
+                        <img src={ArrowImage} alt="arrow"/>
                     </div>
-                    <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
+                    <hr style={{width: '50vw', marginTop: '30px', marginBottom: "30px"}}/>
                     {displayFeedback && (
-                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                        <div style={{backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
                             <p>{feedback}</p>
                             <a href={link}>{link}</a>
                         </div>
