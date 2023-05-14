@@ -78,6 +78,7 @@ export function QuizPage() {
                 <div style={{ width: '55vw', margin: 'auto' }}>
                     <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>Test your knowledge on digital safety and cyber security by taking our quick  question quiz. </p>
                     <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>Once you’ve finished, we’ll show you how you did on the quiz, and give you some extra information on questions you may have gotten wrong </p>
+                    
                     {showQuiz ? (
                         <div style={{ width: '55vw', margin: 'auto' }}>
                             <hr style={{ width: '55vw', marginTop: '70px', marginBottom: "60px" }} />
