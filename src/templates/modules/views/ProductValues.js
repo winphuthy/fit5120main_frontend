@@ -59,7 +59,7 @@ function ProductValues() {
                 component="section"
                 sx={{display: 'flex', overflow: 'hidden', bgcolor: '#08527A'}}
             >
-                <Container sx={{mt: 15, mb: 5, display: 'flex', position: 'relative'}}>
+                <Container sx={{mt: 15, mb: 30, display: 'flex', position: 'relative'}}>
                     <Box
                         component="img"
                         src="/static/themes/onepirate/productCurvyLines.png"
@@ -69,12 +69,12 @@ function ProductValues() {
                     <Grid container spacing={5}>
                         <HomePageBox icon={WhoWeAre} title="Who we are" content={'We are a team of 5 Masters of IT students from different disciplines collaborating together'}/>
                         <HomePageBox icon={WhatGoal} title="What our goal is" content={'Provide educational content to groups above 55 and improve their digital literacy skills'}/>
-                        <HomePageBox icon={questionaire} title="Learning Recommendation" content={'Unsure of what you need? Answer our questions and we’ll give the best suggestion'}/>
+                        <HomePageBox icon={questionaire} title="Learning Recommendation" content={'Unsure of what you need? Answer our questions and we’ll give the best suggestion for you'}/>
                         <HomePageBox icon={DigitalCommunicationIcon} title="Digital communication" content={'Step-by-step instructions on how to access some of the most popular digital communications platforms'}/>
                         <HomePageBox icon={DigitalServiceIcon} title="Digital Services" content={'Step-by-step instructions on how to access some of the most commonly used digital services'}/>
                         <HomePageBox icon={security} title="Security" content={'Best practices on avoiding scams and creating secure passwords. Scam detector and password evaluator for personal use'}/>
                         <HomePageBox icon={LearningSuggestions} title="Learning Suggestions" content={"Can't find a specific guide? Visit the learning suggestions page to vote for the next guide to be created"}/>
-                        <HomePageBox icon={quiz} title="Digital Ability Test" content={"Keen to test your digital knowledge? Do so here with our Digital knowledge quiz"}/>
+                        <HomePageBox icon={quiz} title="Digital Ability Test" content={"Keen to test your digital knowledge? Do so here with our comprehensive digital knowledge quiz"}/>
                     </Grid>
                 </Container>
             </Box>
