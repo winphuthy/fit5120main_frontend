@@ -13,17 +13,23 @@ export const Questionnaire = () => {
     const [displayQuestionnaireA, setDisplayQuestionnaireA] = React.useState(false);
     const [displayQuestionnaireB, setDisplayQuestionnaireB] = React.useState(false);
     const [displayQuestionnaireC, setDisplayQuestionnaireC] = React.useState(false);
+    const [displayQuestionnaireD, setDisplayQuestionnaireD] = React.useState(false);
+
     const [selectedOptionA, setSelectedOptionA] = React.useState("");
     const [selectedOptionB, setSelectedOptionB] = React.useState("");
+    const [selectedOptionD, setSelectedOptionD] = React.useState("");
+
     const [feedback, setFeedback] = useState(null);
     const [displayFeedback, setDisplayFeedback] = useState(false);
-    const [link,setLink] = useState(null);
+    const [link, setLink] = useState(null);
 
 
     const handleDigitalServiceButtonClick = () => {
         setDisplayQuestionnaireA(true);
         setDisplayQuestionnaireB(false);
         setDisplayQuestionnaireC(false);
+        setDisplayQuestionnaireD(false);
+
         const questionA = document.getElementById('questionA');
         if (questionA) {
             questionA.scrollIntoView({ behavior: "smooth" });
@@ -35,6 +41,7 @@ export const Questionnaire = () => {
         setDisplayQuestionnaireA(false);
         setDisplayQuestionnaireB(true);
         setDisplayQuestionnaireC(false);
+        setDisplayQuestionnaireD(false);
         const questionB = document.getElementById('questionB');
         if (questionB) {
             questionB.scrollIntoView({ behavior: "smooth" });
@@ -45,6 +52,7 @@ export const Questionnaire = () => {
         setDisplayQuestionnaireA(false);
         setDisplayQuestionnaireB(false);
         setDisplayQuestionnaireC(true);
+        setDisplayQuestionnaireD(false);
         const questionC = document.getElementById('questionC');
         if (questionC) {
             questionC.scrollIntoView({ behavior: "smooth" });
@@ -59,6 +67,12 @@ export const Questionnaire = () => {
     const handleOptionChangeB = (event) => {
         setSelectedOptionB(event.target.value);
     }
+
+    const handleOptionChangeD = (event) => {
+        if (event.target.checked) {
+            setSelectedOptionD(event.target.value);
+        }
+    };
 
     const submitFormA = () => {
         const feedbackText = data[0].options.find(
@@ -77,6 +91,22 @@ export const Questionnaire = () => {
         ).feedback;
         setLink(data[1].options.find(
             (option) => option.text === selectedOptionB
+        ).link);
+        if (selectedOptionB === "B. Video Calling") {
+            setDisplayQuestionnaireB(false);
+            setDisplayQuestionnaireD(true);
+        } else {
+            setFeedback(feedbackText);
+            setDisplayFeedback(true);
+        }
+    }
+
+    const submitFormD = () => {
+        const feedbackText = data[2].options.find(
+            (option) => option.text === selectedOptionD
+        ).feedback;
+        setLink(data[2].options.find(
+            (option) => option.text === selectedOptionD
         ).link);
         setFeedback(feedbackText);
         setDisplayFeedback(true);
@@ -108,10 +138,10 @@ export const Questionnaire = () => {
                     <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>If you’re unsure about what software might best suit your needs, have a quick go at our recommendations questionnaire, and we’ll provide you with the best recommendations</p>
                     <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "50px" }} />
                     <Stack direction="column" spacing={1} sx={{ display: 'flex', alignItems: 'center', marginTop: '50px' }} >
-                        <Button variant="outlined" sx={{ width: '50vw', height: '50px',fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalServiceButtonClick}>
-                        Digital services: Access to online tools that can aid with public services</Button>
-                        <Button variant="outlined" sx={{ width: '50vw',height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalCommunicationButtonClick}>
-                        Digital Communications: Online tools for messaging, calling, video calling</Button>
+                        <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalServiceButtonClick}>
+                            Digital services: Access to online tools that can aid with public services</Button>
+                        <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalCommunicationButtonClick}>
+                            Digital Communications: Online tools for messaging, calling, video calling</Button>
                         <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleNoneButtonClick}>
                             None
                         </Button>
@@ -148,16 +178,16 @@ export const Questionnaire = () => {
                     </div>
                     <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
                     {displayFeedback && (
-                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px'}}>
+                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
                             <p>{feedback}</p>
-                            <a  href= {link}>{link}</a>
+                            <a href={link}>{link}</a>
                         </div>
                     )}
 
                 </div>
             )}
             {displayQuestionnaireB && (
-                <div id='questionB' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify' ,marginTop:'30px'}}>
+                <div id='questionB' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
 
                     <div style={{ backgroundColor: 'cornsilk', padding: '20px' }}>
                         <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
@@ -181,7 +211,7 @@ export const Questionnaire = () => {
                     {displayFeedback && (
                         <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
                             <p>{feedback}</p>
-                            <a  href= {link}>{link}</a>
+                            <a href={link}>{link}</a>
                         </div>
                     )}
 
@@ -189,15 +219,48 @@ export const Questionnaire = () => {
             )}
 
             {displayQuestionnaireC && (
-                <div id='questionC' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify',marginTop:'30px'}}>
+                <div id='questionC' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
                     <div style={{ backgroundColor: 'grey', padding: '20px' }}>
                         <p>It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: </p>
-                        <a  href= "https://lesterwithhistreasure.de/learningsuggestions">https://lesterwithhistreasure.de/learningsuggestions</a>
+                        <a href="https://lesterwithhistreasure.de/learningsuggestions">https://lesterwithhistreasure.de/learningsuggestions</a>
                     </div>
                 </div>
             )}
 
+            {displayQuestionnaireD && (
+                <div id='questionD' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
+                    <div style={{ backgroundColor: 'cornsilk', padding: '20px' }}>
+                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+
+                            <p>Which of the following  best describes your digital situation?</p>
+                            {data[2].options.map((option) => (
+                                <div>
+                                    <Checkbox checked={selectedOptionD === option.text} onChange={handleOptionChangeD} value={option.text} /> <label>{option.text}</label>
+                                    <br />
+                                </div>
+                            ))}
+                            <br />
+                            <br />
+                            <Button variant="contained" sx={{ width: '150px', heighåt: '50px', backgroundColor: 'aliceblue', fontsize: '1.5rem', fontWeight: 'bolder', display: 'block', margin: 'auto' }} onClick={submitFormD}>submit</Button>
+                        </div>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
+                        <img src={ArrowImage} alt="arrow" />
+                    </div>
+                    <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
+                    {displayFeedback && (
+                        <div style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
+                            <p>{feedback}</p>
+                            <a href={link}>{link}</a>
+                        </div>
+                    )}
+
+                </div>
+            )}
+
+
         </div>
+
 
     )
 

@@ -35,7 +35,7 @@
         "link":"https://lesterwithhistreasure.de/whatsapp"
       },
       {
-        "text": "B. Video Calling         ",
+        "text": "B. Video Calling",
         "feedback":"WhatsApp is a free to use messaging and calling digital application that works with all mobile devices. It can send messages from anywhere to anyone as long as you’ve got an internet connection. To learn how to set WhatsApp up, you can through our guide here:",
         "link":"https://lesterwithhistreasure.de/whatsapp"
       },
@@ -48,6 +48,27 @@
         "text": "D. None of the above   ",
         "feedback":"It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: ",
         "link":"https://lesterwithhistreasure.de/learningsuggestions"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "content": "Which of the following  best describes your digital situation?",
+    "options": [
+      {
+        "text": "A. Iphone/Ipad",
+        "feedback":"Facetime is a video calling platform that is freely available to Apple products. If you’ve got an Iphone or Ipad, this will be perfect for communicating with other people who own Apple products. To learn how to set FaceTime up, you can go through our guide here:",
+        "link":"https://lesterwithhistreasure.de/facetime"
+      },
+      {
+        "text": "B. Other Phone/Tablet brands",
+        "feedback":"WhatsApp is a free to use messaging and calling digital application that works with all mobile devices. It can send messages from anywhere to anyone as long as you’ve got an internet connection. To learn how to set WhatsApp up, you can through our guide here:",
+        "link":"https://lesterwithhistreasure.de/whatsapp"
+      },
+      {
+        "text": "C. Laptop/Desktop  ",
+        "feedback":"Zoom is a free to use video conferencing software. It is great for big family catch-up sessions. To learn how to use and set Zoom up, you can go through our guide here: ",
+        "link":"https://lesterwithhistreasure.de/zoom"
       }
     ]
   }

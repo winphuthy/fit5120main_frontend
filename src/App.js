@@ -18,6 +18,11 @@ import {FaceTime} from "./page/FaceTime";
 import {Email} from "./page/Email";
 import {MyGov} from "./page/MyGov";
 import {Medicare} from "./page/Medicare";
+import {QuizPage} from "./page/QuizPage";
+import {Questionnaire} from "./page/Questinnaire";
+import {Login} from "./page/Login";
+
+
 
 import {
     BarElement,
@@ -30,9 +35,8 @@ import {
     Title,
     Tooltip
 } from 'chart.js'
-import {Login} from "./page/Login";
-import {QuizPage} from "./page/QuizPage";
-import {Questionnaire} from "./page/Questinnaire";
+
+
 
 ChartJS.register(
     CategoryScale,
