@@ -55,6 +55,8 @@ export const MuiNavBar = () => {
                     </Typography>
                     <Stack direction='row' spacing={2}>
                         <Button component={NavLink} to='/' color='inherit' sx={buttonSX}>Home</Button>
+                        <Button component={NavLink} to='questionnaire' color='inherit'
+                                sx={buttonSX}>Learning recommendation</Button>
                         <Button color='inherit'
                                 onClick={handleClick_DC}
                                 endIcon={<KeyboardArrowDownIcon/>}
@@ -84,9 +86,8 @@ export const MuiNavBar = () => {
                         {/*<Button component={NavLink} to= 'avoidingscam' color='inherit' sx={buttonSX}>Avoiding Scams</Button>*/}
                         <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning
                             Suggestions</Button>
-                        <Button component={NavLink} to='QuizPage' color='inherit' sx={buttonSX}>Quiz</Button>
-                        <Button component={NavLink} to='questionnaire' color='inherit'
-                                sx={buttonSX}>questionnaire</Button>
+
+                        <Button component={NavLink} to='QuizPage' color='inherit' sx={buttonSX}>Digital Test</Button>
                     </Stack>
                     <Menu
                         id="basic-menu_DC"

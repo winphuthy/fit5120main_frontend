@@ -75,6 +75,7 @@ export const Questionnaire = () => {
     };
 
     const submitFormA = () => {
+        if(selectedOptionA){
         const feedbackText = data[0].options.find(
             (option) => option.text === selectedOptionA
         ).feedback;
@@ -83,9 +84,11 @@ export const Questionnaire = () => {
             (option) => option.text === selectedOptionA
         ).link);
         setDisplayFeedback(true);
+        }
     }
 
     const submitFormB = () => {
+        if(selectedOptionB){
         const feedbackText = data[1].options.find(
             (option) => option.text === selectedOptionB
         ).feedback;
@@ -100,8 +103,11 @@ export const Questionnaire = () => {
             setDisplayFeedback(true);
         }
     }
+    }
 
     const submitFormD = () => {
+        if(selectedOptionD){
+
         const feedbackText = data[2].options.find(
             (option) => option.text === selectedOptionD
         ).feedback;
@@ -110,6 +116,7 @@ export const Questionnaire = () => {
         ).link);
         setFeedback(feedbackText);
         setDisplayFeedback(true);
+        }
     }
 
 
