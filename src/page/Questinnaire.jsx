@@ -122,7 +122,7 @@ export const Questionnaire = () => {
 
     return (
         <div style={{
-            backgroundColor: "#333333", paddingBottom: '100px', height: '100vh',
+            backgroundColor: "#333333", paddingBottom: '100px',
         }}>
             <div style={{
                 color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.5rem', margin: 'auto',
