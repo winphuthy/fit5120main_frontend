@@ -24,6 +24,7 @@ export function QuizPage() {
         setSelectedColor('');
         window.scrollTo(0, 800);
         setShowQuiz(false);
+        handleShowButton();
 
     };
     const handleFinish = () => {
@@ -49,9 +50,23 @@ export function QuizPage() {
             setCurrentQuestionIndex(currentQuestionIndex);
 
         }
-
         setShowQuiz(true);
+        
         window.scrollTo(0, 300);
+    }
+
+    const handleNextButton = () => {
+        const button = document.getElementById('continue-quiz');
+        button.style.display = 'none';
+        handleNext();
+    }
+
+    const handleShowButton = () => {
+        if (currentQuestionIndex > 0)
+        {
+        const button = document.getElementById('continue-quiz');
+        button.style.display = 'block';
+        }
     }
 
 
@@ -149,9 +164,10 @@ export function QuizPage() {
                                 </div>
                             ))}
                             <Button
+                                id = 'continue-quiz'
                                 variant="contained"
                                 sx={{ width: '300px', height: '60px', marginTop: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', backgroundColor: 'orange' }}
-                                onClick={handleNext}
+                                onClick={handleNextButton}
                             >
                                 Continue quiz
                             </Button>
