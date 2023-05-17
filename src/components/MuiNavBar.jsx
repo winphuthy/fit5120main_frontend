@@ -55,25 +55,27 @@ export const MuiNavBar = () => {
                     </Typography>
                     <Stack direction='row' spacing={2}>
                         <Button component={NavLink} to='/' color='inherit' sx={buttonSX}>Home</Button>
-                        <Button component={NavLink} to='questionnaire' color='inherit'
-                                sx={buttonSX}>Learning recommendation</Button>
+                        <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning
+                            Suggestions</Button>
+                        {/*<Button component={NavLink} to='questionnaire' color='inherit'
+                         sx={buttonSX}>Learning recommendation</Button>*/}
                         <Button color='inherit'
                                 onClick={handleClick_DC}
                                 endIcon={<KeyboardArrowDownIcon/>}
                                 aria-controls={open_DC ? 'basic-menu_DC' : undefined}
                                 aria-haspopup="true"
                                 aria-expanded={open_DC ? 'true' : undefined}>
-                            Digital Communication
+                            Digital tutorial
                         </Button>
-                        <Button color='inherit'
-                                onClick={handleClick_DS}
-                                endIcon={<KeyboardArrowDownIcon/>}
-                                aria-controls={open_DS ? 'basic-menu_DS' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={open_DS ? 'true' : undefined}
-                        >
-                            Digital Service
-                        </Button>
+                        {/*<Button color='inherit'
+                         onClick={handleClick_DS}
+                         endIcon={<KeyboardArrowDownIcon/>}
+                         aria-controls={open_DS ? 'basic-menu_DS' : undefined}
+                         aria-haspopup="true"
+                         aria-expanded={open_DS ? 'true' : undefined}
+                         >
+                         Digital Service
+                         </Button>*/}
                         <Button color='inherit'
                                 onClick={handleClick_S}
                                 endIcon={<KeyboardArrowDownIcon/>}
@@ -84,8 +86,6 @@ export const MuiNavBar = () => {
                             Security
                         </Button>
                         {/*<Button component={NavLink} to= 'avoidingscam' color='inherit' sx={buttonSX}>Avoiding Scams</Button>*/}
-                        <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning
-                            Suggestions</Button>
 
                         <Button component={NavLink} to='QuizPage' color='inherit' sx={buttonSX}>Digital Test</Button>
                     </Stack>
@@ -105,22 +105,26 @@ export const MuiNavBar = () => {
                                   sx={buttonSX}>Facebook</MenuItem>
                         <MenuItem component={NavLink} to="facetime" onClick={handleClose_DC}
                                   sx={buttonSX}>FaceTime</MenuItem>
-                    </Menu>
-
-                    <Menu
-                        id="basic-menu_DS"
-                        anchorEl={anchorEl_DS}
-                        open={open_DS}
-                        onClose={handleClose_DS}
-                        MenuListProps={{
-                            'aria-labelledby': 'basic-button',
-                        }}
-                    >
                         <MenuItem component={NavLink} to="email" onClick={handleClose_DS} sx={buttonSX}>Email</MenuItem>
                         <MenuItem component={NavLink} to="mygov" onClick={handleClose_DS} sx={buttonSX}>MyGov</MenuItem>
                         <MenuItem component={NavLink} to="medicare" onClick={handleClose_DS}
                                   sx={buttonSX}>Medicare</MenuItem>
                     </Menu>
+
+                    {/*<Menu
+                     id="basic-menu_DS"
+                     anchorEl={anchorEl_DS}
+                     open={open_DS}
+                     onClose={handleClose_DS}
+                     MenuListProps={{
+                     'aria-labelledby': 'basic-button',
+                     }}
+                     >
+                     <MenuItem component={NavLink} to="email" onClick={handleClose_DS} sx={buttonSX}>Email</MenuItem>
+                     <MenuItem component={NavLink} to="mygov" onClick={handleClose_DS} sx={buttonSX}>MyGov</MenuItem>
+                     <MenuItem component={NavLink} to="medicare" onClick={handleClose_DS}
+                     sx={buttonSX}>Medicare</MenuItem>
+                     </Menu>*/}
 
                     <Menu
                         id="basic-menu_S"
