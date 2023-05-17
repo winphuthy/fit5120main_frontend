@@ -11,14 +11,36 @@ const SelectList = ['Inclusion Index', 'Accessibility Index', 'Ability Index'];
 const options = {
     // responsive: true,
     // aspectRatio: 2,
-    maintainAspectRatio: false
+    maintainAspectRatio: false,
+    scales: {
+        x: {
+            display: true,
+            title: {
+                display: true,
+                text: 'Score',
+                font: {
+                    size: 18
+                }
+            }
+        },
+        y: {
+            display: true,
+            title: {
+                display: true,
+                text: 'Year',
+                font: {
+                    size: 18
+                }
+            },
+        }
+    }
 }
 
 const labelContent = LandingPageData.map(value => value.Year);
 const ageDataFirst = LandingPageData.map(value => Object.values(value)[2]);
 const ageDataSecond = LandingPageData.map(value => Object.values(value)[3]);
-const firstLabel = Object.keys(LandingPageData[0])[2];
 
+const firstLabel = Object.keys(LandingPageData[0])[2];
 let secondLabel;
 
 secondLabel = Object.keys(LandingPageData[0])[3];

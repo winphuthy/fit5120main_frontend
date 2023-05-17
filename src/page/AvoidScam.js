@@ -1,12 +1,13 @@
 import './AvoidScam.css';
 import MainImage from '../images/websitebackgroundnew2.jpg'
 import * as React from 'react';
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Button from '@mui/material/Button';
 import output from '../images/wc_new.png'
 import {backendIP} from "../const/const";
 import TextField from '@mui/material/TextField';
 import ReactSpeedometer from "react-d3-speedometer";
+import async from "async";
 
 const speedometerColor = '#030303';
 
@@ -18,10 +19,14 @@ export function AvoidScam() {
 
     const scamInputRef = useRef();
 
-    const handleSubmit = (event) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(scamInputRef.current.value);
-        fetch_scamInput();
+        await fetch_scamInput();
     };
 
     async function fetch_scamInput() {
@@ -39,7 +44,7 @@ export function AvoidScam() {
             .catch((error) => {
                 console.error('Error:', error);
             });
-    }
+    };
 
     return (
         <div style={{

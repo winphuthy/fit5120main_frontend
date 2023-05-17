@@ -46,7 +46,7 @@ export const MuiNavBar = () => {
 
     return (
         <div className='muinavbar'>
-            <AppBar position='static'>
+            <AppBar position='fixed'>
                 <Toolbar>
                     <IconButton component={NavLink} to='/' size='large' edge='start' color='inherit' aria-label='logo'>
                         <img src={icon} style={{width: 'auto', height: "5vh", minHeight: '25px'}} alt='icon'/>
@@ -55,8 +55,6 @@ export const MuiNavBar = () => {
                     </Typography>
                     <Stack direction='row' spacing={2}>
                         <Button component={NavLink} to='/' color='inherit' sx={buttonSX}>Home</Button>
-                        <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning
-                            Suggestions</Button>
                         {/*<Button component={NavLink} to='questionnaire' color='inherit'
                          sx={buttonSX}>Learning recommendation</Button>*/}
                         <Button color='inherit'
@@ -67,6 +65,9 @@ export const MuiNavBar = () => {
                                 aria-expanded={open_DC ? 'true' : undefined}>
                             Digital tutorial
                         </Button>
+                        <Button component={NavLink} to='learningsuggestions' color='inherit' sx={buttonSX}>Learning
+                            Suggestions</Button>
+
                         {/*<Button color='inherit'
                          onClick={handleClick_DS}
                          endIcon={<KeyboardArrowDownIcon/>}
