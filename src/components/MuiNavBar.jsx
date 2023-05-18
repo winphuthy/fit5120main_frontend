@@ -138,6 +138,7 @@ export const MuiNavBar = () => {
                     >
                         <MenuItem component={NavLink} to="avoidingscam" onClick={handleClose_S} sx={buttonSX}>Avoiding
                             Scams</MenuItem>
+                        <MenuItem component={NavLink} to="passwordevaluator" onClick={handleClose_S} sx={buttonSX}>Password Evaluator</MenuItem>
                         {/*<MenuItem component={NavLink} to="" onClick={handleClose_S} sx={buttonSX}>Password*/}
                         {/*    Evaluate</MenuItem>*/}
                     </Menu>
