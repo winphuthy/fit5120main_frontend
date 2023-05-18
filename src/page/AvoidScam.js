@@ -222,9 +222,11 @@ export function AvoidScam() {
             <div style={{ width: '45vw', margin: 'auto' }}>
                 <p style={{ textAlign: 'justify', fontSize: '1.5rem', color: "floralwhite" }}> {result}</p>
             </div>
-
+            
             <hr style={{ width: '70vw', margin: 'auto', marginTop: '50px', marginBottom: '50px' }} />
-            <div style={{ backgroundColor: 'white', padding: '20px', width: '60vw', fontWeight: "bolder", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', fontSize: '1.2rem' }}>
+            <h1 style={{fontWeight: "bolder",color:'whitesmoke'}}>Test your password: </h1>
+            <p style={{fontWeight: "bolder",fonts:'1.5rem',color:'whitesmoke'}}>Tip: Longer passwords with more varying characters are much more secure</p>
+            <div style={{ backgroundColor: 'beige', padding: '20px', width: '60vw', fontWeight: "bolder", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', fontSize: '1.2rem' }}>
                 <p style={{ fontSize: '1.5rem' }}>Type a password</p>
                 <Box component="form">
                     <FormControl sx={{ width: '58vw', background: 'grey' }}>
