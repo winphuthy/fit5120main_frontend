@@ -21,8 +21,7 @@ import {Medicare} from "./page/Medicare";
 import {QuizPage} from "./page/QuizPage";
 import {Questionnaire} from "./page/Questinnaire";
 import {Login} from "./page/Login";
-import { PasswordEvaluator } from './page/PasswordEvaluator';
-
+import {PasswordEvaluator} from './page/PasswordEvaluator';
 
 
 import {
@@ -36,7 +35,6 @@ import {
     Title,
     Tooltip
 } from 'chart.js'
-
 
 
 ChartJS.register(
@@ -87,7 +85,7 @@ const main =
 
 function App() {
 
-    const [enter, setEnter] = useState(true);
+    const [enter, setEnter] = useState(false);
 
     const handValueChange = (value) => {
         console.log(`The new value is ${value}`);

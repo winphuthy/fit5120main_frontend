@@ -39,7 +39,7 @@ export const Login = (props) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if (passwordRef.current.value === '123456') {
+        if (passwordRef.current.value === 'SeniorAid55!') {
             setPasswordFlag(true)
         }
         console.log({

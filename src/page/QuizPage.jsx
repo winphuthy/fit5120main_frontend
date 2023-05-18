@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { useState } from 'react';
+import {useState} from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import multiQuiz from '../const/MultiQuiz.json';
 import MainImage from '../images/mainpage.jpg';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from '@mui/material';
 
 
 export function QuizPage() {
@@ -72,10 +72,10 @@ export function QuizPage() {
 
     return (
         <div style={{
-            backgroundColor: "#333333", paddingBottom: '100px',
+            backgroundColor: "#333333", height: "100%"
         }}>
             <div style={{
-                color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.2rem', margin: 'auto',
+                color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.2rem', margin: 'auto', paddingBottom: "12vh"
             }}>
                 <div style={{
                     height: '45vh',
@@ -209,8 +209,6 @@ export function QuizPage() {
                             </Button>
                         </div>
                     )}
-
-
                 </div>
             </div>
 
