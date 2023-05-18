@@ -45,6 +45,12 @@ export default function HomePage() {
         if (questionA) {
             questionA.scrollIntoView({ behavior: "smooth" });
         }
+        const digitalCommunication = document.getElementById('digitalCommunication');
+        digitalCommunication.style.display = 'none';
+        const no = document.getElementById('no');
+        no.style.display = 'none';
+
+
 
     };
 
@@ -57,6 +63,10 @@ export default function HomePage() {
         if (questionB) {
             questionB.scrollIntoView({ behavior: "smooth" });
         }
+        const digitalService = document.getElementById('digitalService');
+        digitalService.style.display = 'none';
+        const no = document.getElementById('no');
+        no.style.display = 'none';
     };
 
     const handleNoneButtonClick = () => {
@@ -69,6 +79,10 @@ export default function HomePage() {
             questionC.style.display = 'block';
             questionC.scrollIntoView({ behavior: "smooth" });
         }
+        const digitalService = document.getElementById('digitalService');
+        digitalService.style.display = 'none';
+        const no = document.getElementById('no');
+        no.style.display = 'none';
     }
 
 
@@ -114,10 +128,11 @@ export default function HomePage() {
                 setDisplayQuestionnaireB(false);
                 setDisplayQuestionnaireD(true);
             } else {
-                setFeedback(feedbackText);
                 const feedbackBDisplay = document.getElementById('feedbackB');
+                setFeedback(feedbackText);
                 feedbackBDisplay.style.display = 'block';
                 feedbackBDisplay.scrollIntoView({ behavior: 'smooth' });
+
             }
         }
     }
@@ -159,7 +174,7 @@ export default function HomePage() {
 
 
                         <div style={{
-                            backgroundColor: "#333333", paddingBottom: '50px',paddingTop:'30px'
+                            backgroundColor: "#333333", paddingBottom: '50px', paddingTop: '30px'
                         }}>
                             <div style={{
                                 color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.5rem', margin: 'auto',
@@ -167,15 +182,18 @@ export default function HomePage() {
 
                             </div>
                             <div style={{ width: '50vw', margin: 'auto' }}>
-                                
+                                <hr style={{ width: '50vw', marginTop: '30px' }} />
+                                <h3>Need a recommendation?</h3>
+
+
                                 <p style={{ textAlign: 'justify', fontSize: '1.2rem' }}>If you’re unsure about what software might best suit your needs, have a quick go at our recommendations questionnaire, and we’ll provide you with the best recommendations</p>
                                 <hr style={{ width: '50vw', marginTop: '30px' }} />
                                 <Stack direction="column" spacing={1} sx={{ display: 'flex', alignItems: 'center', marginTop: '50px' }} >
-                                    <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalServiceButtonClick}>
+                                    <Button id='digitalService' variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalServiceButtonClick}>
                                         Digital services: Access to online tools that can aid with public services</Button>
-                                    <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalCommunicationButtonClick}>
+                                    <Button id='digitalCommunication' variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleDigitalCommunicationButtonClick}>
                                         Digital Communications: Online tools for messaging, calling, video calling</Button>
-                                    <Button variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleNoneButtonClick}>
+                                    <Button id= 'no' variant="outlined" sx={{ width: '50vw', height: '50px', fontWeight: 'bolder', color: 'white' }} onClick={handleNoneButtonClick}>
                                         None
                                     </Button>
                                 </Stack>
@@ -210,10 +228,10 @@ export default function HomePage() {
                                     <img src={ArrowImage} alt="arrow" />
                                 </div>
                                 <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
-                                    <div id = 'feedbackA' style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px', display:'none' }}>
-                                        <p>{feedback}</p>
-                                        <a href={link}>{link}</a>
-                                    </div>
+                                <div id='feedbackA' style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px', display: 'none' }}>
+                                    <p>{feedback}</p>
+                                    <a href={link}>{link}</a>
+                                </div>
 
                             </div>
                         )}
@@ -239,20 +257,20 @@ export default function HomePage() {
                                     <img src={ArrowImage} alt="arrow" />
                                 </div>
                                 <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
-                                    <div id='feedbackB' style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' }}>
-                                        <p>{feedback}</p>
-                                        <a href={link}>{link}</a>
-                                    </div>
+                                <div id='feedbackB' style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px', display: 'none' }}>
+                                    <p>{feedback}</p>
+                                    <a href={link}>{link}</a>
+                                </div>
 
                             </div>
                         )}
 
-                            <div id='questionC' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px',display:'none'}}>
-                                <div style={{ backgroundColor: 'grey', padding: '20px' }}>
-                                    <p>It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: </p>
-                                    <a href="https://lesterwithhistreasure.de/learningsuggestions">https://lesterwithhistreasure.de/learningsuggestions</a>
-                                </div>
+                        <div id='questionC' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px', display: 'none' }}>
+                            <div style={{ backgroundColor: 'grey', padding: '20px' }}>
+                                <p>It looks like none of our current guides will match your desired goal. If you’d like a guide created for a specific platform, you can make a suggestion over on our learning suggestions page: </p>
+                                <a href="https://lesterwithhistreasure.de/learningsuggestions">https://lesterwithhistreasure.de/learningsuggestions</a>
                             </div>
+                        </div>
 
                         {displayQuestionnaireD && (
                             <div id='questionD' style={{ width: '50vw', margin: 'auto', color: 'whitesmoke', fontWeight: 'bolder', fontSize: '1.0rem', textAlign: 'justify', marginTop: '30px' }}>
@@ -275,15 +293,15 @@ export default function HomePage() {
                                     <img src={ArrowImage} alt="arrow" />
                                 </div>
                                 <hr style={{ width: '50vw', marginTop: '30px', marginBottom: "30px" }} />
-                
-                                    <div id= 'feedbackD' style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px' ,display: 'none'}}>
-                                        <p>{feedback}</p>
-                                        <a href={link}>{link}</a>
-                                    </div>
+
+                                <div id='feedbackD' style={{ backgroundColor: 'grey', padding: '20px', marginBottom: '20px', display: 'none' }}>
+                                    <p>{feedback}</p>
+                                    <a href={link}>{link}</a>
+                                </div>
 
                             </div>
                         )}
-                        
+
 
 
 
