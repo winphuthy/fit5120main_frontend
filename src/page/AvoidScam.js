@@ -11,7 +11,6 @@ import ReactSpeedometer from "react-d3-speedometer";
 import FormControl, { useFormControl } from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
-import styled from 'styled-components';
 
 
 const speedometerColor = '#030303';
