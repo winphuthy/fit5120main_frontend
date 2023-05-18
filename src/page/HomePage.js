@@ -77,7 +77,7 @@ export default function HomePage() {
         const questionC = document.getElementById('questionC');
         if (questionC) {
             questionC.style.display = 'block';
-            questionC.scrollIntoView({ behavior: "smooth" });
+            window.scrollTo(0,1500);
         }
         const digitalService = document.getElementById('digitalService');
         digitalService.style.display = 'none';
@@ -111,7 +111,7 @@ export default function HomePage() {
             ).link);
             const feedbackADisplay = document.getElementById('feedbackA');
             feedbackADisplay.style.display = 'block';
-            feedbackADisplay.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo(0,2000);
 
         }
     }
@@ -131,8 +131,7 @@ export default function HomePage() {
                 const feedbackBDisplay = document.getElementById('feedbackB');
                 setFeedback(feedbackText);
                 feedbackBDisplay.style.display = 'block';
-                feedbackBDisplay.scrollIntoView({ behavior: 'smooth' });
-
+                window.scrollTo(0,2000);
             }
         }
     }
@@ -149,7 +148,7 @@ export default function HomePage() {
             setFeedback(feedbackText);
             const feedbackDDisplay = document.getElementById('feedbackD');
             feedbackDDisplay.style.display = 'block';
-            feedbackDDisplay.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo(0,2000);
         }
     }
 
