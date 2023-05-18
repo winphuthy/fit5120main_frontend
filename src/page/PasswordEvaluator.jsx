@@ -9,9 +9,6 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 
 
-const speedometerColor = '#030303';
-
-
 export function PasswordEvaluator() {
 
     const [password, setPassword] = useState('');
@@ -38,7 +35,7 @@ export function PasswordEvaluator() {
         <div style={{
             backgroundColor: "#333333",
             height: "auto",
-            paddingBottom: '50px',
+            paddingBottom: '60px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'
