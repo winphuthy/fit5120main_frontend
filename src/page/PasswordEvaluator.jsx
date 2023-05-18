@@ -54,7 +54,7 @@ export function PasswordEvaluator() {
                 <p style={{ fontSize: "xxx-large", fontWeight: "bolder", color: 'black' }}>Password Evaluator</p>
             </div>
 
-            <p style={{fontWeight: "bolder",color:'whitesmoke',fontSize:'1.8rem',marginRight:'460px'}}>Test your password: </p>
+            <p style={{fontWeight: "bolder",color:'whitesmoke',fontSize:'1.8rem'}}>Test your password </p>
             <p style={{fontWeight: "bolder",fontSize:'1.3rem',color:'whitesmoke'}}>Tip: Longer passwords with more varying characters are much more secure</p>
             <div style={{ backgroundColor: 'beige', padding: '20px', width: '60vw', fontWeight: "bolder", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', fontSize: '1.2rem' }}>
                 <p style={{ fontSize: '1.5rem' }}>Type a password</p>
