@@ -21,6 +21,7 @@ import {Medicare} from "./page/Medicare";
 import {QuizPage} from "./page/QuizPage";
 import {Questionnaire} from "./page/Questinnaire";
 import {Login} from "./page/Login";
+import { PasswordEvaluator } from './page/PasswordEvaluator';
 
 
 
@@ -76,6 +77,9 @@ const main =
             <Route path='questionnaire' element={<Questionnaire/>}/>
             <Route path='*' element={<Error/>}/>
             <Route path='develop' element={<Develop/>}/>
+            <Route path='passwordevaluator' element={<PasswordEvaluator/>}/>
+
+
         </Routes>
         {/*<AppFooter/>*/}
     </BrowserRouter>

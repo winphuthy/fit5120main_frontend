@@ -1,119 +1,116 @@
 [
-    {
-      "id": 0,
-      "content": "Step 1: On your Web browser, navigate to the top of it, and click the “+”icon to open a new tab. Within the empty address bar at the top of the tab, enter the following link: “www.facebook.com”. You should now see the following on the top right of the page: "
-    },
-    {
-      "id": 1,
-      "content": "Step 2: Please click on the green rectangle that says: “Create new account”.      ",
-      "image": "communication/image35.png"
-    },
-    {
-        "id": 2,
-        "content": "Step 3: Clicking on this, should produce the following prompt: Fill in the respective fields based on your personal information. If you do not have an email address, please navigate here: “LINK TO CREATING EMAIL” to set-up your email.",
-        "image": "communication/image52.png"
-      },    
-      {
-        "id": 3,
-        "content": "Step 4: Once that is done, your account has been created. You will then be navigated to the following page: During this point, you will need to navigate to your email, and find an email from facebook, that email should contain a code starting with the following characters: “FB-”, please only enter in the 5 digit code that appears after “FB-” into the field, and hit continue.        ",
-        "image": "communication/image21.png"
-      },
-      {
-        "id": 4,
-        "content": "Step 5: This will verify your email address with facebook, and will bring you to your facebook page, which will look as shown below. You are now on your facebook page to learn more about how to utilise facebook, simply scroll down and have a look at some of our other instructions on this page.       ",
-        "image": "communication/image3.png"
-      },
-      {
-        "id": 5,
-        "content": "Setting up your profile: Step 1: On the top right of your facebook page, click on the icon displayed below, and click on your name         ",
-        "image": "communication/image47.png"
-      },
-      {
-        "id": 6,
-        "content": "Step 2: This will open the following pop-up right below the icon:        ",
-        "image": "communication/image7.png"
-      },
-      {
-        "id": 7,
-        "content": "Step 3: Click on “Your Name”, this will navigate you to your profile page, it should look like below        ",
-        "image": "communication/image11.png"
-      },
-      {
-        "id": 8,
-        "content": "Intro: If you would people to be familiar with you, your details, your hobbies, or would simply like specific pictures to be featured on yoru profile, you can do so over here in the “Intro” box       ",
-        "image": "communication/image12.png"
-      },
-      {
-        "id": 9,
-        "content": "To access any of these features, simply click on them, and the website will prompt you to either enter in some details about yourself, select from some hobbies, or to choose from a set of photos to be featured for others to see. Some examples of what they might look like are below: ",
-        "image": "communication/image45.png"
-      },
-      {
-        "id": 10,
-        "content": "This information will be publicly available, and people who view your facebook profile will be able to see things added on your profile        ",
-        "image": "communication/image10.png"
-      },
-      {
-        "id": 11,
-        "content": "Adding Photos onto facebook: Either In the Navigation Bar below “Your Name”, or in the “Photos” box.        ",
-        "image": "communication/image38.png"
-      },
-      {
-        "id": 12,
-        "content": "Click on “Photos”. This will navigate you to the photos page of your account, which should look as shown below.  ",
-        "image": "communication/image9.png"
-      },
-      {
-        "id": 13,
-        "content": "To start uploading photos, you can simply click “Add photos/video”, on the top right of the “Photos” box. This will open a folder on your computer, it will normally open the “Pictures” folder on your computer. Simply click on the photo you would like to upload, and select “Open” ",
-        "image": "communication/image39.png"
-      },
-      {
-        "id": 14,
-        "content": "Next, select who you would like to see your photos. Make sure you have a read of who can view your photos, based on the message below each option. This will look as such:        ",
-        "image": "communication/image50.png"
-      },
-      {
-        "id": 15,
-        "content": "Once done, this will open the following window: If you would like to post this photo with a message attached to it, simply click on “What’s on your mind?” and proceed to enter in your message. If you have completed typing your message, or if you did not wish to type in any message, simply click “Post”",
-        "image": "communication/image56.png"
-      },
-      {
-        "id": 16,
-        "content": "You have now successfully uploaded your first photo, and should now be able to see your uploaded photo under the “Photos” box.  ",
-        "image": "communication/image36.png"
-      },
-      {
-        "id": 17,
-        "content": "Connecting with Friends & Family: On the top left of any facebook page, there will be a “Search Facebook” that looks as below: Type in the name of the person you would like to add as a “facebook friend”, and hit “Enter” on your keyboard. This will bring you to a new page, in which under “People”, there will be some suggestions of other facebook users who have your entered name. Once you see your friend within the list, please click the “Add Friend” icon on the right of their name. You may be able to tell it is them from the photo they have showing which will be on the left of their name ",
-        "image": "communication/image18.png"
-      },
-      {
-        "id": 18,
-        "content": "Once you’ve clicked “Add Friend”, it will send them a friend request. Once they’ve accepted your friend request, they will now be your “facebook friend”        ",
-        "image": "communication/image44.png"
-      },
-      {
-        "id": 19,
-        "content": "Messaging your Facebook friends: In the bottom right of any facebook page, click the following icon: ",
-        "image": "communication/image48.png"
-      },
-      {
-        "id": 20,
-        "content": "This will open up the following window on the left of the icon: Within the “To:” Field, simply enter in the name of the person you would like to message, this will output some suggestions automatically. ",
-        "image": "communication/image17.png"
-      },
-      {
-        "id": 21,
-        "content": "Click on the person you would like to message, you can utilise both name and the profile image to determine you are messaging the correct person. This will then change into a conversation box, which would contain your past messages with the user, and will be shown below. To message them, simply type in your message in the chat box and hit “Enter” on your keyboard.        ",
-        "image": "communication/image37.png"
-      },
-      {
-        "id": 22,
-        "content": "If you receive a message, and have not yet looked at it, there will be a prompt at the top right of your facebook web page. Additionally, the chat box on the bottom right, which will be next to the previously shown icon, will automatically pop-up.        ",
-        "image": "communication/image27.png"
-      }
-
-
-
-  ]
+  {
+    "id": 0,
+    "content": "Step 1: On your Web browser, navigate to the top of it, and click the “+”icon to open a new tab. Within the empty address bar at the top of the tab, enter the following link: “www.facebook.com”. You should now see the following on the top right of the page: "
+  },
+  {
+    "id": 1,
+    "content": "Step 2: Please click on the green rectangle that says: “Create new account”.      ",
+    "image": "communication/image35.png"
+  },
+  {
+    "id": 2,
+    "content": "Step 3: Clicking on this, should produce the following prompt: Fill in the respective fields based on your personal information. If you do not have an email address, please navigate here: “LINK TO CREATING EMAIL” to set-up your email.",
+    "image": "communication/image52.png"
+  },
+  {
+    "id": 3,
+    "content": "Step 4: Once that is done, your account has been created. You will then be navigated to the following page: During this point, you will need to navigate to your email, and find an email from facebook, that email should contain a code starting with the following characters: “FB-”, please only enter in the 5 digit code that appears after “FB-” into the field, and hit continue.        ",
+    "image": "communication/image21.png"
+  },
+  {
+    "id": 4,
+    "content": "Step 5: This will verify your email address with facebook, and will bring you to your facebook page, which will look as shown below. You are now on your facebook page to learn more about how to utilise facebook, simply scroll down and have a look at some of our other instructions on this page.       ",
+    "image": "communication/image3.png"
+  },
+  {
+    "id": 5,
+    "content": "Setting up your profile: Step 1: On the top right of your facebook page, click on the icon displayed below, and click on your name         ",
+    "image": "communication/image47.png"
+  },
+  {
+    "id": 6,
+    "content": "Step 2: This will open the following pop-up right below the icon:        ",
+    "image": "communication/image7.png"
+  },
+  {
+    "id": 7,
+    "content": "Step 3: Click on “Your Name”, this will navigate you to your profile page, it should look like below        ",
+    "image": "communication/image11.png"
+  },
+  {
+    "id": 8,
+    "content": "Intro: If you would people to be familiar with you, your details, your hobbies, or would simply like specific pictures to be featured on yoru profile, you can do so over here in the “Intro” box       ",
+    "image": "communication/image12.png"
+  },
+  {
+    "id": 9,
+    "content": "To access any of these features, simply click on them, and the website will prompt you to either enter in some details about yourself, select from some hobbies, or to choose from a set of photos to be featured for others to see. Some examples of what they might look like are below: ",
+    "image": "communication/image45.png"
+  },
+  {
+    "id": 10,
+    "content": "This information will be publicly available, and people who view your facebook profile will be able to see things added on your profile        ",
+    "image": "communication/image10.png"
+  },
+  {
+    "id": 11,
+    "content": "Adding Photos onto facebook: Either In the Navigation Bar below “Your Name”, or in the “Photos” box.        ",
+    "image": "communication/image38.png"
+  },
+  {
+    "id": 12,
+    "content": "Click on “Photos”. This will navigate you to the photos page of your account, which should look as shown below.  ",
+    "image": "communication/image9.png"
+  },
+  {
+    "id": 13,
+    "content": "To start uploading photos, you can simply click “Add photos/video”, on the top right of the “Photos” box. This will open a folder on your computer, it will normally open the “Pictures” folder on your computer. Simply click on the photo you would like to upload, and select “Open” ",
+    "image": "communication/image39.png"
+  },
+  {
+    "id": 14,
+    "content": "Next, select who you would like to see your photos. Make sure you have a read of who can view your photos, based on the message below each option. This will look as such:        ",
+    "image": "communication/image50.png"
+  },
+  {
+    "id": 15,
+    "content": "Once done, this will open the following window: If you would like to post this photo with a message attached to it, simply click on “What’s on your mind?” and proceed to enter in your message. If you have completed typing your message, or if you did not wish to type in any message, simply click “Post”",
+    "image": "communication/image56.png"
+  },
+  {
+    "id": 16,
+    "content": "You have now successfully uploaded your first photo, and should now be able to see your uploaded photo under the “Photos” box.  ",
+    "image": "communication/image36.png"
+  },
+  {
+    "id": 17,
+    "content": "Connecting with Friends & Family: On the top left of any facebook page, there will be a “Search Facebook” that looks as below: Type in the name of the person you would like to add as a “facebook friend”, and hit “Enter” on your keyboard. This will bring you to a new page, in which under “People”, there will be some suggestions of other facebook users who have your entered name. Once you see your friend within the list, please click the “Add Friend” icon on the right of their name. You may be able to tell it is them from the photo they have showing which will be on the left of their name ",
+    "image": "communication/image18.png"
+  },
+  {
+    "id": 18,
+    "content": "Once you’ve clicked “Add Friend”, it will send them a friend request. Once they’ve accepted your friend request, they will now be your “facebook friend”        ",
+    "image": "communication/image44.png"
+  },
+  {
+    "id": 19,
+    "content": "Messaging your Facebook friends: In the bottom right of any facebook page, click the following icon: ",
+    "image": "communication/image48.png"
+  },
+  {
+    "id": 20,
+    "content": "This will open up the following window on the left of the icon: Within the “To:” Field, simply enter in the name of the person you would like to message, this will output some suggestions automatically. ",
+    "image": "communication/image17.png"
+  },
+  {
+    "id": 21,
+    "content": "Click on the person you would like to message, you can utilise both name and the profile image to determine you are messaging the correct person. This will then change into a conversation box, which would contain your past messages with the user, and will be shown below. To message them, simply type in your message in the chat box and hit “Enter” on your keyboard.        ",
+    "image": "communication/image37.png"
+  },
+  {
+    "id": 22,
+    "content": "If you receive a message, and have not yet looked at it, there will be a prompt at the top right of your facebook web page. Additionally, the chat box on the bottom right, which will be next to the previously shown icon, will automatically pop-up.        ",
+    "image": "communication/image27.png"
+  }
+]

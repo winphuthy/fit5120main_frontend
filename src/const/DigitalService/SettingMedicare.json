@@ -1,20 +1,27 @@
 [
   {
     "id": 0,
-    "content": "Q1. How can you apply for a Medicare card online?",
-    "options": [
-      {
-        "text": "A) Through myGov account",
-        "isCorrect": false
-      },
-      {
-        "text": "B) Through the Medicare website",
-        "isCorrect": true
-      },
-      {
-        "text": "C) Through the Department of Human Services",
-        "isCorrect": false
-      }
-    ]
+    "content": "Step 1: Go to the myGov website (https://my.gov.au).",
+    "image": "digitalService/settingMedicare/step1.png"
+  },
+  {
+    "id": 1,
+    "content": "Step 2: Click Health and disability.",
+    "image": "digitalService/settingMedicare/step2.png"
+  },
+  {
+    "id": 2,
+    "content": "Step 3:.Complete a Medicare enrolment form.",
+    "image": "digitalService/settingMedicare/step3.png"
+  },
+  {
+    "id": 3,
+    "content": "Step 4: Send your form and supporting documents to us. You can post them to the address on the form or email them to Medicare Enrolment Services.\nIf you’re enrolling as a family, you’ll need to nominate a contact person for your Medicare card. We’ll send Medicare cards and other general information for everyone listed on the card to the contact person.\nIf you’re the only person listed on the Medicare card, you’ll be the contact person for the card.\n",
+    "image": "digitalService/settingMedicare/step4.png"
+  },
+  {
+    "id": 4,
+    "content": "Step 5:You’ll get a Medicare card number after you enrol in Medicare.\n",
+    "image": "digitalService/settingMedicare/step5.png"
   }
 ]

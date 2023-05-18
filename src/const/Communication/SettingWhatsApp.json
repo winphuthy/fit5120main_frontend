@@ -2,27 +2,27 @@
     {
       "id": 0,
       "content": "Step 1: Select a different app store (here is the Apple Store as an example)",
-      "image": "communication/image42.jpg"
+      "image": "communication/whatsapp/step1.png"
     },
     {
       "id": 1,
       "content": "Step 2: Search for the keyword WhatsApp in the app store and click on the Download button.",
-      "image": "communication/image32.jpg"
+      "image": "communication/whatsapp/step2.png"
     },
     {
         "id": 2,
         "content": "Step 3: Open the whatsApp and enter your phone number as an account",
-        "image": "communication/image31.jpg"
+      "image": "communication/whatsapp/step3.png"
       },    
       {
         "id": 3,
         "content": "Step 4: Enter the verification code from the phone number.",
-        "image": "communication/image22.jpg"
+        "image": "communication/whatsapp/step4.png"
       },
       {
         "id": 4,
         "content": "Step 5: Enter some profile information.",
-        "image": "communication/image2.jpg"
+        "image": "communication/whatsapp/step5.png"
       },
       {
         "id": 5,
