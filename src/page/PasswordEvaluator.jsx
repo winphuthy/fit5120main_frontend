@@ -1,10 +1,10 @@
 import './AvoidScam.css';
 import MainImage from '../images/websitebackgroundnew2.jpg'
 import * as React from 'react';
-import { useRef, useState } from 'react';
+import {useState} from 'react';
 
 
-import FormControl, { useFormControl } from '@mui/material/FormControl';
+import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 
@@ -34,8 +34,8 @@ export function PasswordEvaluator() {
     return (
         <div style={{
             backgroundColor: "#333333",
-            height: "auto",
-            paddingBottom: '60px',
+            height: "100vh",
+            // paddingBottom: '60px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'

@@ -1,14 +1,14 @@
 import './AvoidScam.css';
 import MainImage from '../images/websitebackgroundnew2.jpg'
 import * as React from 'react';
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Button from '@mui/material/Button';
 import output from '../images/wc_new.png'
-import { backendIP } from "../const/const";
+import {backendIP} from "../const/const";
 import TextField from '@mui/material/TextField';
 import ReactSpeedometer from "react-d3-speedometer";
 
-import FormControl, { useFormControl } from '@mui/material/FormControl';
+import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 

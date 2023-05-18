@@ -2,6 +2,7 @@
 
 .muinavbar .MuiAppBar-root {
     height: var(--navbar-height);
-    min-height: 60px;
+    min-height: 30px;
+    max-height: var(--navbar-height);
     /*position: fixed;*/
 }
