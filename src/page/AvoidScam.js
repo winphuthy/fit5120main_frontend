@@ -216,11 +216,9 @@ export function AvoidScam() {
                     </Button>
                 </div>
             </form>
-
-
-            {/*<div style={{ width: '45vw', margin: 'auto' }}>*/}
-            {/*    <p style={{ textAlign: 'justify', fontSize: '1.5rem', color: "floralwhite" }}> {result}</p>*/}
-            {/*</div>*/}
+            <div style={{width: '45vw', margin: 'auto'}}>
+                <p style={{textAlign: 'justify', fontSize: '1.5rem', color: "floralwhite"}}> {result}</p>
+            </div>
 
             {/*<hr style={{ width: '70vw', margin: 'auto', marginTop: '50px', marginBottom: '50px' }} />*/}
             {/*<h2 style={{fontWeight: "bolder",color:'whitesmoke'}}>Test your password: </h2>*/}
