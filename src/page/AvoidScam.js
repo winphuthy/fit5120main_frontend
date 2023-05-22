@@ -8,10 +8,6 @@ import {backendIP} from "../const/const";
 import TextField from '@mui/material/TextField';
 import ReactSpeedometer from "react-d3-speedometer";
 
-import FormControl from '@mui/material/FormControl';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import Box from '@mui/material/Box';
-
 
 const speedometerColor = '#030303';
 
@@ -222,34 +218,34 @@ export function AvoidScam() {
             </form>
 
 
-            <div style={{ width: '45vw', margin: 'auto' }}>
-                <p style={{ textAlign: 'justify', fontSize: '1.5rem', color: "floralwhite" }}> {result}</p>
-            </div>
+            {/*<div style={{ width: '45vw', margin: 'auto' }}>*/}
+            {/*    <p style={{ textAlign: 'justify', fontSize: '1.5rem', color: "floralwhite" }}> {result}</p>*/}
+            {/*</div>*/}
 
-            <hr style={{ width: '70vw', margin: 'auto', marginTop: '50px', marginBottom: '50px' }} />
-            <h2 style={{fontWeight: "bolder",color:'whitesmoke'}}>Test your password: </h2>
-            <p style={{fontWeight: "bolder",fonts:'1.5rem',color:'whitesmoke'}}>Tip: Longer passwords with more varying characters are much more secure</p>
-            <div style={{ backgroundColor: 'beige', padding: '20px', width: '60vw', fontWeight: "bolder", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', fontSize: '1.2rem' }}>
-                <p style={{ fontSize: '1.5rem' }}>Type a password</p>
-                <Box component="form">
-                    <FormControl  sx={{ width: '58vw', background: 'grey' }}>
-                        <OutlinedInput placeholder="Type the password here" onChange={handlePasswordChange} />
-                    </FormControl>
-                </Box>
-                <div style={{ marginTop: '30px', display: 'flex', justifyContent: 'space-between', width: '55vw' }}>
-                    <span style={{ color: count === 0 ? 'grey' : 'black' }}>{count} characters containing:</span>
-                    <span style={{ color: uppercase ? 'green' : 'gray' }}>Uppercase</span>
-                    <span style={{ color: lowercase ? 'green' : 'gray' }}>Lowercase</span>
-                    <span style={{ color: number ? 'green' : 'gray' }}>Number</span>
-                    <span style={{ color: symbol ? 'green' : 'gray' }}>Symbol</span>
-                </div>
-            </div>
-            <div id='passwordFeedback' style={{fontWeight: 'bold',paddingTop:'30px',fontSize: '1.2rem',display:'none'}}>
-            {password.length > 8 && uppercase && lowercase && number && symbol ?
-                <div style={{ color: 'green'}}>Password is secure</div> :
-                <div style={{ color: 'red'}}>Password is too simple</div>
-            }
-            </div>
+            {/*<hr style={{ width: '70vw', margin: 'auto', marginTop: '50px', marginBottom: '50px' }} />*/}
+            {/*<h2 style={{fontWeight: "bolder",color:'whitesmoke'}}>Test your password: </h2>*/}
+            {/*<p style={{fontWeight: "bolder",fonts:'1.5rem',color:'whitesmoke'}}>Tip: Longer passwords with more varying characters are much more secure</p>*/}
+            {/*<div style={{ backgroundColor: 'beige', padding: '20px', width: '60vw', fontWeight: "bolder", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', fontSize: '1.2rem' }}>*/}
+            {/*    <p style={{ fontSize: '1.5rem' }}>Type a password</p>*/}
+            {/*    <Box component="form">*/}
+            {/*        <FormControl  sx={{ width: '58vw', background: 'grey' }}>*/}
+            {/*            <OutlinedInput placeholder="Type the password here" onChange={handlePasswordChange} />*/}
+            {/*        </FormControl>*/}
+            {/*    </Box>*/}
+            {/*    <div style={{ marginTop: '30px', display: 'flex', justifyContent: 'space-between', width: '55vw' }}>*/}
+            {/*        <span style={{ color: count === 0 ? 'grey' : 'black' }}>{count} characters containing:</span>*/}
+            {/*        <span style={{ color: uppercase ? 'green' : 'gray' }}>Uppercase</span>*/}
+            {/*        <span style={{ color: lowercase ? 'green' : 'gray' }}>Lowercase</span>*/}
+            {/*        <span style={{ color: number ? 'green' : 'gray' }}>Number</span>*/}
+            {/*        <span style={{ color: symbol ? 'green' : 'gray' }}>Symbol</span>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+            {/*<div id='passwordFeedback' style={{fontWeight: 'bold',paddingTop:'30px',fontSize: '1.2rem',display:'none'}}>*/}
+            {/*{password.length > 8 && uppercase && lowercase && number && symbol ?*/}
+            {/*    <div style={{ color: 'green'}}>Password is secure</div> :*/}
+            {/*    <div style={{ color: 'red'}}>Password is too simple</div>*/}
+            {/*}*/}
+            {/*</div>*/}
         </div>
 
     )

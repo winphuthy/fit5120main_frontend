@@ -17,7 +17,7 @@ const options = {
             display: true,
             title: {
                 display: true,
-                text: 'Score',
+                text: 'Year',
                 font: {
                     size: 18
                 }
@@ -27,7 +27,7 @@ const options = {
             display: true,
             title: {
                 display: true,
-                text: 'Year',
+                text: 'Score',
                 font: {
                     size: 18
                 }

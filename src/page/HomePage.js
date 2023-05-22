@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState} from 'react';
 import ProductHero from "../templates/modules/views/ProductHero";
 import ProductValues from "../templates/modules/views/ProductValues";
 /*
@@ -12,10 +13,8 @@ import InteractionChart from "../components/InteractionChart";
 
 import Stack from '@mui/material/Stack';
 import Checkbox from '@mui/material/Checkbox';
-import MainImage from '../images/mainpage.jpg'
 import Button from '@mui/material/Button';
 import data from '../const/Questionnaire.json'
-import { useState } from 'react';
 import ArrowImage from '../images/productHeroArrowDown.png'
 
 
